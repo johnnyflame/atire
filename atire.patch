@@ -1,0 +1,121 @@
+# HG changeset patch
+# User Lech Szymanski <lechszym@cs.otago.ac.nz>
+# Date 1520413064 -46800
+#      Wed Mar 07 21:57:44 2018 +1300
+# Node ID e85fa9332b7e769a072184ebc9074af0324f6d37
+# Parent  9a105a28370bed73c37a5fe59bc91f4908fce93c
+Boost python atire compile
+
+diff -r 9a105a28370b -r e85fa9332b7e GNUmakefile
+--- a/GNUmakefile	Wed Jan 17 14:38:17 2018 -0500
++++ b/GNUmakefile	Wed Mar 07 21:57:44 2018 +1300
+@@ -23,11 +23,14 @@
+ 
+ all: $(EXTRA_OBJS) GNUmakefile index atire atire_client atire_broker atire_dictionary atire_merge atire_reorder atire_doclist
+ 
++python: $(EXTRA_OBJS) GNUMakefile atire.so
++
+ # faster compilation without considering extra objects, useful for repeated make for testing
+ internal: index atire atire_client atire_broker atire_dictionary atire_merge atire_reorder atire_doclist
+ 
+ index: $(BIN_DIR)/index
+ atire: $(BIN_DIR)/atire
++atire.so: $(PYTHON_DIR)/atire.so
+ atire_client: $(BIN_DIR)/atire_client
+ atire_broker: $(BIN_DIR)/atire_broker
+ atire_dictionary: $(BIN_DIR)/atire_dictionary
+@@ -92,6 +95,9 @@
+ $(BIN_DIR)/atire : $(ATIRE_OBJECTS)
+ 	$(CC) -o $@  $^ $(EXTRA_OBJS) $(LDFLAGS)
+ 
++$(PYTHON_DIR)/atire.so: $(ATIRE_OBJECTS)
++	$(CC) -shared -o $@ $^ $(EXTRA_OBJS) $(LDFLAGS) -Wl,-rpath,${ANACONDA_ENV_LIBS} ${BOOST_PYTHON_LIBS}/libboost_python3-mt.a ${ANACONDA_ENV_LIBS}/libpython3.6m.dylib
++
+ $(BIN_DIR)/atire_broker : $(ATIRE_BROKER_OBJECTS)
+ 	$(CC) -o $@  $^ $(EXTRA_OBJS) $(LDFLAGS)
+ 
+diff -r 9a105a28370b -r e85fa9332b7e GNUmakefile.defns
+--- a/GNUmakefile.defns	Wed Jan 17 14:38:17 2018 -0500
++++ b/GNUmakefile.defns	Wed Mar 07 21:57:44 2018 +1300
+@@ -202,7 +202,7 @@
+ ###############################################################################
+ 
+ ifeq ($(USE_GCC), 1)
+-	CC = @g++ 
++	CC = g++ 
+ 	PUT_FILENAME = @echo $<
+ 	ifeq ($(USE_GCC_VERBOSE), 1)
+ 		CC = g++ 
+@@ -322,6 +322,7 @@
+ LIB_DIR = $(BASE_DIR)/lib
+ TOOLS_DIR = $(BASE_DIR)/tools
+ TESTS_DIR = $(BASE_DIR)/tests
++PYTHON_DIR = $(BASE_DIR)/python
+ 
+ IGNORE_LIST := $(SRC_DIR)/stem_paice_husk.c
+ 
+diff -r 9a105a28370b -r e85fa9332b7e GNUmakefile.python
+--- /dev/null	Thu Jan 01 00:00:00 1970 +0000
++++ b/GNUmakefile.python	Wed Mar 07 21:57:44 2018 +1300
+@@ -0,0 +1,9 @@
++ANACONDA_ENV=~/anaconda2/envs/atire
++ANACONDA_ENV_LIBS=${ANACONDA_ENV}/lib
++ANACONDA_ENV_INCLUDES=${ANACONDA_ENV}/include
++BOOST_PYTHON_LIBS=/usr/local/lib/
++CFLAGS += -DBOOSTPY -Datire_EXPORTS -I ${ANACONDA_ENV_INCLUDES}/python3.6m -fPIC -DATIRE_LIBRARY
++
++#Glib stuff
++LDFLAGS += $(shell pkg-config --libs glib-2.0)
++CFLAGS += $(shell pkg-config --cflags glib-2.0)
+diff -r 9a105a28370b -r e85fa9332b7e atire/atire.c
+--- a/atire/atire.c	Wed Jan 17 14:38:17 2018 -0500
++++ b/atire/atire.c	Wed Mar 07 21:57:44 2018 +1300
+@@ -2,6 +2,10 @@
+ 	ATIRE.C
+ 	-------
+ */
++#ifdef BOOSTPY
++#include <boost/python.hpp>
++#include <glib.h>
++#endif
+ #include <stdio.h>
+ #include <string.h>
+ #include <sstream>
+@@ -1005,3 +1009,30 @@
+ }
+ 
+ #endif
++
++
++#ifdef BOOSTPY
++/*
++ * This is the C++ function we write and want to expose to Python.
++ */
++void atire_run_from_python(const std::string &args) {
++  gint argc;
++  gchar **argv;
++
++  g_shell_parse_argv (args.c_str(),&argc,&argv,NULL);
++  run_atire(argc,argv);
++
++  g_strfreev (argv);
++}
++
++/*
++ * This is a macro Boost.Python provides to signify a Python extension module.
++ */
++BOOST_PYTHON_MODULE(atire) {
++  // An established convention for using boost.python.
++  using namespace boost::python;
++
++  // Expose the function hello().
++  def("run", atire_run_from_python);
++}
++#endif
+diff -r 9a105a28370b -r e85fa9332b7e python/test.py
+--- /dev/null	Thu Jan 01 00:00:00 1970 +0000
++++ b/python/test.py	Wed Mar 07 21:57:44 2018 +1300
+@@ -0,0 +1,3 @@
++import atire
++
++atire.run("atire -a evaluation/WSJ.qrels -q evaluation/51-100.titles")

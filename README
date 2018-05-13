@@ -1,0 +1,16 @@
+How to build ATIRE
+------------------
+ATIRE builds with the native compilers on Mac (Xcode), Linux (gcc), and Windows (Visual Studio).  The build process is the same in all cases.
+
+First, get the source code:
+
+> hg clone http://www.atire.org/hg/atire
+
+Second, build
+
+>make
+
+This should leave you with a numner of executable files in the bin directory. one of those tools, index, is the indexer.  Another, atire, is the search engine.
+
+Please contact us if you need help building or running ATIRE.
+

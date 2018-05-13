@@ -1,0 +1,188 @@
+ATIRE Version 0.5 alpha (64-bit)
+Written (w) 2008-2014 Andrew Trotman, University of Otago
+
+GENERAL
+-------
+-? -h -H        Display this help message
+-nologo         Suppress banner
+-people         Display credits
+
+FILE HANDLING
+-------------
+-findex <fn>    Filename of index
+-fdoclist <fn>  Filename of doclist
+-a<filenane>    Topic assessments are in <filename> (formats: ANT, TREC, INEX 2008)
+-q<filename>    Queries are in file <filename> (format: ANT, TREC, INEX 2008)
+-q:<port>       ANT SERVER:Queries from TCP/IP port <port> [default=8088]
+
+TERM EXPANSION
+--------------
+-t[-DhkoOpsSX][+-<th>] Term expansion, one of:
+  -             None [default]
+  D             Double Metaphone phonetics
+  h             English Paice Husk stemming
+  k             English Krovetz stemming
+  o             English Otago stemming
+  O             English Otago stemming version 2
+  p             English Porter stemming (ATIRE's version of Porter v1)
+  s             English S-Stripping stemming
+  S             Soundex phonetics
+  X[abcDdEeFfg2hiklnpRrSst] Stemming using the Snowball libraries
+   a Armenian
+   b Basque
+   c Catalan
+   D Danish
+   d Dutch
+   k Dutch (using the Snowball variant of Kraaij Pohlmann)
+   E English (using the Porter stemmer verison 1)
+   e English (using the Porter stemmer version 2)
+   l English (using the Lovins stemmer)
+   F Finnish
+   f French
+   g German (version 1)
+   2 German (version 2)
+   h Hungarian
+   i Italian
+   n Norwegian
+   p Portuguese
+   R Romanian
+   r Russian
+   S Spanish
+   s Swedish
+   t Turkish
+   -<th>        Stemmed terms cutoff with term similarity. [default=0]
+
+QUERY TYPE
+----------
+-Q[s][nbt][-rmT][NI][wW][R]Query type
+  n             NEXI [default]
+  b             Boolean
+  N:<t><n><d>   NIST (TREC) query file (from trec.nist.gov) <t>itle, <n>arrative, <d>escription [default=t]
+  I:<t><c><n><d>INEX query file (from inex.otago.ac.nz) <t>itle, <c>astitle, <n>arrative, <d>escription [default=t]
+  s:<n><p><0><s><a>Stopword the query: <p>uurula's 988 list, <n>cbi 313 list, <0>numbers, or <s>hort (>=2) words, <a>tire extensions [default=false]
+  t:<w>:<d>:<f> TopSig index of width <w> bits, density <d>%, and globalstats <f>
+  -             No relevance feedback [default]
+  r:<d>:<t>     Rocchio blind relevance feedback by analysing <d> top documents and extracting <t> terms [default d=17 t=5]
+  m:<d>:<l>     Relevance Model feedback (Puurula ALATA paper) using top <d> documents and lambda=l [default d=17 l=0.5]
+  R<ranker>     Use <ranker> as the relevance feedback ranking function (<ranker> is a valid RANKING FUNCTION, excludes pregen)
+  T:<d>         TopSig blind relevance feedback, analysing <d> top documents [default d=10]
+  w:<t>         WordNet tf-merging (wordnet.aspt) <t>=[<s>ynonym <a>ntonym <h>olonym <m>eronym hyp<o>nym hyp<e>rnym][default=s]
+  W:<t>         WordNet query expansion (wordnet.aspt) <t>=[<s>ynonym <a>ntonym <h>olonym <m>eronym hyp<o>nym hyp<e>rnym][default=s]
+
+OPTIMISATIONS
+-------------
+-k<n>           Top-k search. Document results list accurate to the top <n> (0=all) [default=0]
+-F<n>           Focus-k. Focused results list accurate to the top <n> [default=2000]
+-K<n>           Static pruning. Process no fewer than <n> postings (0=all) [default=0]
+-M              Load the index into memory at startup
+-Pt             Process postings lists term-at-a-time [default]
+-Pq:[ndsl]      Process postings lists quantum-at-a-time
+  n             no early termination for the quantum-at-a-time approach [default]
+  d             early termination based on the difference between the top k and k+1
+  s             early termination based on the smallest difference among the top documents
+  l             early termination based on the difference between the largest and second-largest documents
+
+METRICS
+-------
+-m[metric][@<n>]Score the result set after <n> results (0=all) [default=0] using:
+   MAP          Documents, Uninterpolated Mean Average Precision (TREC) [default]
+   MAgP         Documents, Uninterpolated Mean Average generalised Precision (INEX)
+   RankEff      Documents, Rank Effectiveness (account for unassessed documents)
+   bpref[:m]    Documents, Binary Preference (account for unassessed documents) with minimum <m> in relevant (default=0)
+   nDCG[t][:a]  Documents, Normalised Discounted Cumulative Gain (using [t]rec's version), with [a]lpha (alpha-nDCG) (default=0)
+   ERR[:m]      Documents, Expected Reciprocal Rank with maximum judgement <m> (default=4)
+   P            Documents, Set-based precision
+   S            Documents, Set-based success (1=found at least 1 relevant or 0=none)
+   IA-MAP       Documents, Intent-Aware Uninterpolated Mean Average Precision
+   IA-nDCG[t][:a] Documents, Intent-Aware Normalised Discounted Cumulative Gain (using [t]rec's version) with [a]lpha (default=0)
+   IA-ERR[:m]   Documents, Intent-Aware Expected Reciprocal Rank with maximum judgement <m> (default=4)
+   IA-P         Documents, Intent-Aware Precision
+
+TREC / INEX SPECIFIC
+--------------------
+-e[-Iifbet]     Export a run file for use in an Evaluation Forum
+  -             Don't generate a run file [default]
+  I             INEX 2008 (XML) run format
+  i             INEX 2009 (TREC++) run format (documents only)
+  f             INEX 2009 (TREC++) run format (documents and passages)
+  b             INEX 2009 (TREC++) run format (best entry point)
+  e             INEX 2009 Efficiency (XML) run format
+  t             TREC run format
+-o<filename>    Output filename for the run [default=ant.out]
+-i<id>          Forum participant id is <id> [default=unknown]
+-n<name>        Run is named <name> [default=unknown]
+-l<n>           Length of the results list [default=1500 for batch, default=10 for interactive)]
+-QN:<t><n><d>   NIST (TREC) query file (from trec.nist.gov) <t>itle, <n>arrative, <d>escription [default=t]
+-QI:<t><c><n><d>INEX query file (from inex.otago.ac.nz) <t>itle, <c>astitle, <n>arrative, <d>escription [default=t]
+
+SEGMENTATION
+------------
+-S[n]           East-Asian language word segmentation, query is segmented into characters by default
+  n             No segmentation, search with the input terms separated by space
+
+PREGENERATED RANK ORDERS
+------------------------
+-pregen name    Load pregen file with given field name on startup
+
+RANKING FUNCTION
+----------------
+-R[function]    Rank the result set using
+  BM25:<k1>:<b>      BM25 with k1=<k1> and b=<b> [default k1=0.9 b=0.4, use 1.1:0.3 for INEX 2009 [default]
+  BM25L:<k1>:<b>:<d> BM25L (Lv & Zhai) with k1=<k1>, b=<b>, delta=<d> [default k1=0.9 b=0.4, d=0.5] 
+  BM25+:<k1>:<b>:<d> BM25+ (Lv & Zhai) with k1=<k1>, b=<b>, delta=<d> [default k1=0.9 b=0.4, d=1] 
+  BM25T:<b>          BM25T k1=log-logistic (Lv & Zhai) with b=<b> [default b=0.2] 
+  BM25ADPT:<b>       BM25ADPT k1=information gain (Lv & Zhai) with b=<b> [default b=0.3] 
+  TFlodop:<b>:<d>    TFlodop*IDF (Rousseau & Vazirgiannis) with b=<b> and delta=<d> [default b=0.1, d=0.1] 
+  lmd:<u>            Language Models with Dirichlet smoothing, u=<u> [default u = 6750] 
+  lmds:<u>           Language Models with Dirichlet smoothing (see Petri et al, ADCS 2013), u=<u> [default u = 2500] 
+  lmp:<u>:<g>        Language Models with Pittman-Yor Process Dirichlet smoothing (see Puurula, ALTA 2013), u=<u>, g=<g> [default u=1000, g=0.5] 
+  lmptfidf:<u>:<g>   LMP with TF.IDF weighting (see Puurula, ALTA 2013), u=<u>, g=<g> [default u=1000, g=0.5] 
+  lmjm:<l>           Language Models with Jelinek-Mercer smoothing, l=<l> [default l = 0.5] 
+  divergence         Divergence from randomness using I(ne)B2 
+  be                 Bose-Einstein GL2 
+  DLH13              Terrier DLH13 (Terrier's function, not the published DLH13) 
+  DPH                Terrier DPH 
+  DFRee              Terrier DFRee 
+  DFI                Divergence From Independence (TREC 2010 function) 
+  DFIW               Divergence From Independence Web (TREC 2011 function) 
+  DFI_IDF            Divergence From Independence with IDF) 
+  DFIW_IDF           Divergence From Independence Web with IDF 
+  tfidf              TF.IDF (vector space inner product) 
+  kbtfidf:<k>:<b>    log(k * tf - b) * idf * idf (Shlomo's vector space) 
+  allterms           Relevant only if all query terms are present (Boolean AND) 
+  termcount          The number of query terms in the document (Boolean OR) 
+  impact             Sum of impact scores 
+  readable:<k1>:<b>  Readability (BM25 with Dale-Chall) [default k1=0.9 b=0.4] 
+  docid:<d>          Sort by document index (<d=1> ascending or <d=0> descending [default d=1] 
+  pregen:<name>[:a]  Pregenerated ranking, with field of given name, optionally ascending 
+
+-r[n]           Quantize search results in n bits [default n=maths!]
+
+FOCUSED AND SNIPPET RETRIEVAL
+-----------------------------
+-f[a][cC][s<stemmer>][-fbBtT<tag>][wnN<n>]Focus the results list
+  a             Article retrieval [default]
+  r             Range retrieval: Start tag before the first occurence to end tag after the last
+  -             No snippets [default]
+  b<tag>        Snippet is the <tag> element with the highest term count
+  B<tag>        Snippet is the <tag> element with the tf.icf score
+  c             Snippet is the passage with the highest term count
+  C             Snippet is the passage with the tf.icf score
+  t<tag>        Snippet is the contents of the first occuernce of the <tag> element [default=title]
+  f<tag>        Snippet is the text immediately following the first <tag> element [default=title]
+  n<n>          Snippet maximum length is <n> characters [default=300]
+  w<n>          Snippet is a KL-divergence word cloud with at most <n> terms in it [default=40]
+  S<stemmer>    Use stemming in snippet generation (except clouds) <stemmer> is a valid TERM EXPANSION algorithm (e.g. -fSp)
+  T<tag>        Title is the contents of the first occuernce of the <tag> element [default=title]
+  N<n>          Title maximum length is <n> characters [default=300]
+
+REPORTING
+---------
+-s[-aqQs]       Report statistics
+  -             No statistics
+  a             All statistics (same as -sqQs)
+  p             Mean precision scores (if computed)
+  q             Query by query statistics
+  Q             Sum of query by query statistics for this run
+  s             Short reporting (hits, average precision, etc) [default]
+

@@ -1,0 +1,4440 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="100">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <df root="." name="0">
+      <df name=".idea">
+        <df name="codeStyles">
+        </df>
+        <df name="libraries">
+        </df>
+      </df>
+      <df name="atire">
+        <df name="php">
+        </df>
+        <in>ant_param_block.c</in>
+        <in>ant_param_block.h</in>
+        <in>atire.c</in>
+        <in>atire_api.c</in>
+        <in>atire_api.h</in>
+        <in>atire_api_remote.c</in>
+        <in>atire_api_remote.h</in>
+        <in>atire_broke.c</in>
+        <in>atire_broke.h</in>
+        <in>atire_broke_engine.c</in>
+        <in>atire_broke_engine.h</in>
+        <in>atire_broker.c</in>
+        <in>atire_broker_param_block.c</in>
+        <in>atire_broker_param_block.h</in>
+        <in>atire_client.c</in>
+        <in>atire_client_param_block.c</in>
+        <in>atire_client_param_block.h</in>
+        <in>atire_dictionary.c</in>
+        <in>atire_doclist.c</in>
+        <in>atire_engine.h</in>
+        <in>atire_engine_param_block.h</in>
+        <in>atire_engine_result.h</in>
+        <in>atire_engine_result_set.c</in>
+        <in>atire_engine_result_set.h</in>
+        <in>atire_engine_result_set_export.h</in>
+        <in>atire_engine_result_set_export_INEX_snippet.c</in>
+        <in>atire_engine_result_set_export_INEX_snippet.h</in>
+        <in>atire_engine_result_set_export_TREC.c</in>
+        <in>atire_engine_result_set_export_TREC.h</in>
+        <in>atire_main_class.cpp</in>
+        <in>atire_main_class.h</in>
+        <in>atire_merge.c</in>
+        <in>atire_reorder.c</in>
+        <in>index.c</in>
+        <in>indexer_param_block.c</in>
+        <in>indexer_param_block.h</in>
+        <in>indexer_param_block_pregen.c</in>
+        <in>indexer_param_block_pregen.h</in>
+        <in>indexer_param_block_rank.c</in>
+        <in>indexer_param_block_rank.h</in>
+        <in>indexer_param_block_stem.c</in>
+        <in>indexer_param_block_stem.h</in>
+        <in>indexer_param_block_topsig.c</in>
+        <in>indexer_param_block_topsig.h</in>
+        <in>merger_param_block.c</in>
+        <in>merger_param_block.h</in>
+      </df>
+      <df name="bin">
+      </df>
+      <df name="cgi">
+        <in>ant_cgi.c</in>
+        <in>ant_getdoc_cgi.c</in>
+        <in>env.c</in>
+        <in>header.h</in>
+      </df>
+      <df name="CliX">
+        <df name="lib">
+        </df>
+        <df name="src">
+          <df name="com">
+            <df name="spreada">
+              <df name="utils">
+                <df name="chinese">
+                </df>
+              </df>
+            </df>
+          </df>
+          <df name="de">
+            <df name="mpii">
+              <df name="clix">
+                <df name="dblp">
+                </df>
+                <df name="imdb">
+                </df>
+                <df name="support">
+                </df>
+                <df name="wikipedia">
+                </df>
+              </df>
+            </df>
+          </df>
+          <df name="META-INF">
+          </df>
+          <df name="org">
+            <df name="apache">
+              <df name="tools">
+                <df name="bzip2">
+                </df>
+              </df>
+            </df>
+          </df>
+        </df>
+      </df>
+      <df name="Docs">
+      </df>
+      <df name="edit">
+        <df name="resources">
+          <in>resource.h</in>
+        </df>
+        <in>canvas.c</in>
+        <in>canvas.h</in>
+        <in>edit_renderer.h</in>
+        <in>line.c</in>
+        <in>line.h</in>
+        <in>main.c</in>
+        <in>memory_file_line.c</in>
+        <in>memory_file_line.h</in>
+        <in>memory_file_line_iterator.c</in>
+        <in>memory_file_line_iterator.h</in>
+        <in>point.h</in>
+        <in>rgb.h</in>
+        <in>source_parser.c</in>
+        <in>source_parser.h</in>
+        <in>source_parser_c.c</in>
+        <in>source_parser_c.h</in>
+        <in>source_parser_token.h</in>
+        <in>token_colours.c</in>
+        <in>token_colours.h</in>
+      </df>
+      <df name="evaluation">
+        <in>INEXassessments_get_best.c</in>
+        <in>INEXieee_assessments_to_ANT.c</in>
+        <in>INEXtopics_to_ANTquery.c</in>
+        <in>MAP_fake.c</in>
+        <in>between.c</in>
+        <in>mkqrel.c</in>
+        <in>qrel_orig_alt_compare.c</in>
+        <in>stop_word.c</in>
+        <in>stop_word.h</in>
+        <in>trec2query.c</in>
+      </df>
+      <df name="experiments">
+        <df name="dict_compression_v2">
+          <in>RB_tree.h</in>
+          <in>build_dictionaries.c</in>
+          <in>build_vocab.c</in>
+          <in>common.c</in>
+          <in>common.h</in>
+          <in>dict_blocked.c</in>
+          <in>dict_embed.c</in>
+          <in>dict_embedfixed.c</in>
+          <in>dict_embedfixed_null.c</in>
+          <in>dict_embedfront.c</in>
+          <in>dict_fixed.c</in>
+          <in>dict_string.c</in>
+          <in>linked_list.h</in>
+          <in>primary_cmp.h</in>
+          <in>search_dictionaries.c</in>
+        </df>
+        <df name="init_accumulators">
+          <in>init_accumulators.cpp</in>
+          <in>init_accumulators_orig.cpp</in>
+          <in>mt19937-64.c</in>
+          <in>mt64.h</in>
+        </df>
+        <df name="quantum-at-a-time">
+          <df name="extra-info">
+          </df>
+        </df>
+        <df name="special_compression">
+        </df>
+      </df>
+      <df name="external">
+        <df name="gpl">
+          <df name="lzo">
+            <df name="lzo-2.06">
+              <df name="asm">
+                <df name="i386">
+                  <df name="src">
+                    <in>lzo1c_s1.S</in>
+                    <in>lzo1c_s2.S</in>
+                    <in>lzo1f_f1.S</in>
+                    <in>lzo1f_f2.S</in>
+                    <in>lzo1x_f1.S</in>
+                    <in>lzo1x_f2.S</in>
+                    <in>lzo1x_s1.S</in>
+                    <in>lzo1x_s2.S</in>
+                    <in>lzo1y_f1.S</in>
+                    <in>lzo1y_f2.S</in>
+                    <in>lzo1y_s1.S</in>
+                    <in>lzo1y_s2.S</in>
+                    <in>lzo_asm.h</in>
+                  </df>
+                  <df name="src_gas">
+                    <df name="all">
+                      <in>asm_all.S</in>
+                    </df>
+                    <in>lzo1c_s1.S</in>
+                    <in>lzo1c_s2.S</in>
+                    <in>lzo1f_f1.S</in>
+                    <in>lzo1f_f2.S</in>
+                    <in>lzo1x_f1.S</in>
+                    <in>lzo1x_f2.S</in>
+                    <in>lzo1x_s1.S</in>
+                    <in>lzo1x_s2.S</in>
+                    <in>lzo1y_f1.S</in>
+                    <in>lzo1y_f2.S</in>
+                    <in>lzo1y_s1.S</in>
+                    <in>lzo1y_s2.S</in>
+                  </df>
+                  <df name="src_masm">
+                    <df name="all">
+                      <in>asm_all.asm</in>
+                    </df>
+                    <in>lzo1c_s1.asm</in>
+                    <in>lzo1c_s2.asm</in>
+                    <in>lzo1f_f1.asm</in>
+                    <in>lzo1f_f2.asm</in>
+                    <in>lzo1x_f1.asm</in>
+                    <in>lzo1x_f2.asm</in>
+                    <in>lzo1x_s1.asm</in>
+                    <in>lzo1x_s2.asm</in>
+                    <in>lzo1y_f1.asm</in>
+                    <in>lzo1y_f2.asm</in>
+                    <in>lzo1y_s1.asm</in>
+                    <in>lzo1y_s2.asm</in>
+                  </df>
+                  <df name="src_nasm">
+                    <df name="all">
+                      <in>asm_all.asm</in>
+                    </df>
+                    <in>lzo1c_s1.asm</in>
+                    <in>lzo1c_s2.asm</in>
+                    <in>lzo1f_f1.asm</in>
+                    <in>lzo1f_f2.asm</in>
+                    <in>lzo1x_f1.asm</in>
+                    <in>lzo1x_f2.asm</in>
+                    <in>lzo1x_s1.asm</in>
+                    <in>lzo1x_s2.asm</in>
+                    <in>lzo1y_f1.asm</in>
+                    <in>lzo1y_f2.asm</in>
+                    <in>lzo1y_s1.asm</in>
+                    <in>lzo1y_s2.asm</in>
+                  </df>
+                </df>
+              </df>
+              <df name="autoconf">
+              </df>
+              <df name="B">
+                <df name="dos16">
+                </df>
+                <df name="dos32">
+                </df>
+                <df name="generic">
+                </df>
+                <df name="os2">
+                </df>
+                <df name="os2_16">
+                </df>
+                <df name="win16">
+                </df>
+                <df name="win32">
+                </df>
+                <df name="win64">
+                </df>
+              </df>
+              <df name="doc">
+              </df>
+              <df name="examples">
+                <in>dict.c</in>
+                <in>lzopack.c</in>
+                <in>overlap.c</in>
+                <in>portab.h</in>
+                <in>portab_a.h</in>
+                <in>precomp.c</in>
+                <in>precomp2.c</in>
+                <in>simple.c</in>
+              </df>
+              <df name="include">
+                <df name="lzo">
+                  <in>lzo1.h</in>
+                  <in>lzo1a.h</in>
+                  <in>lzo1b.h</in>
+                  <in>lzo1c.h</in>
+                  <in>lzo1f.h</in>
+                  <in>lzo1x.h</in>
+                  <in>lzo1y.h</in>
+                  <in>lzo1z.h</in>
+                  <in>lzo2a.h</in>
+                  <in>lzo_asm.h</in>
+                  <in>lzoconf.h</in>
+                  <in>lzodefs.h</in>
+                  <in>lzoutil.h</in>
+                </df>
+              </df>
+              <df name="lzotest">
+                <in>asm.h</in>
+                <in>db.h</in>
+                <in>lzotest.c</in>
+                <in>wrap.h</in>
+                <in>wrapmisc.h</in>
+              </df>
+              <df name="minilzo">
+                <in>minilzo.c</in>
+                <in>minilzo.h</in>
+                <in>testmini.c</in>
+              </df>
+              <df name="src">
+                <in>compr1b.h</in>
+                <in>compr1c.h</in>
+                <in>config1.h</in>
+                <in>config1a.h</in>
+                <in>config1b.h</in>
+                <in>config1c.h</in>
+                <in>config1f.h</in>
+                <in>config1x.h</in>
+                <in>config1y.h</in>
+                <in>config1z.h</in>
+                <in>config2a.h</in>
+                <in>lzo1.c</in>
+                <in>lzo1_99.c</in>
+                <in>lzo1_cm.ch</in>
+                <in>lzo1_d.ch</in>
+                <in>lzo1a.c</in>
+                <in>lzo1a_99.c</in>
+                <in>lzo1a_cm.ch</in>
+                <in>lzo1a_cr.ch</in>
+                <in>lzo1a_de.h</in>
+                <in>lzo1b_1.c</in>
+                <in>lzo1b_2.c</in>
+                <in>lzo1b_3.c</in>
+                <in>lzo1b_4.c</in>
+                <in>lzo1b_5.c</in>
+                <in>lzo1b_6.c</in>
+                <in>lzo1b_7.c</in>
+                <in>lzo1b_8.c</in>
+                <in>lzo1b_9.c</in>
+                <in>lzo1b_99.c</in>
+                <in>lzo1b_9x.c</in>
+                <in>lzo1b_c.ch</in>
+                <in>lzo1b_cc.c</in>
+                <in>lzo1b_cc.h</in>
+                <in>lzo1b_cm.ch</in>
+                <in>lzo1b_cr.ch</in>
+                <in>lzo1b_d.ch</in>
+                <in>lzo1b_d1.c</in>
+                <in>lzo1b_d2.c</in>
+                <in>lzo1b_de.h</in>
+                <in>lzo1b_r.ch</in>
+                <in>lzo1b_rr.c</in>
+                <in>lzo1b_sm.ch</in>
+                <in>lzo1b_tm.ch</in>
+                <in>lzo1b_xx.c</in>
+                <in>lzo1c_1.c</in>
+                <in>lzo1c_2.c</in>
+                <in>lzo1c_3.c</in>
+                <in>lzo1c_4.c</in>
+                <in>lzo1c_5.c</in>
+                <in>lzo1c_6.c</in>
+                <in>lzo1c_7.c</in>
+                <in>lzo1c_8.c</in>
+                <in>lzo1c_9.c</in>
+                <in>lzo1c_99.c</in>
+                <in>lzo1c_9x.c</in>
+                <in>lzo1c_cc.c</in>
+                <in>lzo1c_cc.h</in>
+                <in>lzo1c_d1.c</in>
+                <in>lzo1c_d2.c</in>
+                <in>lzo1c_rr.c</in>
+                <in>lzo1c_xx.c</in>
+                <in>lzo1f_1.c</in>
+                <in>lzo1f_9x.c</in>
+                <in>lzo1f_d.ch</in>
+                <in>lzo1f_d1.c</in>
+                <in>lzo1f_d2.c</in>
+                <in>lzo1x_1.c</in>
+                <in>lzo1x_1k.c</in>
+                <in>lzo1x_1l.c</in>
+                <in>lzo1x_1o.c</in>
+                <in>lzo1x_9x.c</in>
+                <in>lzo1x_c.ch</in>
+                <in>lzo1x_d.ch</in>
+                <in>lzo1x_d1.c</in>
+                <in>lzo1x_d2.c</in>
+                <in>lzo1x_d3.c</in>
+                <in>lzo1x_o.c</in>
+                <in>lzo1x_oo.ch</in>
+                <in>lzo1y_1.c</in>
+                <in>lzo1y_9x.c</in>
+                <in>lzo1y_d1.c</in>
+                <in>lzo1y_d2.c</in>
+                <in>lzo1y_d3.c</in>
+                <in>lzo1y_o.c</in>
+                <in>lzo1z_9x.c</in>
+                <in>lzo1z_d1.c</in>
+                <in>lzo1z_d2.c</in>
+                <in>lzo1z_d3.c</in>
+                <in>lzo2a_9x.c</in>
+                <in>lzo2a_d.ch</in>
+                <in>lzo2a_d1.c</in>
+                <in>lzo2a_d2.c</in>
+                <in>lzo_conf.h</in>
+                <in>lzo_crc.c</in>
+                <in>lzo_dict.h</in>
+                <in>lzo_dll.ch</in>
+                <in>lzo_func.ch</in>
+                <in>lzo_init.c</in>
+                <in>lzo_mchw.ch</in>
+                <in>lzo_ptr.c</in>
+                <in>lzo_ptr.h</in>
+                <in>lzo_str.c</in>
+                <in>lzo_swd.ch</in>
+                <in>lzo_util.c</in>
+                <in>miniacc.h</in>
+                <in>stats1a.h</in>
+                <in>stats1b.h</in>
+                <in>stats1c.h</in>
+              </df>
+              <df name="tests">
+                <in>align.c</in>
+                <in>chksum.c</in>
+                <in>promote.c</in>
+                <in>sizes.c</in>
+              </df>
+              <df name="util">
+              </df>
+            </df>
+          </df>
+          <df name="MySQL">
+            <df name="mysql-connector-c-noinstall-6.0.2-win32">
+              <df name="bin">
+              </df>
+              <df name="include">
+                <df name="atomic">
+                  <in>gcc_builtins.h</in>
+                  <in>generic-msvc.h</in>
+                  <in>nolock.h</in>
+                  <in>rwlock.h</in>
+                  <in>x86-gcc.h</in>
+                </df>
+                <df name="mysys">
+                  <in>rijndael.h</in>
+                </df>
+                <in>base64.h</in>
+                <in>config-win.h</in>
+                <in>decimal.h</in>
+                <in>errmsg.h</in>
+                <in>hash.h</in>
+                <in>keycache.h</in>
+                <in>lf.h</in>
+                <in>m_ctype.h</in>
+                <in>m_string.h</in>
+                <in>my_aes.h</in>
+                <in>my_alarm.h</in>
+                <in>my_alloc.h</in>
+                <in>my_atomic.h</in>
+                <in>my_attribute.h</in>
+                <in>my_base.h</in>
+                <in>my_bit.h</in>
+                <in>my_bitmap.h</in>
+                <in>my_charsets.h</in>
+                <in>my_config.h</in>
+                <in>my_dbug.h</in>
+                <in>my_dir.h</in>
+                <in>my_getopt.h</in>
+                <in>my_global.h</in>
+                <in>my_libwrap.h</in>
+                <in>my_list.h</in>
+                <in>my_md5.h</in>
+                <in>my_net.h</in>
+                <in>my_no_pthread.h</in>
+                <in>my_nosys.h</in>
+                <in>my_pthread.h</in>
+                <in>my_stacktrace.h</in>
+                <in>my_sys.h</in>
+                <in>my_time.h</in>
+                <in>my_tree.h</in>
+                <in>my_trie.h</in>
+                <in>my_uctype.h</in>
+                <in>my_vle.h</in>
+                <in>my_xml.h</in>
+                <in>myisampack.h</in>
+                <in>mysql.h</in>
+                <in>mysql_com.h</in>
+                <in>mysql_time.h</in>
+                <in>mysql_version.h</in>
+                <in>mysqld_error.h</in>
+                <in>mysys_err.h</in>
+                <in>queues.h</in>
+                <in>service_versions.h</in>
+                <in>sha1.h</in>
+                <in>sha2.h</in>
+                <in>sql_common.h</in>
+                <in>sslopt-case.h</in>
+                <in>sslopt-longopts.h</in>
+                <in>sslopt-vars.h</in>
+                <in>t_ctype.h</in>
+                <in>thr_alarm.h</in>
+                <in>thr_lock.h</in>
+                <in>typelib.h</in>
+                <in>violite.h</in>
+                <in>waiting_threads.h</in>
+                <in>wqueue.h</in>
+              </df>
+            </df>
+            <df name="mysql-connector-c-noinstall-6.0.2-winx64">
+              <df name="include">
+                <df name="atomic">
+                  <in>gcc_builtins.h</in>
+                  <in>generic-msvc.h</in>
+                  <in>nolock.h</in>
+                  <in>rwlock.h</in>
+                  <in>x86-gcc.h</in>
+                </df>
+                <df name="mysys">
+                  <in>rijndael.h</in>
+                </df>
+                <in>base64.h</in>
+                <in>config-win.h</in>
+                <in>decimal.h</in>
+                <in>errmsg.h</in>
+                <in>hash.h</in>
+                <in>keycache.h</in>
+                <in>lf.h</in>
+                <in>m_ctype.h</in>
+                <in>m_string.h</in>
+                <in>my_aes.h</in>
+                <in>my_alarm.h</in>
+                <in>my_alloc.h</in>
+                <in>my_atomic.h</in>
+                <in>my_attribute.h</in>
+                <in>my_base.h</in>
+                <in>my_bit.h</in>
+                <in>my_bitmap.h</in>
+                <in>my_charsets.h</in>
+                <in>my_config.h</in>
+                <in>my_dbug.h</in>
+                <in>my_dir.h</in>
+                <in>my_getopt.h</in>
+                <in>my_global.h</in>
+                <in>my_libwrap.h</in>
+                <in>my_list.h</in>
+                <in>my_md5.h</in>
+                <in>my_net.h</in>
+                <in>my_no_pthread.h</in>
+                <in>my_nosys.h</in>
+                <in>my_pthread.h</in>
+                <in>my_stacktrace.h</in>
+                <in>my_sys.h</in>
+                <in>my_time.h</in>
+                <in>my_tree.h</in>
+                <in>my_trie.h</in>
+                <in>my_uctype.h</in>
+                <in>my_vle.h</in>
+                <in>my_xml.h</in>
+                <in>myisampack.h</in>
+                <in>mysql.h</in>
+                <in>mysql_com.h</in>
+                <in>mysql_time.h</in>
+                <in>mysql_version.h</in>
+                <in>mysqld_error.h</in>
+                <in>mysys_err.h</in>
+                <in>queues.h</in>
+                <in>service_versions.h</in>
+                <in>sha1.h</in>
+                <in>sha2.h</in>
+                <in>sql_common.h</in>
+                <in>sslopt-case.h</in>
+                <in>sslopt-longopts.h</in>
+                <in>sslopt-vars.h</in>
+                <in>t_ctype.h</in>
+                <in>thr_alarm.h</in>
+                <in>thr_lock.h</in>
+                <in>typelib.h</in>
+                <in>violite.h</in>
+                <in>waiting_threads.h</in>
+                <in>wqueue.h</in>
+              </df>
+            </df>
+          </df>
+          <df name="swig">
+            <df name="swigwin-2.0.4">
+              <df name="CCache">
+                <df name="debian">
+                  <df name="patches">
+                  </df>
+                </df>
+                <df name="packaging">
+                </df>
+                <df name="web">
+                </df>
+                <in>args.c</in>
+                <in>ccache.c</in>
+                <in>ccache.h</in>
+                <in>cleanup.c</in>
+                <in>execute.c</in>
+                <in>hash.c</in>
+                <in>mdfour.c</in>
+                <in>mdfour.h</in>
+                <in>snprintf.c</in>
+                <in>stats.c</in>
+                <in>unify.c</in>
+                <in>util.c</in>
+              </df>
+              <df name="Doc">
+                <df name="Devel">
+                </df>
+                <df name="Manual">
+                </df>
+              </df>
+              <df name="Examples">
+                <df name="chicken">
+                  <df name="class">
+                    <in>example.cxx</in>
+                    <in>example.h</in>
+                    <in>example.i</in>
+                  </df>
+                  <df name="constants">
+                    <in>example.i</in>
+                  </df>
+                  <df name="egg">
+                    <in>mod1.i</in>
+                    <in>mod2.i</in>
+                    <in>single.i</in>
+                  </df>
+                  <df name="multimap">
+                    <in>example.c</in>
+                    <in>example.i</in>
+                  </df>
+                  <df name="overload">
+                    <in>example.cxx</in>
+                    <in>example.h</in>
+                    <in>example.i</in>
+                  </df>
+                  <df name="simple">
+                    <in>example.c</in>
+                    <in>example.i</in>
+                  </df>
+                </df>
+                <df name="contract">
+                  <df name="simple_c">
+                    <in>example.c</in>
+                    <in>example.i</in>
+                  </df>
+                  <df name="simple_cxx">
+                    <in>example.cxx</in>
+                    <in>example.h</in>
+                    <in>example.i</in>
+                  </df>
+                </df>
+                <df name="csharp">
+                  <df name="arrays">
+                    <in>example.c</in>
+                    <in>example.h</in>
+                    <in>example.i</in>
+                  </df>
+                  <df name="callback">
+                    <in>example.cxx</in>
+                    <in>example.h</in>
+                    <in>example.i</in>
+                  </df>
+                  <df name="class">
+                    <in>example.cxx</in>
+                    <in>example.h</in>
+                    <in>example.i</in>
+                  </df>
+                  <df name="enum">
+                    <in>example.cxx</in>
+                    <in>example.h</in>
+                    <in>example.i</in>
+                  </df>
+                  <df name="extend">
+                    <in>example.cxx</in>
+                    <in>example.h</in>
+                    <in>example.i</in>
+                  </df>
+                  <df name="funcptr">
+                    <in>example.c</in>
+                    <in>example.h</in>
+                    <in>example.i</in>
+                  </df>
+                  <df name="reference">
+                    <in>example.cxx</in>
+                    <in>example.h</in>
+                    <in>example.i</in>
+                  </df>
+                  <df name="simple">
+                    <in>example.c</in>
+                    <in>example.i</in>
+                  </df>
+                  <df name="template">
+                    <in>example.h</in>
+                    <in>example.i</in>
+                  </df>
+                  <df name="variables">
+                    <in>example.c</in>
+                    <in>example.h</in>
+                    <in>example.i</in>
+                  </df>
+                </df>
+                <df name="d">
+                  <df name="callback">
+                    <df name="d1">
+                    </df>
+                    <df name="d2">
+                    </df>
+                    <in>example.cxx</in>
+                    <in>example.h</in>
+                    <in>example.i</in>
+                  </df>
+                  <df name="class">
+                    <df name="d1">
+                    </df>
+                    <df name="d2">
+                    </df>
+                    <in>example.cxx</in>
+                    <in>example.h</in>
+                    <in>example.i</in>
+                  </df>
+                  <df name="constants">
+                    <df name="d1">
+                    </df>
+                    <df name="d2">
+                    </df>
+                    <in>example.i</in>
+                  </df>
+                  <df name="enum">
+                    <df name="d1">
+                    </df>
+                    <df name="d2">
+                    </df>
+                    <in>example.cxx</in>
+                    <in>example.h</in>
+                    <in>example.i</in>
+                  </df>
+                  <df name="extend">
+                    <df name="d1">
+                    </df>
+                    <df name="d2">
+                    </df>
+                    <in>example.cxx</in>
+                    <in>example.h</in>
+                    <in>example.i</in>
+                  </df>
+                  <df name="funcptr">
+                    <df name="d1">
+                    </df>
+                    <df name="d2">
+                    </df>
+                    <in>example.c</in>
+                    <in>example.h</in>
+                    <in>example.i</in>
+                  </df>
+                  <df name="simple">
+                    <df name="d1">
+                    </df>
+                    <df name="d2">
+                    </df>
+                    <in>example.c</in>
+                    <in>example.i</in>
+                  </df>
+                  <df name="variables">
+                    <df name="d1">
+                    </df>
+                    <df name="d2">
+                    </df>
+                    <in>example.c</in>
+                    <in>example.h</in>
+                    <in>example.i</in>
+                  </df>
+                </df>
+                <df name="go">
+                  <df name="callback">
+                    <in>example.cxx</in>
+                    <in>example.h</in>
+                    <in>example.i</in>
+                  </df>
+                  <df name="class">
+                    <in>example.cxx</in>
+                    <in>example.h</in>
+                    <in>example.i</in>
+                  </df>
+                  <df name="constants">
+                    <in>example.i</in>
+                  </df>
+                  <df name="enum">
+                    <in>example.cxx</in>
+                    <in>example.h</in>
+                    <in>example.i</in>
+                  </df>
+                  <df name="extend">
+                    <in>example.cxx</in>
+                    <in>example.h</in>
+                    <in>example.i</in>
+                  </df>
+                  <df name="funcptr">
+                    <in>example.c</in>
+                    <in>example.h</in>
+                    <in>example.i</in>
+                  </df>
+                  <df name="multimap">
+                    <in>example.c</in>
+                    <in>example.i</in>
+                  </df>
+                  <df name="pointer">
+                    <in>example.c</in>
+                    <in>example.i</in>
+                  </df>
+                  <df name="reference">
+                    <in>example.cxx</in>
+                    <in>example.h</in>
+                    <in>example.i</in>
+                  </df>
+                  <df name="simple">
+                    <in>example.c</in>
+                    <in>example.i</in>
+                  </df>
+                  <df name="template">
+                    <in>example.h</in>
+                    <in>example.i</in>
+                  </df>
+                  <df name="variables">
+                    <in>example.c</in>
+                    <in>example.h</in>
+                    <in>example.i</in>
+                  </df>
+                </df>
+                <df name="guile">
+                  <df name="constants">
+                    <in>example.i</in>
+                  </df>
+                  <df name="matrix">
+                    <in>main.c</in>
+                    <in>matrix.c</in>
+                    <in>matrix.i</in>
+                    <in>package.i</in>
+                    <in>vector.c</in>
+                    <in>vector.h</in>
+                    <in>vector.i</in>
+                  </df>
+                  <df name="multimap">
+                    <in>example.c</in>
+                    <in>example.i</in>
+                  </df>
+                  <df name="multivalue">
+                    <in>example.c</in>
+                    <in>example.i</in>
+                  </df>
+                  <df name="port">
+                    <in>port.c</in>
+                    <in>port.i</in>
+                  </df>
+                  <df name="simple">
+                    <in>example.c</in>
+                    <in>example.i</in>
+                  </df>
+                  <df name="std_vector">
+                    <in>example.h</in>
+                    <in>example.i</in>
+                  </df>
+                </df>
+                <df name="java">
+                  <df name="callback">
+                    <in>example.cxx</in>
+                    <in>example.h</in>
+                    <in>example.i</in>
+                  </df>
+                  <df name="class">
+                    <in>example.cxx</in>
+                    <in>example.h</in>
+                    <in>example.i</in>
+                  </df>
+                  <df name="constants">
+                    <in>example.i</in>
+                  </df>
+                  <df name="enum">
+                    <in>example.cxx</in>
+                    <in>example.h</in>
+                    <in>example.i</in>
+                  </df>
+                  <df name="extend">
+                    <in>example.cxx</in>
+                    <in>example.h</in>
+                    <in>example.i</in>
+                  </df>
+                  <df name="funcptr">
+                    <in>example.c</in>
+                    <in>example.h</in>
+                    <in>example.i</in>
+                  </df>
+                  <df name="multimap">
+                    <in>example.c</in>
+                    <in>example.i</in>
+                  </df>
+                  <df name="native">
+                    <in>example.i</in>
+                  </df>
+                  <df name="pointer">
+                    <in>example.c</in>
+                    <in>example.i</in>
+                  </df>
+                  <df name="reference">
+                    <in>example.cxx</in>
+                    <in>example.h</in>
+                    <in>example.i</in>
+                  </df>
+                  <df name="simple">
+                    <in>example.c</in>
+                    <in>example.i</in>
+                  </df>
+                  <df name="template">
+                    <in>example.h</in>
+                    <in>example.i</in>
+                  </df>
+                  <df name="typemap">
+                    <in>example.i</in>
+                  </df>
+                  <df name="variables">
+                    <in>example.c</in>
+                    <in>example.h</in>
+                    <in>example.i</in>
+                  </df>
+                </df>
+                <df name="lua">
+                  <df name="arrays">
+                    <in>example.c</in>
+                    <in>example.i</in>
+                  </df>
+                  <df name="class">
+                    <in>example.cxx</in>
+                    <in>example.h</in>
+                    <in>example.i</in>
+                  </df>
+                  <df name="constants">
+                    <in>example.i</in>
+                  </df>
+                  <df name="dual">
+                    <in>dual.cpp</in>
+                    <in>example.i</in>
+                    <in>example2.i</in>
+                  </df>
+                  <df name="embed">
+                    <in>embed.c</in>
+                    <in>example.c</in>
+                    <in>example.i</in>
+                  </df>
+                  <df name="embed2">
+                    <in>embed2.c</in>
+                    <in>example.c</in>
+                    <in>example.i</in>
+                  </df>
+                  <df name="embed3">
+                    <in>embed3.cpp</in>
+                    <in>example.cpp</in>
+                    <in>example.h</in>
+                    <in>example.i</in>
+                  </df>
+                  <df name="exception">
+                    <in>example.h</in>
+                    <in>example.i</in>
+                  </df>
+                  <df name="funcptr3">
+                    <in>example.c</in>
+                    <in>example.h</in>
+                    <in>example.i</in>
+                  </df>
+                  <df name="functest">
+                    <in>example.c</in>
+                    <in>example.i</in>
+                  </df>
+                  <df name="functor">
+                    <in>example.i</in>
+                  </df>
+                  <df name="import">
+                    <in>bar.h</in>
+                    <in>bar.i</in>
+                    <in>base.h</in>
+                    <in>base.i</in>
+                    <in>foo.h</in>
+                    <in>foo.i</in>
+                    <in>spam.h</in>
+                    <in>spam.i</in>
+                  </df>
+                  <df name="owner">
+                    <in>example.cxx</in>
+                    <in>example.h</in>
+                    <in>example.i</in>
+                  </df>
+                  <df name="pointer">
+                    <in>example.c</in>
+                    <in>example.i</in>
+                  </df>
+                  <df name="simple">
+                    <in>example.c</in>
+                    <in>example.i</in>
+                  </df>
+                  <df name="variables">
+                    <in>example.c</in>
+                    <in>example.h</in>
+                    <in>example.i</in>
+                  </df>
+                  <in>lua.c</in>
+                </df>
+                <df name="modula3">
+                  <df name="class">
+                    <in>example.cxx</in>
+                    <in>example.h</in>
+                    <in>example.i</in>
+                  </df>
+                  <df name="enum">
+                    <in>example.cxx</in>
+                    <in>example.h</in>
+                    <in>example.i</in>
+                  </df>
+                  <df name="exception">
+                    <in>example.h</in>
+                    <in>example.i</in>
+                  </df>
+                  <df name="reference">
+                    <in>example.cxx</in>
+                    <in>example.h</in>
+                    <in>example.i</in>
+                  </df>
+                  <df name="simple">
+                    <in>example.c</in>
+                    <in>example.i</in>
+                  </df>
+                  <df name="typemap">
+                    <in>example.i</in>
+                  </df>
+                </df>
+                <df name="mzscheme">
+                  <df name="multimap">
+                    <in>example.c</in>
+                    <in>example.i</in>
+                  </df>
+                  <df name="simple">
+                    <in>example.c</in>
+                    <in>example.i</in>
+                  </df>
+                  <df name="std_vector">
+                    <in>example.h</in>
+                    <in>example.i</in>
+                  </df>
+                </df>
+                <df name="ocaml">
+                  <df name="argout_ref">
+                    <in>example.c</in>
+                    <in>example.i</in>
+                  </df>
+                  <df name="contract">
+                    <in>example.i</in>
+                  </df>
+                  <df name="scoped_enum">
+                    <in>example.i</in>
+                    <in>foo.h</in>
+                  </df>
+                  <df name="shapes">
+                    <in>example.c</in>
+                    <in>example.h</in>
+                    <in>example.i</in>
+                  </df>
+                  <df name="simple">
+                    <in>example.c</in>
+                    <in>example.i</in>
+                  </df>
+                  <df name="std_string">
+                    <in>example.h</in>
+                    <in>example.i</in>
+                  </df>
+                  <df name="std_vector">
+                    <in>example.h</in>
+                    <in>example.i</in>
+                  </df>
+                  <df name="stl">
+                    <in>example.h</in>
+                    <in>example.i</in>
+                  </df>
+                  <df name="string_from_ptr">
+                    <in>foolib.i</in>
+                  </df>
+                  <df name="strings_test">
+                    <in>example.h</in>
+                    <in>example.i</in>
+                  </df>
+                </df>
+                <df name="octave">
+                  <df name="callback">
+                    <in>example.cxx</in>
+                    <in>example.h</in>
+                    <in>example.i</in>
+                    <in>runme.m</in>
+                  </df>
+                  <df name="class">
+                    <in>example.cxx</in>
+                    <in>example.h</in>
+                    <in>example.i</in>
+                    <in>runme.m</in>
+                  </df>
+                  <df name="constants">
+                    <in>example.i</in>
+                    <in>runme.m</in>
+                  </df>
+                  <df name="contract">
+                    <in>example.c</in>
+                    <in>example.i</in>
+                    <in>runme.m</in>
+                  </df>
+                  <df name="enum">
+                    <in>example.cxx</in>
+                    <in>example.h</in>
+                    <in>example.i</in>
+                    <in>runme.m</in>
+                  </df>
+                  <df name="extend">
+                    <in>example.cxx</in>
+                    <in>example.h</in>
+                    <in>example.i</in>
+                    <in>runme.m</in>
+                  </df>
+                  <df name="funcptr">
+                    <in>example.c</in>
+                    <in>example.h</in>
+                    <in>example.i</in>
+                    <in>runme.m</in>
+                  </df>
+                  <df name="funcptr2">
+                    <in>example.c</in>
+                    <in>example.h</in>
+                    <in>example.i</in>
+                    <in>runme.m</in>
+                  </df>
+                  <df name="functor">
+                    <in>example.i</in>
+                    <in>runme.m</in>
+                  </df>
+                  <df name="operator">
+                    <in>example.h</in>
+                    <in>example.i</in>
+                    <in>runme.m</in>
+                  </df>
+                  <df name="pointer">
+                    <in>example.c</in>
+                    <in>example.i</in>
+                    <in>runme.m</in>
+                  </df>
+                  <df name="reference">
+                    <in>example.cxx</in>
+                    <in>example.h</in>
+                    <in>example.i</in>
+                    <in>runme.m</in>
+                  </df>
+                  <df name="simple">
+                    <in>example.c</in>
+                    <in>example.i</in>
+                    <in>runme.m</in>
+                  </df>
+                  <df name="template">
+                    <in>example.h</in>
+                    <in>example.i</in>
+                    <in>runme.m</in>
+                  </df>
+                  <df name="variables">
+                    <in>example.c</in>
+                    <in>example.h</in>
+                    <in>example.i</in>
+                    <in>runme.m</in>
+                  </df>
+                </df>
+                <df name="perl5">
+                  <df name="class">
+                    <in>example.cxx</in>
+                    <in>example.h</in>
+                    <in>example.i</in>
+                  </df>
+                  <df name="constants">
+                    <in>example.i</in>
+                  </df>
+                  <df name="constants2">
+                    <in>example.i</in>
+                  </df>
+                  <df name="funcptr">
+                    <in>example.c</in>
+                    <in>example.h</in>
+                    <in>example.i</in>
+                  </df>
+                  <df name="import">
+                    <in>bar.h</in>
+                    <in>bar.i</in>
+                    <in>base.h</in>
+                    <in>base.i</in>
+                    <in>foo.h</in>
+                    <in>foo.i</in>
+                    <in>spam.h</in>
+                    <in>spam.i</in>
+                  </df>
+                  <df name="inline">
+                  </df>
+                  <df name="java">
+                    <in>example.i</in>
+                  </df>
+                  <df name="multimap">
+                    <in>example.c</in>
+                    <in>example.i</in>
+                  </df>
+                  <df name="multiple_inheritance">
+                    <in>example.h</in>
+                    <in>example.i</in>
+                  </df>
+                  <df name="pointer">
+                    <in>example.c</in>
+                    <in>example.i</in>
+                  </df>
+                  <df name="reference">
+                    <in>example.cxx</in>
+                    <in>example.h</in>
+                    <in>example.i</in>
+                  </df>
+                  <df name="simple">
+                    <in>example.c</in>
+                    <in>example.i</in>
+                  </df>
+                  <df name="value">
+                    <in>example.c</in>
+                    <in>example.h</in>
+                    <in>example.i</in>
+                  </df>
+                  <df name="variables">
+                    <in>example.c</in>
+                    <in>example.h</in>
+                    <in>example.i</in>
+                  </df>
+                  <df name="xmlstring">
+                    <in>example.cxx</in>
+                    <in>example.h</in>
+                    <in>example.i</in>
+                    <in>xmlstring.i</in>
+                  </df>
+                </df>
+                <df name="php">
+                  <df name="callback">
+                    <in>example.cxx</in>
+                    <in>example.h</in>
+                    <in>example.i</in>
+                  </df>
+                  <df name="class">
+                    <in>example.cxx</in>
+                    <in>example.h</in>
+                    <in>example.i</in>
+                  </df>
+                  <df name="constants">
+                    <in>example.i</in>
+                  </df>
+                  <df name="cpointer">
+                    <in>example.c</in>
+                    <in>example.i</in>
+                  </df>
+                  <df name="disown">
+                    <in>example.cxx</in>
+                    <in>example.h</in>
+                    <in>example.i</in>
+                  </df>
+                  <df name="enum">
+                    <in>example.cxx</in>
+                    <in>example.h</in>
+                    <in>example.i</in>
+                  </df>
+                  <df name="extend">
+                    <in>example.cxx</in>
+                    <in>example.h</in>
+                    <in>example.i</in>
+                  </df>
+                  <df name="funcptr">
+                    <in>example.c</in>
+                    <in>example.h</in>
+                    <in>example.i</in>
+                  </df>
+                  <df name="overloading">
+                    <in>example.cxx</in>
+                    <in>example.h</in>
+                    <in>example.i</in>
+                  </df>
+                  <df name="pointer">
+                    <in>example.c</in>
+                    <in>example.i</in>
+                  </df>
+                  <df name="pragmas">
+                    <in>example.i</in>
+                  </df>
+                  <df name="proxy">
+                    <in>example.cxx</in>
+                    <in>example.h</in>
+                    <in>example.i</in>
+                  </df>
+                  <df name="reference">
+                    <in>example.cxx</in>
+                    <in>example.h</in>
+                    <in>example.i</in>
+                  </df>
+                  <df name="simple">
+                    <in>example.c</in>
+                    <in>example.i</in>
+                  </df>
+                  <df name="sync">
+                    <in>example.cxx</in>
+                    <in>example.h</in>
+                    <in>example.i</in>
+                  </df>
+                  <df name="value">
+                    <in>example.c</in>
+                    <in>example.h</in>
+                    <in>example.i</in>
+                  </df>
+                  <df name="variables">
+                    <in>example.c</in>
+                    <in>example.h</in>
+                    <in>example.i</in>
+                  </df>
+                </df>
+                <df name="pike">
+                  <df name="class">
+                    <in>example.cxx</in>
+                    <in>example.h</in>
+                    <in>example.i</in>
+                  </df>
+                  <df name="constants">
+                    <in>example.i</in>
+                  </df>
+                  <df name="enum">
+                    <in>example.cxx</in>
+                    <in>example.h</in>
+                    <in>example.i</in>
+                  </df>
+                  <df name="overload">
+                    <in>example.cxx</in>
+                    <in>example.h</in>
+                    <in>example.i</in>
+                  </df>
+                  <df name="simple">
+                    <in>example.c</in>
+                    <in>example.i</in>
+                  </df>
+                  <df name="template">
+                    <in>example.h</in>
+                    <in>example.i</in>
+                  </df>
+                </df>
+                <df name="python">
+                  <df name="callback">
+                    <in>example.cxx</in>
+                    <in>example.h</in>
+                    <in>example.i</in>
+                  </df>
+                  <df name="class">
+                    <in>example.cxx</in>
+                    <in>example.h</in>
+                    <in>example.i</in>
+                  </df>
+                  <df name="constants">
+                    <in>example.i</in>
+                  </df>
+                  <df name="contract">
+                    <in>example.c</in>
+                    <in>example.i</in>
+                  </df>
+                  <df name="docstrings">
+                    <in>example.cxx</in>
+                    <in>example.h</in>
+                    <in>example.i</in>
+                  </df>
+                  <df name="enum">
+                    <in>example.cxx</in>
+                    <in>example.h</in>
+                    <in>example.i</in>
+                  </df>
+                  <df name="exception">
+                    <in>example.h</in>
+                    <in>example.i</in>
+                  </df>
+                  <df name="exceptproxy">
+                    <in>example.h</in>
+                    <in>example.i</in>
+                  </df>
+                  <df name="extend">
+                    <in>example.cxx</in>
+                    <in>example.h</in>
+                    <in>example.i</in>
+                  </df>
+                  <df name="funcptr">
+                    <in>example.c</in>
+                    <in>example.h</in>
+                    <in>example.i</in>
+                  </df>
+                  <df name="funcptr2">
+                    <in>example.c</in>
+                    <in>example.h</in>
+                    <in>example.i</in>
+                  </df>
+                  <df name="functor">
+                    <in>example.i</in>
+                  </df>
+                  <df name="import">
+                    <in>bar.h</in>
+                    <in>bar.i</in>
+                    <in>base.h</in>
+                    <in>base.i</in>
+                    <in>foo.h</in>
+                    <in>foo.i</in>
+                    <in>spam.h</in>
+                    <in>spam.i</in>
+                  </df>
+                  <df name="import_template">
+                    <in>bar.h</in>
+                    <in>bar.i</in>
+                    <in>base.h</in>
+                    <in>base.i</in>
+                    <in>foo.h</in>
+                    <in>foo.i</in>
+                    <in>spam.h</in>
+                    <in>spam.i</in>
+                  </df>
+                  <df name="java">
+                    <in>example.i</in>
+                  </df>
+                  <df name="libffi">
+                    <in>example.i</in>
+                  </df>
+                  <df name="multimap">
+                    <in>example.c</in>
+                    <in>example.i</in>
+                  </df>
+                  <df name="operator">
+                    <in>example.h</in>
+                    <in>example.i</in>
+                  </df>
+                  <df name="performance">
+                    <df name="constructor">
+                      <in>Simple.i</in>
+                    </df>
+                    <df name="func">
+                      <in>Simple.i</in>
+                    </df>
+                    <df name="hierarchy">
+                      <in>Simple.i</in>
+                    </df>
+                    <df name="hierarchy_operator">
+                      <in>Simple.i</in>
+                    </df>
+                    <df name="operator">
+                      <in>Simple.i</in>
+                    </df>
+                  </df>
+                  <df name="pointer">
+                    <in>example.c</in>
+                    <in>example.i</in>
+                  </df>
+                  <df name="reference">
+                    <in>example.cxx</in>
+                    <in>example.h</in>
+                    <in>example.i</in>
+                  </df>
+                  <df name="simple">
+                    <in>example.c</in>
+                    <in>example.i</in>
+                  </df>
+                  <df name="smartptr">
+                    <in>example.cxx</in>
+                    <in>example.h</in>
+                    <in>example.i</in>
+                    <in>smartptr.h</in>
+                  </df>
+                  <df name="std_map">
+                    <in>example.h</in>
+                    <in>example.i</in>
+                  </df>
+                  <df name="std_vector">
+                    <in>example.h</in>
+                    <in>example.i</in>
+                  </df>
+                  <df name="swigrun">
+                    <in>example.cxx</in>
+                    <in>example.h</in>
+                    <in>example.i</in>
+                  </df>
+                  <df name="template">
+                    <in>example.h</in>
+                    <in>example.i</in>
+                  </df>
+                  <df name="varargs">
+                    <in>example.i</in>
+                  </df>
+                  <df name="variables">
+                    <in>example.c</in>
+                    <in>example.h</in>
+                    <in>example.i</in>
+                  </df>
+                </df>
+                <df name="r">
+                  <df name="class">
+                    <in>example.cxx</in>
+                    <in>example.h</in>
+                    <in>example.i</in>
+                  </df>
+                  <df name="simple">
+                    <in>example.c</in>
+                    <in>example.i</in>
+                  </df>
+                </df>
+                <df name="ruby">
+                  <df name="class">
+                    <in>example.cxx</in>
+                    <in>example.h</in>
+                    <in>example.i</in>
+                  </df>
+                  <df name="constants">
+                    <in>example.i</in>
+                  </df>
+                  <df name="enum">
+                    <in>example.cxx</in>
+                    <in>example.h</in>
+                    <in>example.i</in>
+                  </df>
+                  <df name="exception_class">
+                    <in>example.h</in>
+                    <in>example.i</in>
+                  </df>
+                  <df name="free_function">
+                    <in>example.cxx</in>
+                    <in>example.h</in>
+                    <in>example.i</in>
+                  </df>
+                  <df name="funcptr">
+                    <in>example.c</in>
+                    <in>example.h</in>
+                    <in>example.i</in>
+                  </df>
+                  <df name="funcptr2">
+                    <in>example.c</in>
+                    <in>example.h</in>
+                    <in>example.i</in>
+                  </df>
+                  <df name="functor">
+                    <in>example.i</in>
+                  </df>
+                  <df name="hashargs">
+                    <in>example.i</in>
+                  </df>
+                  <df name="import">
+                    <in>bar.h</in>
+                    <in>bar.i</in>
+                    <in>base.h</in>
+                    <in>base.i</in>
+                    <in>foo.h</in>
+                    <in>foo.i</in>
+                    <in>spam.h</in>
+                    <in>spam.i</in>
+                  </df>
+                  <df name="import_template">
+                    <in>bar.h</in>
+                    <in>bar.i</in>
+                    <in>base.h</in>
+                    <in>base.i</in>
+                    <in>foo.h</in>
+                    <in>foo.i</in>
+                    <in>spam.h</in>
+                    <in>spam.i</in>
+                  </df>
+                  <df name="java">
+                    <in>example.i</in>
+                  </df>
+                  <df name="mark_function">
+                    <in>example.cxx</in>
+                    <in>example.h</in>
+                    <in>example.i</in>
+                  </df>
+                  <df name="multimap">
+                    <in>example.c</in>
+                    <in>example.i</in>
+                  </df>
+                  <df name="operator">
+                    <in>example.h</in>
+                    <in>example.i</in>
+                  </df>
+                  <df name="overloading">
+                    <in>example.cxx</in>
+                    <in>example.h</in>
+                    <in>example.i</in>
+                  </df>
+                  <df name="pointer">
+                    <in>example.c</in>
+                    <in>example.i</in>
+                  </df>
+                  <df name="reference">
+                    <in>example.cxx</in>
+                    <in>example.h</in>
+                    <in>example.i</in>
+                  </df>
+                  <df name="simple">
+                    <in>example.c</in>
+                    <in>example.i</in>
+                  </df>
+                  <df name="std_vector">
+                    <in>example.h</in>
+                    <in>example.i</in>
+                  </df>
+                  <df name="template">
+                    <in>example.h</in>
+                    <in>example.i</in>
+                  </df>
+                  <df name="value">
+                    <in>example.c</in>
+                    <in>example.h</in>
+                    <in>example.i</in>
+                  </df>
+                  <df name="variables">
+                    <in>example.c</in>
+                    <in>example.h</in>
+                    <in>example.i</in>
+                  </df>
+                </df>
+                <df name="s-exp">
+                </df>
+                <df name="tcl">
+                  <df name="class">
+                    <in>example.cxx</in>
+                    <in>example.h</in>
+                    <in>example.i</in>
+                  </df>
+                  <df name="constants">
+                    <in>example.i</in>
+                  </df>
+                  <df name="contract">
+                    <in>example.c</in>
+                    <in>example.i</in>
+                  </df>
+                  <df name="enum">
+                    <in>example.cxx</in>
+                    <in>example.h</in>
+                    <in>example.i</in>
+                  </df>
+                  <df name="funcptr">
+                    <in>example.c</in>
+                    <in>example.h</in>
+                    <in>example.i</in>
+                  </df>
+                  <df name="import">
+                    <in>bar.h</in>
+                    <in>bar.i</in>
+                    <in>base.h</in>
+                    <in>base.i</in>
+                    <in>foo.h</in>
+                    <in>foo.i</in>
+                    <in>spam.h</in>
+                    <in>spam.i</in>
+                  </df>
+                  <df name="java">
+                    <in>example.i</in>
+                  </df>
+                  <df name="multimap">
+                    <in>example.c</in>
+                    <in>example.i</in>
+                  </df>
+                  <df name="operator">
+                    <in>example.h</in>
+                    <in>example.i</in>
+                  </df>
+                  <df name="pointer">
+                    <in>example.c</in>
+                    <in>example.i</in>
+                  </df>
+                  <df name="reference">
+                    <in>example.cxx</in>
+                    <in>example.h</in>
+                    <in>example.i</in>
+                  </df>
+                  <df name="simple">
+                    <in>example.c</in>
+                    <in>example.i</in>
+                  </df>
+                  <df name="std_vector">
+                    <in>example.h</in>
+                    <in>example.i</in>
+                  </df>
+                  <df name="value">
+                    <in>example.c</in>
+                    <in>example.h</in>
+                    <in>example.i</in>
+                  </df>
+                  <df name="variables">
+                    <in>example.c</in>
+                    <in>example.h</in>
+                    <in>example.i</in>
+                  </df>
+                </df>
+                <df name="test-suite">
+                  <df name="allegrocl">
+                  </df>
+                  <df name="cffi">
+                  </df>
+                  <df name="chicken">
+                    <in>ext_test_external.cxx</in>
+                  </df>
+                  <df name="clisp">
+                  </df>
+                  <df name="csharp">
+                  </df>
+                  <df name="d">
+                  </df>
+                  <df name="errors">
+                    <in>c_bad_name.i</in>
+                    <in>c_bad_native.i</in>
+                    <in>c_class.i</in>
+                    <in>c_default_error.i</in>
+                    <in>c_deprecated.i</in>
+                    <in>c_empty_char.i</in>
+                    <in>c_enum_badvalue.i</in>
+                    <in>c_extra_rblock.i</in>
+                    <in>c_extra_rbrace.i</in>
+                    <in>c_extra_unsigned.i</in>
+                    <in>c_insert_missing.i</in>
+                    <in>c_long_short.i</in>
+                    <in>c_missing_rbrace.i</in>
+                    <in>c_missing_semi.i</in>
+                    <in>c_redefine.i</in>
+                    <in>c_varargs.i</in>
+                    <in>c_varargs_neg.i</in>
+                    <in>cpp_bad_extern.i</in>
+                    <in>cpp_extend_redefine.i</in>
+                    <in>cpp_extend_undefined.i</in>
+                    <in>cpp_inherit.i</in>
+                    <in>cpp_inline_namespace.i</in>
+                    <in>cpp_macro_locator.i</in>
+                    <in>cpp_missing_rtemplate.i</in>
+                    <in>cpp_namespace_alias.i</in>
+                    <in>cpp_namespace_aliasnot.i</in>
+                    <in>cpp_namespace_aliasundef.i</in>
+                    <in>cpp_nested.i</in>
+                    <in>cpp_no_access.i</in>
+                    <in>cpp_nobase.i</in>
+                    <in>cpp_overload.i</in>
+                    <in>cpp_overload_const.i</in>
+                    <in>cpp_private_defvalue.i</in>
+                    <in>cpp_private_inherit.i</in>
+                    <in>cpp_recursive_typedef.i</in>
+                    <in>cpp_shared_ptr.i</in>
+                    <in>cpp_template_argname.i</in>
+                    <in>cpp_template_nargs.i</in>
+                    <in>cpp_template_not.i</in>
+                    <in>cpp_template_partial.i</in>
+                    <in>cpp_template_repeat.i</in>
+                    <in>cpp_template_undef.i</in>
+                    <in>cpp_using_not.i</in>
+                    <in>cpp_using_undef.i</in>
+                    <in>nomodule.i</in>
+                    <in>pp_badeval.i</in>
+                    <in>pp_constant.i</in>
+                    <in>pp_defined.i</in>
+                    <in>pp_deprecated.i</in>
+                    <in>pp_illegal_argument.i</in>
+                    <in>pp_macro_args.i</in>
+                    <in>pp_macro_badchar.i</in>
+                    <in>pp_macro_defined_unterminated.i</in>
+                    <in>pp_macro_expansion.i</in>
+                    <in>pp_macro_expansion_multiline.i</in>
+                    <in>pp_macro_inline_unterminated.i</in>
+                    <in>pp_macro_missing_expression.i</in>
+                    <in>pp_macro_nargs.i</in>
+                    <in>pp_macro_redef.i</in>
+                    <in>pp_macro_rparen.i</in>
+                    <in>pp_macro_unexpected_tokens.i</in>
+                    <in>pp_macro_unterminated.i</in>
+                    <in>pp_misplaced_elif.i</in>
+                    <in>pp_misplaced_else.i</in>
+                    <in>pp_missing_enddef.i</in>
+                    <in>pp_missing_endif.i</in>
+                    <in>pp_missing_file.i</in>
+                    <in>pp_missing_rblock.i</in>
+                    <in>pp_pragma.i</in>
+                    <in>pp_unterm_char.i</in>
+                    <in>pp_unterm_comment.i</in>
+                    <in>pp_unterm_string.i</in>
+                    <in>pp_variable_args.i</in>
+                    <in>swig_apply_nargs.i</in>
+                    <in>swig_identifier.i</in>
+                    <in>swig_insert_bad.i</in>
+                    <in>swig_typemap_copy.i</in>
+                    <in>swig_typemap_old.i</in>
+                  </df>
+                  <df name="go">
+                  </df>
+                  <df name="guile">
+                  </df>
+                  <df name="guilescm">
+                    <in>ext_test_external.cxx</in>
+                  </df>
+                  <df name="java">
+                  </df>
+                  <df name="lua">
+                  </df>
+                  <df name="mzscheme">
+                  </df>
+                  <df name="ocaml">
+                  </df>
+                  <df name="octave">
+                    <in>abstract_access_runme.m</in>
+                    <in>abstract_typedef2_runme.m</in>
+                    <in>abstract_typedef_runme.m</in>
+                    <in>abstract_virtual_runme.m</in>
+                    <in>argcargvtest_runme.m</in>
+                    <in>array_member_runme.m</in>
+                    <in>arrays_global_runme.m</in>
+                    <in>callback_runme.m</in>
+                    <in>class_ignore_runme.m</in>
+                    <in>class_scope_weird_runme.m</in>
+                    <in>compactdefaultargs_runme.m</in>
+                    <in>complextest_runme.m</in>
+                    <in>constover_runme.m</in>
+                    <in>constructor_copy_runme.m</in>
+                    <in>contract_runme.m</in>
+                    <in>cpp_enum_runme.m</in>
+                    <in>cpp_namespace_runme.m</in>
+                    <in>default_args_runme.m</in>
+                    <in>default_constructor_runme.m</in>
+                    <in>director_abstract_runme.m</in>
+                    <in>director_basic_runme.m</in>
+                    <in>director_classic_runme.m</in>
+                    <in>director_default_runme.m</in>
+                    <in>director_detect_runme.m</in>
+                    <in>director_enum_runme.m</in>
+                    <in>director_extend_runme.m</in>
+                    <in>director_frob_runme.m</in>
+                    <in>director_nested_runme.m</in>
+                    <in>director_stl_runme.m</in>
+                    <in>director_string_runme.m</in>
+                    <in>director_unroll_runme.m</in>
+                    <in>director_wstring_runme.m</in>
+                    <in>dynamic_cast_runme.m</in>
+                    <in>empty_runme.m</in>
+                    <in>enum_template_runme.m</in>
+                    <in>enums_runme.m</in>
+                    <in>exception_order_runme.m</in>
+                    <in>extend_placement_runme.m</in>
+                    <in>extend_template_ns_runme.m</in>
+                    <in>extend_template_runme.m</in>
+                    <in>extend_variable_runme.m</in>
+                    <in>file_test_runme.m</in>
+                    <in>friends_runme.m</in>
+                    <in>fvirtual_runme.m</in>
+                    <in>global_ns_arg_runme.m</in>
+                    <in>grouping_runme.m</in>
+                    <in>iadd_runme.m</in>
+                    <in>import_nomodule_runme.m</in>
+                    <in>imports_runme.m</in>
+                    <in>inctest_runme.m</in>
+                    <in>inherit_missing_runme.m</in>
+                    <in>inout_runme.m</in>
+                    <in>inplaceadd_runme.m</in>
+                    <in>input_runme.m</in>
+                    <in>li_attribute_runme.m</in>
+                    <in>li_carrays_runme.m</in>
+                    <in>li_cmalloc_runme.m</in>
+                    <in>li_cpointer_runme.m</in>
+                    <in>li_cstring_runme.m</in>
+                    <in>li_cwstring_runme.m</in>
+                    <in>li_factory_runme.m</in>
+                    <in>li_implicit_runme.m</in>
+                    <in>li_std_carray_runme.m</in>
+                    <in>li_std_pair_extra_runme.m</in>
+                    <in>li_std_set_runme.m</in>
+                    <in>li_std_stream_runme.m</in>
+                    <in>li_std_string_extra_runme.m</in>
+                    <in>li_std_vector_runme.m</in>
+                    <in>li_std_wstream_runme.m</in>
+                    <in>li_std_wstring_runme.m</in>
+                    <in>member_pointer_runme.m</in>
+                    <in>minherit_runme.m</in>
+                    <in>mod_runme.m</in>
+                    <in>multi_import_runme.m</in>
+                    <in>namespace_class_runme.m</in>
+                    <in>namespace_typemap_runme.m</in>
+                    <in>namespace_virtual_method_runme.m</in>
+                    <in>naturalvar_runme.m</in>
+                    <in>nondynamic_runme.m</in>
+                    <in>null_pointer_runme.m</in>
+                    <in>octave_cell_deref_runme.m</in>
+                    <in>octave_empty.c</in>
+                    <in>overload_complicated_runme.m</in>
+                    <in>overload_copy_runme.m</in>
+                    <in>overload_extend_runme.m</in>
+                    <in>overload_extendc_runme.m</in>
+                    <in>overload_rename_runme.m</in>
+                    <in>overload_simple_cast_runme.m</in>
+                    <in>overload_simple_runme.m</in>
+                    <in>overload_subtype_runme.m</in>
+                    <in>overload_template_fast_runme.m</in>
+                    <in>overload_template_runme.m</in>
+                    <in>preproc_constants_runme.m</in>
+                    <in>preproc_runme.m</in>
+                    <in>primitive_ref_runme.m</in>
+                    <in>profiletest_runme.m</in>
+                    <in>refcount_runme.m</in>
+                    <in>reference_global_vars_runme.m</in>
+                    <in>rename_scope_runme.m</in>
+                    <in>ret_by_value_runme.m</in>
+                    <in>return_const_value_runme.m</in>
+                    <in>samename_runme.m</in>
+                    <in>smart_pointer_extend_runme.m</in>
+                    <in>smart_pointer_member_runme.m</in>
+                    <in>smart_pointer_multi_runme.m</in>
+                    <in>smart_pointer_multi_typedef_runme.m</in>
+                    <in>smart_pointer_not_runme.m</in>
+                    <in>smart_pointer_overload_runme.m</in>
+                    <in>smart_pointer_rename_runme.m</in>
+                    <in>smart_pointer_simple_runme.m</in>
+                    <in>smart_pointer_templatevariables_runme.m</in>
+                    <in>smart_pointer_typedef_runme.m</in>
+                    <in>sneaky1_runme.m</in>
+                    <in>static_const_member_2_runme.m</in>
+                    <in>std_containers_runme.m</in>
+                    <in>struct_rename_runme.m</in>
+                    <in>struct_value_runme.m</in>
+                    <in>swigobject_runme.m</in>
+                    <in>template_construct_runme.m</in>
+                    <in>template_default_arg_runme.m</in>
+                    <in>template_extend1_runme.m</in>
+                    <in>template_extend2_runme.m</in>
+                    <in>template_inherit_runme.m</in>
+                    <in>template_matrix_runme.m</in>
+                    <in>template_ns4_runme.m</in>
+                    <in>template_ns_runme.m</in>
+                    <in>template_opaque_runme.m</in>
+                    <in>template_ref_type_runme.m</in>
+                    <in>template_rename_runme.m</in>
+                    <in>template_static_runme.m</in>
+                    <in>template_tbase_template_runme.m</in>
+                    <in>template_type_namespace_runme.m</in>
+                    <in>template_typedef_cplx2_runme.m</in>
+                    <in>template_typedef_cplx3_runme.m</in>
+                    <in>template_typedef_cplx4_runme.m</in>
+                    <in>template_typedef_cplx_runme.m</in>
+                    <in>template_typedef_import_runme.m</in>
+                    <in>template_typedef_runme.m</in>
+                    <in>typedef_class_runme.m</in>
+                    <in>typedef_inherit_runme.m</in>
+                    <in>typedef_scope_runme.m</in>
+                    <in>typemap_namespace_runme.m</in>
+                    <in>typemap_ns_using_runme.m</in>
+                    <in>typename_runme.m</in>
+                    <in>types_directive_runme.m</in>
+                    <in>unions_runme.m</in>
+                    <in>using1_runme.m</in>
+                    <in>using2_runme.m</in>
+                    <in>using_composition_runme.m</in>
+                    <in>using_extend_runme.m</in>
+                    <in>using_inherit_runme.m</in>
+                    <in>using_private_runme.m</in>
+                    <in>using_protected_runme.m</in>
+                    <in>varargs_runme.m</in>
+                    <in>virtual_derivation_runme.m</in>
+                    <in>virtual_poly_runme.m</in>
+                    <in>voidtest_runme.m</in>
+                    <in>wrapmacro_runme.m</in>
+                  </df>
+                  <df name="perl5">
+                    <df name="Test">
+                    </df>
+                  </df>
+                  <df name="php">
+                  </df>
+                  <df name="pike">
+                  </df>
+                  <df name="python">
+                  </df>
+                  <df name="r">
+                  </df>
+                  <df name="ruby">
+                  </df>
+                  <df name="schemerunme">
+                  </df>
+                  <df name="tcl">
+                  </df>
+                  <df name="testdir">
+                    <df name="subdir1">
+                      <in>hello.i</in>
+                      <in>imports.i</in>
+                      <in>subinc1.i</in>
+                    </df>
+                    <df name="subdir2">
+                      <in>hello.i</in>
+                      <in>imports.i</in>
+                      <in>subinc2.i</in>
+                    </df>
+                    <in>test.i</in>
+                  </df>
+                  <df name="uffi">
+                  </df>
+                  <in>abstract_access.i</in>
+                  <in>abstract_inherit.i</in>
+                  <in>abstract_inherit_ok.i</in>
+                  <in>abstract_signature.i</in>
+                  <in>abstract_typedef.i</in>
+                  <in>abstract_typedef2.i</in>
+                  <in>abstract_virtual.i</in>
+                  <in>access_change.i</in>
+                  <in>add_link.i</in>
+                  <in>aggregate.i</in>
+                  <in>allowexcept.i</in>
+                  <in>allprotected.i</in>
+                  <in>anonymous_bitfield.i</in>
+                  <in>apply_signed_char.i</in>
+                  <in>apply_strings.i</in>
+                  <in>argcargvtest.i</in>
+                  <in>argout.i</in>
+                  <in>array_member.i</in>
+                  <in>array_typedef_memberin.i</in>
+                  <in>arrayref.i</in>
+                  <in>arrays.i</in>
+                  <in>arrays_dimensionless.i</in>
+                  <in>arrays_global.i</in>
+                  <in>arrays_global_twodim.i</in>
+                  <in>arrays_scope.i</in>
+                  <in>bloody_hell.i</in>
+                  <in>bools.i</in>
+                  <in>callback.i</in>
+                  <in>cast_operator.i</in>
+                  <in>casts.i</in>
+                  <in>catches.i</in>
+                  <in>char_binary.i</in>
+                  <in>char_constant.i</in>
+                  <in>char_strings.i</in>
+                  <in>chicken_ext_test.i</in>
+                  <in>class_ignore.i</in>
+                  <in>class_scope_weird.i</in>
+                  <in>clientdata_prop_a.h</in>
+                  <in>clientdata_prop_a.i</in>
+                  <in>clientdata_prop_b.h</in>
+                  <in>clientdata_prop_b.i</in>
+                  <in>compactdefaultargs.i</in>
+                  <in>complextest.i</in>
+                  <in>const_const.i</in>
+                  <in>const_const_2.i</in>
+                  <in>constant_expr.i</in>
+                  <in>constant_pointers.i</in>
+                  <in>constants.i</in>
+                  <in>constover.i</in>
+                  <in>constructor_copy.i</in>
+                  <in>constructor_exception.i</in>
+                  <in>constructor_explicit.i</in>
+                  <in>constructor_ignore.i</in>
+                  <in>constructor_rename.i</in>
+                  <in>constructor_value.i</in>
+                  <in>contract.i</in>
+                  <in>conversion.i</in>
+                  <in>conversion_namespace.i</in>
+                  <in>conversion_ns_template.i</in>
+                  <in>cplusplus_throw.i</in>
+                  <in>cpp_basic.i</in>
+                  <in>cpp_broken.i</in>
+                  <in>cpp_enum.i</in>
+                  <in>cpp_namespace.i</in>
+                  <in>cpp_nodefault.i</in>
+                  <in>cpp_static.i</in>
+                  <in>cpp_typedef.i</in>
+                  <in>csharp_attributes.i</in>
+                  <in>csharp_exceptions.i</in>
+                  <in>csharp_features.i</in>
+                  <in>csharp_lib_arrays.i</in>
+                  <in>csharp_prepost.i</in>
+                  <in>csharp_typemaps.i</in>
+                  <in>d_exception_name.i</in>
+                  <in>d_nativepointers.i</in>
+                  <in>default_arg_values.i</in>
+                  <in>default_args.i</in>
+                  <in>default_constructor.i</in>
+                  <in>defvalue_constructor.i</in>
+                  <in>derived_byvalue.i</in>
+                  <in>derived_nested.i</in>
+                  <in>destructor_reprotected.i</in>
+                  <in>director_abstract.i</in>
+                  <in>director_alternating.i</in>
+                  <in>director_basic.i</in>
+                  <in>director_classes.i</in>
+                  <in>director_classic.i</in>
+                  <in>director_constructor.i</in>
+                  <in>director_default.i</in>
+                  <in>director_detect.i</in>
+                  <in>director_enum.i</in>
+                  <in>director_exception.i</in>
+                  <in>director_extend.i</in>
+                  <in>director_finalizer.i</in>
+                  <in>director_frob.i</in>
+                  <in>director_ignore.i</in>
+                  <in>director_keywords.i</in>
+                  <in>director_namespace_clash.i</in>
+                  <in>director_nested.i</in>
+                  <in>director_overload.i</in>
+                  <in>director_primitives.i</in>
+                  <in>director_profile.i</in>
+                  <in>director_protected.i</in>
+                  <in>director_protected_overloaded.i</in>
+                  <in>director_redefined.i</in>
+                  <in>director_stl.i</in>
+                  <in>director_string.i</in>
+                  <in>director_thread.i</in>
+                  <in>director_unroll.i</in>
+                  <in>director_using.i</in>
+                  <in>director_wombat.i</in>
+                  <in>director_wstring.i</in>
+                  <in>disown.i</in>
+                  <in>dynamic_cast.i</in>
+                  <in>empty.i</in>
+                  <in>enum_plus.i</in>
+                  <in>enum_rename.i</in>
+                  <in>enum_scope_template.i</in>
+                  <in>enum_template.i</in>
+                  <in>enum_thorough.i</in>
+                  <in>enum_thorough_proper.i</in>
+                  <in>enum_thorough_simple.i</in>
+                  <in>enum_thorough_typesafe.i</in>
+                  <in>enum_thorough_typeunsafe.i</in>
+                  <in>enum_var.i</in>
+                  <in>enums.i</in>
+                  <in>evil_diamond.i</in>
+                  <in>evil_diamond_ns.i</in>
+                  <in>evil_diamond_prop.i</in>
+                  <in>exception_order.i</in>
+                  <in>exception_partial_info.i</in>
+                  <in>expressions.i</in>
+                  <in>extend.i</in>
+                  <in>extend_default.i</in>
+                  <in>extend_placement.i</in>
+                  <in>extend_template.i</in>
+                  <in>extend_template_ns.i</in>
+                  <in>extend_variable.i</in>
+                  <in>extern_c.i</in>
+                  <in>extern_declaration.i</in>
+                  <in>extern_namespace.i</in>
+                  <in>extern_throws.i</in>
+                  <in>features.i</in>
+                  <in>file_test.i</in>
+                  <in>fragments.i</in>
+                  <in>friends.i</in>
+                  <in>funcptr.i</in>
+                  <in>funcptr_cpp.i</in>
+                  <in>function_typedef.i</in>
+                  <in>fvirtual.i</in>
+                  <in>global_namespace.i</in>
+                  <in>global_ns_arg.i</in>
+                  <in>global_scope_types.i</in>
+                  <in>global_vars.i</in>
+                  <in>grouping.i</in>
+                  <in>guilescm_ext_test.i</in>
+                  <in>iadd.i</in>
+                  <in>ignore_parameter.i</in>
+                  <in>ignore_template_constructor.i</in>
+                  <in>immutable_values.i</in>
+                  <in>implicittest.i</in>
+                  <in>import_nomodule.h</in>
+                  <in>import_nomodule.i</in>
+                  <in>import_stl_a.i</in>
+                  <in>import_stl_b.i</in>
+                  <in>imports_a.h</in>
+                  <in>imports_a.i</in>
+                  <in>imports_b.h</in>
+                  <in>imports_b.i</in>
+                  <in>inctest.h</in>
+                  <in>inctest.i</in>
+                  <in>inherit.i</in>
+                  <in>inherit_missing.i</in>
+                  <in>inherit_same_name.i</in>
+                  <in>inherit_target_language.i</in>
+                  <in>inherit_void_arg.i</in>
+                  <in>inline_initializer.i</in>
+                  <in>inout.i</in>
+                  <in>inplaceadd.i</in>
+                  <in>input.i</in>
+                  <in>insert_directive.i</in>
+                  <in>integers.i</in>
+                  <in>intermediary_classname.i</in>
+                  <in>java_constants.i</in>
+                  <in>java_director.i</in>
+                  <in>java_enums.i</in>
+                  <in>java_jnitypes.i</in>
+                  <in>java_lib_arrays.i</in>
+                  <in>java_lib_arrays_dimensionless.i</in>
+                  <in>java_lib_various.i</in>
+                  <in>java_pgcpp.i</in>
+                  <in>java_pragmas.i</in>
+                  <in>java_prepost.i</in>
+                  <in>java_throws.i</in>
+                  <in>java_typemaps_proxy.i</in>
+                  <in>java_typemaps_typewrapper.i</in>
+                  <in>keyword_rename.i</in>
+                  <in>kind.i</in>
+                  <in>langobj.i</in>
+                  <in>lextype.i</in>
+                  <in>li_attribute.i</in>
+                  <in>li_boost_intrusive_ptr.i</in>
+                  <in>li_boost_shared_ptr.i</in>
+                  <in>li_boost_shared_ptr_bits.i</in>
+                  <in>li_carrays.i</in>
+                  <in>li_cdata.i</in>
+                  <in>li_cdata_carrays.i</in>
+                  <in>li_cmalloc.i</in>
+                  <in>li_constraints.i</in>
+                  <in>li_cpointer.i</in>
+                  <in>li_cstring.i</in>
+                  <in>li_cwstring.i</in>
+                  <in>li_factory.i</in>
+                  <in>li_implicit.i</in>
+                  <in>li_math.i</in>
+                  <in>li_reference.i</in>
+                  <in>li_std_carray.i</in>
+                  <in>li_std_combinations.i</in>
+                  <in>li_std_deque.i</in>
+                  <in>li_std_except.i</in>
+                  <in>li_std_functors.i</in>
+                  <in>li_std_list.i</in>
+                  <in>li_std_map.i</in>
+                  <in>li_std_map_member.i</in>
+                  <in>li_std_multimap.i</in>
+                  <in>li_std_pair.i</in>
+                  <in>li_std_pair_extra.i</in>
+                  <in>li_std_pair_lang_object.i</in>
+                  <in>li_std_queue.i</in>
+                  <in>li_std_set.i</in>
+                  <in>li_std_stack.i</in>
+                  <in>li_std_stream.i</in>
+                  <in>li_std_string.i</in>
+                  <in>li_std_string_extra.i</in>
+                  <in>li_std_vector.i</in>
+                  <in>li_std_vector_extra.i</in>
+                  <in>li_std_vector_ptr.i</in>
+                  <in>li_std_vectora.i</in>
+                  <in>li_std_wstream.i</in>
+                  <in>li_std_wstring.i</in>
+                  <in>li_stdint.i</in>
+                  <in>li_typemaps.i</in>
+                  <in>li_typemaps_apply.i</in>
+                  <in>li_windows.i</in>
+                  <in>list_vector.i</in>
+                  <in>long_long.i</in>
+                  <in>long_long_apply.i</in>
+                  <in>member_funcptr_galore.i</in>
+                  <in>member_pointer.i</in>
+                  <in>member_template.i</in>
+                  <in>memberin1.i</in>
+                  <in>memberin_extend.i</in>
+                  <in>memberin_extend_c.i</in>
+                  <in>minherit.i</in>
+                  <in>minherit2.i</in>
+                  <in>mixed_types.i</in>
+                  <in>mod.h</in>
+                  <in>mod_a.i</in>
+                  <in>mod_b.i</in>
+                  <in>multi_import.h</in>
+                  <in>multi_import_a.i</in>
+                  <in>multi_import_b.i</in>
+                  <in>multi_import_c.i</in>
+                  <in>multiple_inheritance.i</in>
+                  <in>multivalue.i</in>
+                  <in>name.i</in>
+                  <in>name_cxx.i</in>
+                  <in>name_warnings.i</in>
+                  <in>namespace_class.i</in>
+                  <in>namespace_enum.i</in>
+                  <in>namespace_extend.i</in>
+                  <in>namespace_nested.i</in>
+                  <in>namespace_spaces.i</in>
+                  <in>namespace_template.i</in>
+                  <in>namespace_typedef_class.i</in>
+                  <in>namespace_typemap.i</in>
+                  <in>namespace_union.i</in>
+                  <in>namespace_virtual_method.i</in>
+                  <in>naturalvar.i</in>
+                  <in>nested.i</in>
+                  <in>nested_class.i</in>
+                  <in>nested_comment.i</in>
+                  <in>nested_structs.i</in>
+                  <in>nested_workaround.i</in>
+                  <in>newobject1.i</in>
+                  <in>newobject2.i</in>
+                  <in>nspace.i</in>
+                  <in>nspace_extend.i</in>
+                  <in>null_pointer.i</in>
+                  <in>octave_cell_deref.i</in>
+                  <in>operator_overload.i</in>
+                  <in>operator_overload_break.i</in>
+                  <in>operator_pointer_ref.i</in>
+                  <in>operbool.i</in>
+                  <in>ordering.i</in>
+                  <in>overload_complicated.i</in>
+                  <in>overload_copy.i</in>
+                  <in>overload_extend.i</in>
+                  <in>overload_extendc.i</in>
+                  <in>overload_rename.i</in>
+                  <in>overload_return_type.i</in>
+                  <in>overload_simple.i</in>
+                  <in>overload_subtype.i</in>
+                  <in>overload_template.i</in>
+                  <in>overload_template_fast.i</in>
+                  <in>packageoption.h</in>
+                  <in>packageoption_a.i</in>
+                  <in>packageoption_b.i</in>
+                  <in>packageoption_c.i</in>
+                  <in>php_namewarn_rename.i</in>
+                  <in>pointer_in_out.i</in>
+                  <in>pointer_reference.i</in>
+                  <in>prefix.i</in>
+                  <in>preproc.i</in>
+                  <in>preproc_constants.i</in>
+                  <in>preproc_constants_c.i</in>
+                  <in>preproc_defined.i</in>
+                  <in>preproc_include.i</in>
+                  <in>preproc_include_a.h</in>
+                  <in>preproc_include_b.h</in>
+                  <in>preproc_include_c.h</in>
+                  <in>preproc_include_d withspace.h</in>
+                  <in>preproc_include_e withspace.h</in>
+                  <in>preproc_include_f withspace.h</in>
+                  <in>preproc_include_g.h</in>
+                  <in>preproc_line_file.i</in>
+                  <in>primitive_ref.i</in>
+                  <in>primitive_types.i</in>
+                  <in>private_assign.i</in>
+                  <in>profiletest.i</in>
+                  <in>protected_rename.i</in>
+                  <in>pure_virtual.i</in>
+                  <in>python_abstractbase.i</in>
+                  <in>python_append.i</in>
+                  <in>python_autodoc.i</in>
+                  <in>python_kwargs.i</in>
+                  <in>python_nondynamic.i</in>
+                  <in>python_overload_simple_cast.i</in>
+                  <in>python_pybuf.i</in>
+                  <in>python_richcompare.i</in>
+                  <in>python_varargs_typemap.i</in>
+                  <in>r_copy_struct.i</in>
+                  <in>r_double_delete.i</in>
+                  <in>r_legacy.i</in>
+                  <in>redefined.i</in>
+                  <in>refcount.h</in>
+                  <in>refcount.i</in>
+                  <in>reference_global_vars.i</in>
+                  <in>register_par.i</in>
+                  <in>rename.h</in>
+                  <in>rename1.i</in>
+                  <in>rename2.i</in>
+                  <in>rename3.i</in>
+                  <in>rename4.i</in>
+                  <in>rename_camel.i</in>
+                  <in>rename_pcre_encoder.i</in>
+                  <in>rename_pcre_enum.i</in>
+                  <in>rename_scope.i</in>
+                  <in>rename_simple.i</in>
+                  <in>rename_strip_encoder.i</in>
+                  <in>restrict_cplusplus.i</in>
+                  <in>ret_by_value.i</in>
+                  <in>return_const_value.i</in>
+                  <in>return_value_scope.i</in>
+                  <in>rname.i</in>
+                  <in>ruby_keywords.i</in>
+                  <in>ruby_li_std_speed.i</in>
+                  <in>ruby_naming.i</in>
+                  <in>ruby_track_objects.i</in>
+                  <in>ruby_track_objects_directors.i</in>
+                  <in>samename.i</in>
+                  <in>shared_ptr_wrapper.h</in>
+                  <in>simple_array.i</in>
+                  <in>simutry.i</in>
+                  <in>sizeof_pointer.i</in>
+                  <in>sizet.i</in>
+                  <in>smart_pointer_const.i</in>
+                  <in>smart_pointer_const2.i</in>
+                  <in>smart_pointer_const_overload.i</in>
+                  <in>smart_pointer_extend.i</in>
+                  <in>smart_pointer_inherit.i</in>
+                  <in>smart_pointer_member.i</in>
+                  <in>smart_pointer_multi.i</in>
+                  <in>smart_pointer_multi_typedef.i</in>
+                  <in>smart_pointer_namespace.i</in>
+                  <in>smart_pointer_namespace2.i</in>
+                  <in>smart_pointer_not.i</in>
+                  <in>smart_pointer_overload.i</in>
+                  <in>smart_pointer_protected.i</in>
+                  <in>smart_pointer_rename.i</in>
+                  <in>smart_pointer_simple.i</in>
+                  <in>smart_pointer_static.i</in>
+                  <in>smart_pointer_template_const_overload.i</in>
+                  <in>smart_pointer_templatemethods.i</in>
+                  <in>smart_pointer_templatevariables.i</in>
+                  <in>smart_pointer_typedef.i</in>
+                  <in>sneaky1.i</in>
+                  <in>special_variable_macros.i</in>
+                  <in>special_variables.i</in>
+                  <in>static_array_member.i</in>
+                  <in>static_const_member.i</in>
+                  <in>static_const_member_2.i</in>
+                  <in>std_containers.i</in>
+                  <in>stl_new.i</in>
+                  <in>struct_initialization.i</in>
+                  <in>struct_initialization_cpp.i</in>
+                  <in>struct_rename.i</in>
+                  <in>struct_value.i</in>
+                  <in>swig_examples_lock.h</in>
+                  <in>swigobject.i</in>
+                  <in>sym.i</in>
+                  <in>symbol_clash.i</in>
+                  <in>tag_no_clash_with_variable.i</in>
+                  <in>template_arg_replace.i</in>
+                  <in>template_arg_scope.i</in>
+                  <in>template_arg_typename.i</in>
+                  <in>template_array_numeric.i</in>
+                  <in>template_base_template.i</in>
+                  <in>template_basic.i</in>
+                  <in>template_classes.i</in>
+                  <in>template_const_ref.i</in>
+                  <in>template_construct.i</in>
+                  <in>template_default.i</in>
+                  <in>template_default2.i</in>
+                  <in>template_default_arg.i</in>
+                  <in>template_default_class_parms.i</in>
+                  <in>template_default_inherit.i</in>
+                  <in>template_default_pointer.i</in>
+                  <in>template_default_qualify.i</in>
+                  <in>template_default_vw.i</in>
+                  <in>template_enum.i</in>
+                  <in>template_enum_ns_inherit.i</in>
+                  <in>template_enum_typedef.i</in>
+                  <in>template_explicit.i</in>
+                  <in>template_expr.i</in>
+                  <in>template_extend1.i</in>
+                  <in>template_extend2.i</in>
+                  <in>template_extend_overload.i</in>
+                  <in>template_extend_overload_2.i</in>
+                  <in>template_forward.i</in>
+                  <in>template_inherit.i</in>
+                  <in>template_inherit_abstract.i</in>
+                  <in>template_int_const.i</in>
+                  <in>template_matrix.i</in>
+                  <in>template_methods.i</in>
+                  <in>template_nested.i</in>
+                  <in>template_nested_typemaps.i</in>
+                  <in>template_ns.i</in>
+                  <in>template_ns2.i</in>
+                  <in>template_ns3.i</in>
+                  <in>template_ns4.i</in>
+                  <in>template_ns_enum.i</in>
+                  <in>template_ns_enum2.i</in>
+                  <in>template_ns_inherit.i</in>
+                  <in>template_ns_scope.i</in>
+                  <in>template_opaque.i</in>
+                  <in>template_partial_arg.i</in>
+                  <in>template_partial_specialization.i</in>
+                  <in>template_partial_specialization_typedef.i</in>
+                  <in>template_qualifier.i</in>
+                  <in>template_ref_type.i</in>
+                  <in>template_rename.i</in>
+                  <in>template_retvalue.i</in>
+                  <in>template_specialization.i</in>
+                  <in>template_specialization_defarg.i</in>
+                  <in>template_specialization_enum.i</in>
+                  <in>template_static.i</in>
+                  <in>template_tbase_template.i</in>
+                  <in>template_template_parameters.i</in>
+                  <in>template_type_namespace.i</in>
+                  <in>template_typedef.i</in>
+                  <in>template_typedef_cplx.i</in>
+                  <in>template_typedef_cplx2.h</in>
+                  <in>template_typedef_cplx2.i</in>
+                  <in>template_typedef_cplx3.i</in>
+                  <in>template_typedef_cplx4.i</in>
+                  <in>template_typedef_cplx5.i</in>
+                  <in>template_typedef_fnc.i</in>
+                  <in>template_typedef_funcptr.i</in>
+                  <in>template_typedef_import.i</in>
+                  <in>template_typedef_ns.i</in>
+                  <in>template_typedef_ptr.i</in>
+                  <in>template_typedef_rec.i</in>
+                  <in>template_typemaps.i</in>
+                  <in>template_using.i</in>
+                  <in>template_virtual.i</in>
+                  <in>template_whitespace.i</in>
+                  <in>threads.i</in>
+                  <in>threads_exception.i</in>
+                  <in>throw_exception.i</in>
+                  <in>traits.i</in>
+                  <in>typedef_array_member.i</in>
+                  <in>typedef_class.i</in>
+                  <in>typedef_funcptr.i</in>
+                  <in>typedef_inherit.i</in>
+                  <in>typedef_mptr.i</in>
+                  <in>typedef_reference.i</in>
+                  <in>typedef_scope.i</in>
+                  <in>typedef_sizet.i</in>
+                  <in>typedef_struct.i</in>
+                  <in>typemap_arrays.i</in>
+                  <in>typemap_delete.i</in>
+                  <in>typemap_global_scope.i</in>
+                  <in>typemap_namespace.i</in>
+                  <in>typemap_ns_using.i</in>
+                  <in>typemap_numinputs.i</in>
+                  <in>typemap_out_optimal.i</in>
+                  <in>typemap_qualifier_strip.i</in>
+                  <in>typemap_self.i</in>
+                  <in>typemap_subst.i</in>
+                  <in>typemap_template.i</in>
+                  <in>typemap_variables.i</in>
+                  <in>typemap_various.i</in>
+                  <in>typename.i</in>
+                  <in>types_directive.i</in>
+                  <in>union_parameter.i</in>
+                  <in>union_scope.i</in>
+                  <in>unions.i</in>
+                  <in>using1.i</in>
+                  <in>using2.i</in>
+                  <in>using_composition.i</in>
+                  <in>using_extend.i</in>
+                  <in>using_inherit.i</in>
+                  <in>using_namespace.i</in>
+                  <in>using_namespace_loop.i</in>
+                  <in>using_pointers.i</in>
+                  <in>using_private.i</in>
+                  <in>using_protected.i</in>
+                  <in>valuewrapper.i</in>
+                  <in>valuewrapper_base.i</in>
+                  <in>valuewrapper_const.i</in>
+                  <in>valuewrapper_opaque.i</in>
+                  <in>varargs.i</in>
+                  <in>varargs_overload.i</in>
+                  <in>virtual_derivation.i</in>
+                  <in>virtual_destructor.i</in>
+                  <in>virtual_poly.i</in>
+                  <in>voidtest.i</in>
+                  <in>wallkw.i</in>
+                  <in>wrapmacro.i</in>
+                </df>
+                <df name="xml">
+                  <in>error.i</in>
+                  <in>example.h</in>
+                  <in>example.i</in>
+                  <in>example_apply.i</in>
+                  <in>example_const.i</in>
+                  <in>example_inl.h</in>
+                  <in>example_inl.i</in>
+                  <in>example_p5.i</in>
+                  <in>example_ro.i</in>
+                  <in>example_title_add.i</in>
+                  <in>example_xml.h</in>
+                  <in>example_xml.i</in>
+                  <in>gnarly.i</in>
+                </df>
+              </df>
+              <df name="Lib">
+                <df name="allegrocl">
+                  <in>inout_typemaps.i</in>
+                  <in>longlongs.i</in>
+                  <in>std_list.i</in>
+                  <in>std_string.i</in>
+                  <in>typemaps.i</in>
+                </df>
+                <df name="cffi">
+                </df>
+                <df name="chicken">
+                  <in>std_string.i</in>
+                  <in>typemaps.i</in>
+                </df>
+                <df name="clisp">
+                </df>
+                <df name="csharp">
+                  <in>arrays_csharp.i</in>
+                  <in>boost_shared_ptr.i</in>
+                  <in>std_common.i</in>
+                  <in>std_deque.i</in>
+                  <in>std_except.i</in>
+                  <in>std_map.i</in>
+                  <in>std_pair.i</in>
+                  <in>std_shared_ptr.i</in>
+                  <in>std_string.i</in>
+                  <in>std_vector.i</in>
+                  <in>std_wstring.i</in>
+                  <in>stl.i</in>
+                  <in>typemaps.i</in>
+                  <in>wchar.i</in>
+                </df>
+                <df name="d">
+                  <in>boost_shared_ptr.i</in>
+                  <in>carrays.i</in>
+                  <in>cpointer.i</in>
+                  <in>std_common.i</in>
+                  <in>std_deque.i</in>
+                  <in>std_except.i</in>
+                  <in>std_map.i</in>
+                  <in>std_pair.i</in>
+                  <in>std_shared_ptr.i</in>
+                  <in>std_string.i</in>
+                  <in>std_vector.i</in>
+                  <in>stl.i</in>
+                  <in>typemaps.i</in>
+                </df>
+                <df name="gcj">
+                  <in>cni.i</in>
+                  <in>javaprims.i</in>
+                </df>
+                <df name="go">
+                  <in>cdata.i</in>
+                  <in>exception.i</in>
+                  <in>std_common.i</in>
+                  <in>std_deque.i</in>
+                  <in>std_except.i</in>
+                  <in>std_map.i</in>
+                  <in>std_pair.i</in>
+                  <in>std_string.i</in>
+                  <in>std_vector.i</in>
+                  <in>stl.i</in>
+                  <in>typemaps.i</in>
+                </df>
+                <df name="guile">
+                  <in>cplusplus.i</in>
+                  <in>ghinterface.i</in>
+                  <in>guile.i</in>
+                  <in>guilemain.i</in>
+                  <in>interpreter.i</in>
+                  <in>list-vector.i</in>
+                  <in>pointer-in-out.i</in>
+                  <in>ports.i</in>
+                  <in>std_common.i</in>
+                  <in>std_deque.i</in>
+                  <in>std_except.i</in>
+                  <in>std_map.i</in>
+                  <in>std_pair.i</in>
+                  <in>std_string.i</in>
+                  <in>std_vector.i</in>
+                  <in>stl.i</in>
+                  <in>swigrun.i</in>
+                  <in>typemaps.i</in>
+                </df>
+                <df name="java">
+                  <in>arrays_java.i</in>
+                  <in>boost_intrusive_ptr.i</in>
+                  <in>boost_shared_ptr.i</in>
+                  <in>std_common.i</in>
+                  <in>std_deque.i</in>
+                  <in>std_except.i</in>
+                  <in>std_map.i</in>
+                  <in>std_pair.i</in>
+                  <in>std_shared_ptr.i</in>
+                  <in>std_string.i</in>
+                  <in>std_vector.i</in>
+                  <in>std_wstring.i</in>
+                  <in>stl.i</in>
+                  <in>typemaps.i</in>
+                  <in>various.i</in>
+                </df>
+                <df name="lua">
+                  <in>_std_common.i</in>
+                  <in>carrays.i</in>
+                  <in>lua_fnptr.i</in>
+                  <in>std_common.i</in>
+                  <in>std_deque.i</in>
+                  <in>std_except.i</in>
+                  <in>std_map.i</in>
+                  <in>std_pair.i</in>
+                  <in>std_string.i</in>
+                  <in>std_vector.i</in>
+                  <in>stl.i</in>
+                  <in>typemaps.i</in>
+                  <in>wchar.i</in>
+                </df>
+                <df name="modula3">
+                  <in>typemaps.i</in>
+                </df>
+                <df name="mzscheme">
+                  <in>std_common.i</in>
+                  <in>std_deque.i</in>
+                  <in>std_map.i</in>
+                  <in>std_pair.i</in>
+                  <in>std_string.i</in>
+                  <in>std_vector.i</in>
+                  <in>stl.i</in>
+                  <in>typemaps.i</in>
+                </df>
+                <df name="ocaml">
+                  <in>carray.i</in>
+                  <in>cstring.i</in>
+                  <in>libswigocaml.h</in>
+                  <in>ocaml.i</in>
+                  <in>std_common.i</in>
+                  <in>std_complex.i</in>
+                  <in>std_deque.i</in>
+                  <in>std_list.i</in>
+                  <in>std_map.i</in>
+                  <in>std_pair.i</in>
+                  <in>std_string.i</in>
+                  <in>std_vector.i</in>
+                  <in>stl.i</in>
+                  <in>typecheck.i</in>
+                  <in>typemaps.i</in>
+                </df>
+                <df name="octave">
+                  <in>attribute.i</in>
+                  <in>boost_shared_ptr.i</in>
+                  <in>carrays.i</in>
+                  <in>cdata.i</in>
+                  <in>cmalloc.i</in>
+                  <in>exception.i</in>
+                  <in>factory.i</in>
+                  <in>implicit.i</in>
+                  <in>std_alloc.i</in>
+                  <in>std_basic_string.i</in>
+                  <in>std_carray.i</in>
+                  <in>std_char_traits.i</in>
+                  <in>std_common.i</in>
+                  <in>std_complex.i</in>
+                  <in>std_container.i</in>
+                  <in>std_deque.i</in>
+                  <in>std_except.i</in>
+                  <in>std_map.i</in>
+                  <in>std_pair.i</in>
+                  <in>std_string.i</in>
+                  <in>std_vector.i</in>
+                  <in>stl.i</in>
+                  <in>typemaps.i</in>
+                </df>
+                <df name="perl5">
+                  <in>attribute.i</in>
+                  <in>carrays.i</in>
+                  <in>cdata.i</in>
+                  <in>cmalloc.i</in>
+                  <in>cni.i</in>
+                  <in>cpointer.i</in>
+                  <in>cstring.i</in>
+                  <in>exception.i</in>
+                  <in>factory.i</in>
+                  <in>jstring.i</in>
+                  <in>noembed.h</in>
+                  <in>perlmain.i</in>
+                  <in>reference.i</in>
+                  <in>std_common.i</in>
+                  <in>std_deque.i</in>
+                  <in>std_except.i</in>
+                  <in>std_list.i</in>
+                  <in>std_map.i</in>
+                  <in>std_pair.i</in>
+                  <in>std_string.i</in>
+                  <in>std_vector.i</in>
+                  <in>stl.i</in>
+                  <in>typemaps.i</in>
+                </df>
+                <df name="php">
+                  <in>const.i</in>
+                  <in>factory.i</in>
+                  <in>globalvar.i</in>
+                  <in>phppointers.i</in>
+                  <in>std_common.i</in>
+                  <in>std_deque.i</in>
+                  <in>std_map.i</in>
+                  <in>std_pair.i</in>
+                  <in>std_string.i</in>
+                  <in>std_vector.i</in>
+                  <in>stl.i</in>
+                  <in>typemaps.i</in>
+                  <in>utils.i</in>
+                </df>
+                <df name="pike">
+                  <in>std_string.i</in>
+                </df>
+                <df name="python">
+                  <in>argcargv.i</in>
+                  <in>attribute.i</in>
+                  <in>boost_shared_ptr.i</in>
+                  <in>carrays.i</in>
+                  <in>ccomplex.i</in>
+                  <in>cdata.i</in>
+                  <in>cmalloc.i</in>
+                  <in>cni.i</in>
+                  <in>complex.i</in>
+                  <in>cpointer.i</in>
+                  <in>cstring.i</in>
+                  <in>cwstring.i</in>
+                  <in>embed.i</in>
+                  <in>embed15.i</in>
+                  <in>exception.i</in>
+                  <in>factory.i</in>
+                  <in>file.i</in>
+                  <in>implicit.i</in>
+                  <in>jstring.i</in>
+                  <in>pyabc.i</in>
+                  <in>pybuffer.i</in>
+                  <in>pyname_compat.i</in>
+                  <in>std_alloc.i</in>
+                  <in>std_basic_string.i</in>
+                  <in>std_carray.i</in>
+                  <in>std_char_traits.i</in>
+                  <in>std_common.i</in>
+                  <in>std_complex.i</in>
+                  <in>std_container.i</in>
+                  <in>std_deque.i</in>
+                  <in>std_except.i</in>
+                  <in>std_ios.i</in>
+                  <in>std_iostream.i</in>
+                  <in>std_list.i</in>
+                  <in>std_map.i</in>
+                  <in>std_multimap.i</in>
+                  <in>std_multiset.i</in>
+                  <in>std_pair.i</in>
+                  <in>std_set.i</in>
+                  <in>std_shared_ptr.i</in>
+                  <in>std_sstream.i</in>
+                  <in>std_streambuf.i</in>
+                  <in>std_string.i</in>
+                  <in>std_vector.i</in>
+                  <in>std_vectora.i</in>
+                  <in>std_wios.i</in>
+                  <in>std_wiostream.i</in>
+                  <in>std_wsstream.i</in>
+                  <in>std_wstreambuf.i</in>
+                  <in>std_wstring.i</in>
+                  <in>stl.i</in>
+                  <in>typemaps.i</in>
+                  <in>wchar.i</in>
+                </df>
+                <df name="r">
+                  <in>cdata.i</in>
+                  <in>exception.i</in>
+                  <in>std_alloc.i</in>
+                  <in>std_common.i</in>
+                  <in>std_container.i</in>
+                  <in>std_deque.i</in>
+                  <in>std_except.i</in>
+                  <in>std_map.i</in>
+                  <in>std_pair.i</in>
+                  <in>std_string.i</in>
+                  <in>std_vector.i</in>
+                  <in>stl.i</in>
+                  <in>typemaps.i</in>
+                </df>
+                <df name="ruby">
+                  <in>argcargv.i</in>
+                  <in>attribute.i</in>
+                  <in>carrays.i</in>
+                  <in>cdata.i</in>
+                  <in>cmalloc.i</in>
+                  <in>cni.i</in>
+                  <in>cpointer.i</in>
+                  <in>cstring.i</in>
+                  <in>embed.i</in>
+                  <in>exception.i</in>
+                  <in>factory.i</in>
+                  <in>file.i</in>
+                  <in>jstring.i</in>
+                  <in>progargcargv.i</in>
+                  <in>std_alloc.i</in>
+                  <in>std_basic_string.i</in>
+                  <in>std_char_traits.i</in>
+                  <in>std_common.i</in>
+                  <in>std_complex.i</in>
+                  <in>std_container.i</in>
+                  <in>std_deque.i</in>
+                  <in>std_except.i</in>
+                  <in>std_functors.i</in>
+                  <in>std_ios.i</in>
+                  <in>std_iostream.i</in>
+                  <in>std_list.i</in>
+                  <in>std_map.i</in>
+                  <in>std_multimap.i</in>
+                  <in>std_multiset.i</in>
+                  <in>std_pair.i</in>
+                  <in>std_queue.i</in>
+                  <in>std_set.i</in>
+                  <in>std_sstream.i</in>
+                  <in>std_stack.i</in>
+                  <in>std_streambuf.i</in>
+                  <in>std_string.i</in>
+                  <in>std_vector.i</in>
+                  <in>std_vectora.i</in>
+                  <in>std_wstring.i</in>
+                  <in>stl.i</in>
+                  <in>timeval.i</in>
+                  <in>typemaps.i</in>
+                </df>
+                <df name="std">
+                  <in>_std_deque.i</in>
+                  <in>std_alloc.i</in>
+                  <in>std_basic_string.i</in>
+                  <in>std_char_traits.i</in>
+                  <in>std_common.i</in>
+                  <in>std_container.i</in>
+                  <in>std_deque.i</in>
+                  <in>std_except.i</in>
+                  <in>std_ios.i</in>
+                  <in>std_iostream.i</in>
+                  <in>std_list.i</in>
+                  <in>std_map.i</in>
+                  <in>std_multimap.i</in>
+                  <in>std_multiset.i</in>
+                  <in>std_pair.i</in>
+                  <in>std_queue.i</in>
+                  <in>std_set.i</in>
+                  <in>std_sstream.i</in>
+                  <in>std_stack.i</in>
+                  <in>std_streambuf.i</in>
+                  <in>std_string.i</in>
+                  <in>std_vector.i</in>
+                  <in>std_vectora.i</in>
+                  <in>std_wios.i</in>
+                  <in>std_wiostream.i</in>
+                  <in>std_wsstream.i</in>
+                  <in>std_wstreambuf.i</in>
+                  <in>std_wstring.i</in>
+                </df>
+                <df name="tcl">
+                  <in>attribute.i</in>
+                  <in>carrays.i</in>
+                  <in>cdata.i</in>
+                  <in>cmalloc.i</in>
+                  <in>cni.i</in>
+                  <in>cpointer.i</in>
+                  <in>cstring.i</in>
+                  <in>cwstring.i</in>
+                  <in>exception.i</in>
+                  <in>factory.i</in>
+                  <in>jstring.i</in>
+                  <in>mactkinit.c</in>
+                  <in>std_common.i</in>
+                  <in>std_deque.i</in>
+                  <in>std_except.i</in>
+                  <in>std_map.i</in>
+                  <in>std_pair.i</in>
+                  <in>std_string.i</in>
+                  <in>std_vector.i</in>
+                  <in>std_wstring.i</in>
+                  <in>stl.i</in>
+                  <in>tclinterp.i</in>
+                  <in>tclresult.i</in>
+                  <in>tclsh.i</in>
+                  <in>typemaps.i</in>
+                  <in>wish.i</in>
+                </df>
+                <df name="typemaps">
+                </df>
+                <df name="uffi">
+                </df>
+                <df name="xml">
+                  <in>typemaps.i</in>
+                </df>
+                <in>attribute.i</in>
+                <in>carrays.i</in>
+                <in>cdata.i</in>
+                <in>cmalloc.i</in>
+                <in>constraints.i</in>
+                <in>cpointer.i</in>
+                <in>cstring.i</in>
+                <in>cwstring.i</in>
+                <in>exception.i</in>
+                <in>intrusive_ptr.i</in>
+                <in>inttypes.i</in>
+                <in>linkruntime.c</in>
+                <in>math.i</in>
+                <in>pointer.i</in>
+                <in>shared_ptr.i</in>
+                <in>std_except.i</in>
+                <in>stdint.i</in>
+                <in>stl.i</in>
+                <in>swigarch.i</in>
+                <in>swigrun.i</in>
+                <in>wchar.i</in>
+                <in>windows.i</in>
+              </df>
+              <df name="Source">
+                <df name="CParse">
+                  <in>cparse.h</in>
+                  <in>cscanner.c</in>
+                  <in>parser.c</in>
+                  <in>parser.h</in>
+                  <in>templ.c</in>
+                  <in>util.c</in>
+                </df>
+                <df name="DOH">
+                  <in>base.c</in>
+                  <in>doh.h</in>
+                  <in>dohint.h</in>
+                  <in>file.c</in>
+                  <in>fio.c</in>
+                  <in>hash.c</in>
+                  <in>list.c</in>
+                  <in>memory.c</in>
+                  <in>string.c</in>
+                  <in>void.c</in>
+                </df>
+                <df name="Include">
+                  <in>swigwarn.h</in>
+                </df>
+                <df name="Modules">
+                  <in>allegrocl.cxx</in>
+                  <in>allocate.cxx</in>
+                  <in>browser.cxx</in>
+                  <in>cffi.cxx</in>
+                  <in>chicken.cxx</in>
+                  <in>clisp.cxx</in>
+                  <in>contract.cxx</in>
+                  <in>csharp.cxx</in>
+                  <in>d.cxx</in>
+                  <in>directors.cxx</in>
+                  <in>emit.cxx</in>
+                  <in>go.cxx</in>
+                  <in>guile.cxx</in>
+                  <in>java.cxx</in>
+                  <in>lang.cxx</in>
+                  <in>lua.cxx</in>
+                  <in>main.cxx</in>
+                  <in>modula3.cxx</in>
+                  <in>module.cxx</in>
+                  <in>mzscheme.cxx</in>
+                  <in>ocaml.cxx</in>
+                  <in>octave.cxx</in>
+                  <in>overload.cxx</in>
+                  <in>perl5.cxx</in>
+                  <in>php.cxx</in>
+                  <in>pike.cxx</in>
+                  <in>python.cxx</in>
+                  <in>r.cxx</in>
+                  <in>ruby.cxx</in>
+                  <in>s-exp.cxx</in>
+                  <in>swigmain.cxx</in>
+                  <in>swigmod.h</in>
+                  <in>tcl8.cxx</in>
+                  <in>typepass.cxx</in>
+                  <in>uffi.cxx</in>
+                  <in>utils.cxx</in>
+                  <in>xml.cxx</in>
+                </df>
+                <df name="Preprocessor">
+                  <in>cpp.c</in>
+                  <in>expr.c</in>
+                  <in>preprocessor.h</in>
+                </df>
+                <df name="Swig">
+                  <in>cwrap.c</in>
+                  <in>deprecate.c</in>
+                  <in>error.c</in>
+                  <in>fragment.c</in>
+                  <in>getopt.c</in>
+                  <in>include.c</in>
+                  <in>misc.c</in>
+                  <in>naming.c</in>
+                  <in>parms.c</in>
+                  <in>scanner.c</in>
+                  <in>stype.c</in>
+                  <in>swig.h</in>
+                  <in>swigfile.h</in>
+                  <in>swigopt.h</in>
+                  <in>swigparm.h</in>
+                  <in>swigscan.h</in>
+                  <in>swigtree.h</in>
+                  <in>swigwrap.h</in>
+                  <in>symbol.c</in>
+                  <in>tree.c</in>
+                  <in>typemap.c</in>
+                  <in>typeobj.c</in>
+                  <in>typesys.c</in>
+                  <in>wrapfunc.c</in>
+                </df>
+              </df>
+              <df name="Tools">
+                <df name="config">
+                </df>
+              </df>
+              <df name="vms">
+                <df name="scripts">
+                </df>
+                <in>swigconfig.h</in>
+              </df>
+              <df name="Win">
+              </df>
+            </df>
+          </df>
+        </df>
+        <df name="unencumbered">
+          <df name="bzip">
+            <df name="bzip2-1.0.6">
+              <in>blocksort.c</in>
+              <in>bzip2.c</in>
+              <in>bzip2recover.c</in>
+              <in>bzlib.c</in>
+              <in>bzlib.h</in>
+              <in>bzlib_private.h</in>
+              <in>compress.c</in>
+              <in>crctable.c</in>
+              <in>decompress.c</in>
+              <in>dlltest.c</in>
+              <in>huffman.c</in>
+              <in>mk251.c</in>
+              <in>randtable.c</in>
+              <in>spewG.c</in>
+              <in>unzcrash.c</in>
+            </df>
+          </df>
+          <df name="paice_husk">
+          </df>
+          <df name="snappy">
+            <df name="snappy-1.0.4">
+              <df name="m4">
+              </df>
+              <df name="testdata">
+                <in>fields.c</in>
+              </df>
+              <in>snappy-c.cc</in>
+              <in>snappy-c.h</in>
+              <in>snappy-internal.h</in>
+              <in>snappy-sinksource.cc</in>
+              <in>snappy-sinksource.h</in>
+              <in>snappy-stubs-internal.cc</in>
+              <in>snappy-stubs-internal.h</in>
+              <in>snappy-stubs-public.h</in>
+              <in>snappy-test.cc</in>
+              <in>snappy-test.h</in>
+              <in>snappy.cc</in>
+              <in>snappy.h</in>
+              <in>snappy_unittest.cc</in>
+            </df>
+            <df name="snappy-1.1.1">
+              <df name="m4">
+              </df>
+              <df name="testdata">
+                <in>fields.c</in>
+              </df>
+              <in>snappy-c.cc</in>
+              <in>snappy-c.h</in>
+              <in>snappy-internal.h</in>
+              <in>snappy-sinksource.cc</in>
+              <in>snappy-sinksource.h</in>
+              <in>snappy-stubs-internal.cc</in>
+              <in>snappy-stubs-internal.h</in>
+              <in>snappy-stubs-public.h</in>
+              <in>snappy-test.cc</in>
+              <in>snappy-test.h</in>
+              <in>snappy.cc</in>
+              <in>snappy.h</in>
+              <in>snappy_unittest.cc</in>
+            </df>
+            <df name="snappy-1.1.3">
+              <df name="m4">
+              </df>
+              <df name="testdata">
+              </df>
+              <in>snappy-c.cc</in>
+              <in>snappy-c.h</in>
+              <in>snappy-internal.h</in>
+              <in>snappy-sinksource.cc</in>
+              <in>snappy-sinksource.h</in>
+              <in>snappy-stubs-internal.cc</in>
+              <in>snappy-stubs-internal.h</in>
+              <in>snappy-stubs-public.h</in>
+              <in>snappy-test.cc</in>
+              <in>snappy-test.h</in>
+              <in>snappy.cc</in>
+              <in>snappy.h</in>
+              <in>snappy_unittest.cc</in>
+            </df>
+          </df>
+          <df name="snowball">
+            <df name="libstemmer_c">
+              <df name="examples">
+                <in>stemwords.c</in>
+              </df>
+              <df name="include">
+                <in>libstemmer.h</in>
+              </df>
+              <df name="libstemmer">
+                <in>libstemmer.c</in>
+                <in>libstemmer_utf8.c</in>
+                <in>modules.h</in>
+                <in>modules_utf8.h</in>
+              </df>
+              <df name="runtime">
+                <in>api.c</in>
+                <in>api.h</in>
+                <in>header.h</in>
+                <in>utilities.c</in>
+              </df>
+              <df name="src_c">
+                <in>stem_ISO_8859_1_basque.c</in>
+                <in>stem_ISO_8859_1_basque.h</in>
+                <in>stem_ISO_8859_1_catalan.c</in>
+                <in>stem_ISO_8859_1_catalan.h</in>
+                <in>stem_ISO_8859_1_danish.c</in>
+                <in>stem_ISO_8859_1_danish.h</in>
+                <in>stem_ISO_8859_1_dutch.c</in>
+                <in>stem_ISO_8859_1_dutch.h</in>
+                <in>stem_ISO_8859_1_english.c</in>
+                <in>stem_ISO_8859_1_english.h</in>
+                <in>stem_ISO_8859_1_finnish.c</in>
+                <in>stem_ISO_8859_1_finnish.h</in>
+                <in>stem_ISO_8859_1_french.c</in>
+                <in>stem_ISO_8859_1_french.h</in>
+                <in>stem_ISO_8859_1_german.c</in>
+                <in>stem_ISO_8859_1_german.h</in>
+                <in>stem_ISO_8859_1_german2.c</in>
+                <in>stem_ISO_8859_1_german2.h</in>
+                <in>stem_ISO_8859_1_hungarian.c</in>
+                <in>stem_ISO_8859_1_hungarian.h</in>
+                <in>stem_ISO_8859_1_italian.c</in>
+                <in>stem_ISO_8859_1_italian.h</in>
+                <in>stem_ISO_8859_1_kraaij_pohlmann.c</in>
+                <in>stem_ISO_8859_1_kraaij_pohlmann.h</in>
+                <in>stem_ISO_8859_1_lovins.c</in>
+                <in>stem_ISO_8859_1_lovins.h</in>
+                <in>stem_ISO_8859_1_norwegian.c</in>
+                <in>stem_ISO_8859_1_norwegian.h</in>
+                <in>stem_ISO_8859_1_porter.c</in>
+                <in>stem_ISO_8859_1_porter.h</in>
+                <in>stem_ISO_8859_1_portuguese.c</in>
+                <in>stem_ISO_8859_1_portuguese.h</in>
+                <in>stem_ISO_8859_1_spanish.c</in>
+                <in>stem_ISO_8859_1_spanish.h</in>
+                <in>stem_ISO_8859_1_swedish.c</in>
+                <in>stem_ISO_8859_1_swedish.h</in>
+                <in>stem_ISO_8859_2_romanian.c</in>
+                <in>stem_ISO_8859_2_romanian.h</in>
+                <in>stem_KOI8_R_russian.c</in>
+                <in>stem_KOI8_R_russian.h</in>
+                <in>stem_UTF_8_armenian.c</in>
+                <in>stem_UTF_8_armenian.h</in>
+                <in>stem_UTF_8_basque.c</in>
+                <in>stem_UTF_8_basque.h</in>
+                <in>stem_UTF_8_catalan.c</in>
+                <in>stem_UTF_8_catalan.h</in>
+                <in>stem_UTF_8_danish.c</in>
+                <in>stem_UTF_8_danish.h</in>
+                <in>stem_UTF_8_dutch.c</in>
+                <in>stem_UTF_8_dutch.h</in>
+                <in>stem_UTF_8_english.c</in>
+                <in>stem_UTF_8_english.h</in>
+                <in>stem_UTF_8_finnish.c</in>
+                <in>stem_UTF_8_finnish.h</in>
+                <in>stem_UTF_8_french.c</in>
+                <in>stem_UTF_8_french.h</in>
+                <in>stem_UTF_8_german.c</in>
+                <in>stem_UTF_8_german.h</in>
+                <in>stem_UTF_8_german2.c</in>
+                <in>stem_UTF_8_german2.h</in>
+                <in>stem_UTF_8_hungarian.c</in>
+                <in>stem_UTF_8_hungarian.h</in>
+                <in>stem_UTF_8_italian.c</in>
+                <in>stem_UTF_8_italian.h</in>
+                <in>stem_UTF_8_kraaij_pohlmann.c</in>
+                <in>stem_UTF_8_kraaij_pohlmann.h</in>
+                <in>stem_UTF_8_lovins.c</in>
+                <in>stem_UTF_8_lovins.h</in>
+                <in>stem_UTF_8_norwegian.c</in>
+                <in>stem_UTF_8_norwegian.h</in>
+                <in>stem_UTF_8_porter.c</in>
+                <in>stem_UTF_8_porter.h</in>
+                <in>stem_UTF_8_portuguese.c</in>
+                <in>stem_UTF_8_portuguese.h</in>
+                <in>stem_UTF_8_romanian.c</in>
+                <in>stem_UTF_8_romanian.h</in>
+                <in>stem_UTF_8_russian.c</in>
+                <in>stem_UTF_8_russian.h</in>
+                <in>stem_UTF_8_spanish.c</in>
+                <in>stem_UTF_8_spanish.h</in>
+                <in>stem_UTF_8_swedish.c</in>
+                <in>stem_UTF_8_swedish.h</in>
+                <in>stem_UTF_8_turkish.c</in>
+                <in>stem_UTF_8_turkish.h</in>
+              </df>
+            </df>
+          </df>
+          <df name="zlib">
+            <df name="zlib-1.2.5">
+              <df name="amiga">
+              </df>
+              <df name="contrib">
+                <df name="ada">
+                </df>
+                <df name="amd64">
+                  <in>amd64-match.S</in>
+                </df>
+                <df name="asm686">
+                  <in>match.S</in>
+                </df>
+                <df name="blast">
+                  <in>blast.c</in>
+                  <in>blast.h</in>
+                </df>
+                <df name="delphi">
+                </df>
+                <df name="dotzlib">
+                  <df name="DotZLib">
+                  </df>
+                </df>
+                <df name="gcc_gvmat64">
+                  <in>gvmat64.S</in>
+                </df>
+                <df name="infback9">
+                  <in>infback9.c</in>
+                  <in>infback9.h</in>
+                  <in>inffix9.h</in>
+                  <in>inflate9.h</in>
+                  <in>inftree9.c</in>
+                  <in>inftree9.h</in>
+                </df>
+                <df name="inflate86">
+                  <in>inffas86.c</in>
+                  <in>inffast.S</in>
+                </df>
+                <df name="iostream">
+                  <in>test.cpp</in>
+                  <in>zfstream.cpp</in>
+                  <in>zfstream.h</in>
+                </df>
+                <df name="iostream2">
+                  <in>zstream.h</in>
+                  <in>zstream_test.cpp</in>
+                </df>
+                <df name="iostream3">
+                  <in>test.cc</in>
+                  <in>zfstream.cc</in>
+                  <in>zfstream.h</in>
+                </df>
+                <df name="masmx64">
+                  <in>gvmat64.asm</in>
+                  <in>inffas8664.c</in>
+                  <in>inffasx64.asm</in>
+                </df>
+                <df name="masmx86">
+                  <in>inffas32.asm</in>
+                  <in>match686.asm</in>
+                </df>
+                <df name="minizip">
+                  <in>crypt.h</in>
+                  <in>ioapi.c</in>
+                  <in>ioapi.h</in>
+                  <in>iowin32.c</in>
+                  <in>iowin32.h</in>
+                  <in>miniunz.c</in>
+                  <in>minizip.c</in>
+                  <in>mztools.c</in>
+                  <in>mztools.h</in>
+                  <in>unzip.c</in>
+                  <in>unzip.h</in>
+                  <in>zip.c</in>
+                  <in>zip.h</in>
+                </df>
+                <df name="pascal">
+                </df>
+                <df name="puff">
+                  <in>puff.c</in>
+                  <in>puff.h</in>
+                </df>
+                <df name="testzlib">
+                  <in>testzlib.c</in>
+                </df>
+                <df name="untgz">
+                  <in>untgz.c</in>
+                </df>
+                <df name="vstudio">
+                  <df name="vc10">
+                  </df>
+                  <df name="vc9">
+                  </df>
+                </df>
+              </df>
+              <df name="doc">
+              </df>
+              <df name="examples">
+                <in>enough.c</in>
+                <in>fitblk.c</in>
+                <in>gun.c</in>
+                <in>gzappend.c</in>
+                <in>gzjoin.c</in>
+                <in>gzlog.c</in>
+                <in>gzlog.h</in>
+                <in>zpipe.c</in>
+                <in>zran.c</in>
+              </df>
+              <df name="msdos">
+              </df>
+              <df name="nintendods">
+              </df>
+              <df name="old">
+                <df name="as400">
+                </df>
+                <df name="os2">
+                </df>
+                <df name="visualc6">
+                </df>
+              </df>
+              <df name="qnx">
+              </df>
+              <df name="watcom">
+              </df>
+              <df name="win32">
+              </df>
+              <in>adler32.c</in>
+              <in>compress.c</in>
+              <in>crc32.c</in>
+              <in>crc32.h</in>
+              <in>deflate.c</in>
+              <in>deflate.h</in>
+              <in>example.c</in>
+              <in>gzclose.c</in>
+              <in>gzguts.h</in>
+              <in>gzlib.c</in>
+              <in>gzread.c</in>
+              <in>gzwrite.c</in>
+              <in>infback.c</in>
+              <in>inffast.c</in>
+              <in>inffast.h</in>
+              <in>inffixed.h</in>
+              <in>inflate.c</in>
+              <in>inflate.h</in>
+              <in>inftrees.c</in>
+              <in>inftrees.h</in>
+              <in>minigzip.c</in>
+              <in>trees.c</in>
+              <in>trees.h</in>
+              <in>uncompr.c</in>
+              <in>zconf.h</in>
+              <in>zlib.h</in>
+              <in>zutil.c</in>
+              <in>zutil.h</in>
+            </df>
+          </df>
+        </df>
+      </df>
+      <df name="gp_rank">
+        <in>gp.c</in>
+        <in>gp.h</in>
+        <in>gp_individual.c</in>
+        <in>gp_individual.h</in>
+        <in>gp_individual_node.c</in>
+        <in>gp_individual_node.h</in>
+        <in>gp_main.c</in>
+      </df>
+      <df name="historic_note">
+        <df name="occam">
+        </df>
+      </df>
+      <df name="java">
+        <df name="AtireDroid">
+          <df name="lib">
+          </df>
+          <df name="res">
+            <df name="drawable-hdpi">
+            </df>
+            <df name="drawable-ldpi">
+            </df>
+            <df name="drawable-mdpi">
+            </df>
+            <df name="layout">
+            </df>
+            <df name="values">
+            </df>
+          </df>
+          <df name="src">
+            <df name="org">
+              <df name="atire">
+                <df name="android">
+                </df>
+              </df>
+            </df>
+          </df>
+        </df>
+        <df name="AtireJ">
+          <df name="lib">
+          </df>
+          <df name="src">
+            <df name="org">
+              <df name="atire">
+              </df>
+            </df>
+          </df>
+        </df>
+        <df name="jni">
+          <df name="include">
+            <in>atire.h</in>
+            <in>collate.h</in>
+            <in>glob.h</in>
+            <in>index.h</in>
+          </df>
+          <df name="test">
+            <in>index_test.c</in>
+          </df>
+          <in>glob.c</in>
+        </df>
+      </df>
+      <df name="Link-The-Wiki">
+        <df name="2010_ltw_eval">
+          <in>ltw_eval.c</in>
+          <in>teara_run_to_trec.c</in>
+        </df>
+        <df name="proxy_logs">
+          <in>add_ids_to_log.cpp</in>
+          <in>add_links_to_log.cpp</in>
+          <in>anonymise.c</in>
+          <in>make_title_list.cpp</in>
+        </df>
+        <in>link_extract.c</in>
+        <in>link_extract_pass2.c</in>
+        <in>link_index.c</in>
+        <in>link_index_merge.c</in>
+        <in>link_length_correlate.c</in>
+        <in>link_parts.h</in>
+        <in>link_this.c</in>
+        <in>remove_head.c</in>
+        <in>title_extract.c</in>
+      </df>
+      <df name="misc">
+      </df>
+      <df name="ob3">
+        <df name="code">
+          <df name="api">
+          </df>
+          <df name="core">
+            <df name="model">
+              <df name="core">
+              </df>
+            </df>
+          </df>
+        </df>
+        <df name="javascript">
+          <df name="core">
+            <df name="model">
+            </df>
+          </df>
+          <df name="resources">
+            <df name="text">
+            </df>
+          </df>
+        </df>
+      </df>
+      <df name="obj">
+      </df>
+      <df name="python">
+      </df>
+      <df name="QueryReformulator">
+      </df>
+      <df name="scripts">
+      </df>
+      <df name="source">
+        <in>NEXI.h</in>
+        <in>NEXI_ant.c</in>
+        <in>NEXI_ant.h</in>
+        <in>NEXI_term.c</in>
+        <in>NEXI_term.h</in>
+        <in>NEXI_term_ant.c</in>
+        <in>NEXI_term_ant.h</in>
+        <in>NEXI_term_iterator.c</in>
+        <in>NEXI_term_iterator.h</in>
+        <in>arithmetic_coding.h</in>
+        <in>arithmetic_coding_decoder.h</in>
+        <in>arithmetic_coding_encoder.h</in>
+        <in>arithmetic_model.h</in>
+        <in>arithmetic_model_bigram.c</in>
+        <in>arithmetic_model_bigram.h</in>
+        <in>arithmetic_model_tables.c</in>
+        <in>arithmetic_model_tables.h</in>
+        <in>arithmetic_model_unigram.c</in>
+        <in>arithmetic_model_unigram.h</in>
+        <in>assessment.c</in>
+        <in>assessment.h</in>
+        <in>assessment_INEX.c</in>
+        <in>assessment_INEX.h</in>
+        <in>assessment_TREC.c</in>
+        <in>assessment_TREC.h</in>
+        <in>assessment_factory.c</in>
+        <in>assessment_factory.h</in>
+        <in>barrier.c</in>
+        <in>barrier.h</in>
+        <in>bitstream.c</in>
+        <in>bitstream.h</in>
+        <in>bitstring.c</in>
+        <in>bitstring.h</in>
+        <in>bitstring_iterator.c</in>
+        <in>bitstring_iterator.h</in>
+        <in>bool.h</in>
+        <in>btree.h</in>
+        <in>btree_head_node.h</in>
+        <in>btree_iterator.c</in>
+        <in>btree_iterator.h</in>
+        <in>channel.h</in>
+        <in>channel_file.c</in>
+        <in>channel_file.h</in>
+        <in>channel_inex.c</in>
+        <in>channel_inex.h</in>
+        <in>channel_socket.c</in>
+        <in>channel_socket.h</in>
+        <in>channel_trec.c</in>
+        <in>channel_trec.h</in>
+        <in>compress.h</in>
+        <in>compress_carryover12.c</in>
+        <in>compress_carryover12.h</in>
+        <in>compress_carryover12_internals.h</in>
+        <in>compress_elias_delta.c</in>
+        <in>compress_elias_delta.h</in>
+        <in>compress_elias_gamma.c</in>
+        <in>compress_elias_gamma.h</in>
+        <in>compress_four_integer_variable_byte.c</in>
+        <in>compress_four_integer_variable_byte.h</in>
+        <in>compress_golomb.c</in>
+        <in>compress_golomb.h</in>
+        <in>compress_none.c</in>
+        <in>compress_none.h</in>
+        <in>compress_relative10.c</in>
+        <in>compress_relative10.h</in>
+        <in>compress_sigma.c</in>
+        <in>compress_sigma.h</in>
+        <in>compress_sigma_frequency.h</in>
+        <in>compress_simple16.c</in>
+        <in>compress_simple16.h</in>
+        <in>compress_simple16_packed.c</in>
+        <in>compress_simple16_packed.h</in>
+        <in>compress_simple8b.c</in>
+        <in>compress_simple8b.h</in>
+        <in>compress_simple8b_packed.c</in>
+        <in>compress_simple8b_packed.h</in>
+        <in>compress_simple9.c</in>
+        <in>compress_simple9.h</in>
+        <in>compress_simple9_packed.c</in>
+        <in>compress_simple9_packed.h</in>
+        <in>compress_text.h</in>
+        <in>compress_text_bz2.c</in>
+        <in>compress_text_bz2.h</in>
+        <in>compress_text_deflate.c</in>
+        <in>compress_text_deflate.h</in>
+        <in>compress_text_deflate_internals.h</in>
+        <in>compress_text_none.c</in>
+        <in>compress_text_none.h</in>
+        <in>compress_text_snappy.c</in>
+        <in>compress_text_snappy.h</in>
+        <in>compress_variable_byte.c</in>
+        <in>compress_variable_byte.h</in>
+        <in>compression_factory.c</in>
+        <in>compression_factory.h</in>
+        <in>compression_factory_scheme.h</in>
+        <in>compression_text_factory.c</in>
+        <in>compression_text_factory.h</in>
+        <in>compression_text_factory_scheme.h</in>
+        <in>critical_section.c</in>
+        <in>critical_section.h</in>
+        <in>critical_section_internals.h</in>
+        <in>ctypes.c</in>
+        <in>ctypes.h</in>
+        <in>directory_iterator.c</in>
+        <in>directory_iterator.h</in>
+        <in>directory_iterator_compressor.c</in>
+        <in>directory_iterator_compressor.h</in>
+        <in>directory_iterator_csv.c</in>
+        <in>directory_iterator_csv.h</in>
+        <in>directory_iterator_deflate.c</in>
+        <in>directory_iterator_deflate.h</in>
+        <in>directory_iterator_file.c</in>
+        <in>directory_iterator_file.h</in>
+        <in>directory_iterator_file_buffered.c</in>
+        <in>directory_iterator_file_buffered.h</in>
+        <in>directory_iterator_filter.c</in>
+        <in>directory_iterator_filter.h</in>
+        <in>directory_iterator_filter_spam.c</in>
+        <in>directory_iterator_filter_spam.h</in>
+        <in>directory_iterator_internals.c</in>
+        <in>directory_iterator_internals.h</in>
+        <in>directory_iterator_mime_filter.c</in>
+        <in>directory_iterator_mime_filter.h</in>
+        <in>directory_iterator_multiple.c</in>
+        <in>directory_iterator_multiple.h</in>
+        <in>directory_iterator_multiple_internals.h</in>
+        <in>directory_iterator_mysql.c</in>
+        <in>directory_iterator_mysql.h</in>
+        <in>directory_iterator_object.h</in>
+        <in>directory_iterator_pkzip.c</in>
+        <in>directory_iterator_pkzip.h</in>
+        <in>directory_iterator_pkzip_internals.h</in>
+        <in>directory_iterator_preindex.c</in>
+        <in>directory_iterator_preindex.h</in>
+        <in>directory_iterator_preindex_internals.c</in>
+        <in>directory_iterator_preindex_internals.h</in>
+        <in>directory_iterator_recursive.c</in>
+        <in>directory_iterator_recursive.h</in>
+        <in>directory_iterator_scrub.c</in>
+        <in>directory_iterator_scrub.h</in>
+        <in>directory_iterator_tar.c</in>
+        <in>directory_iterator_tar.h</in>
+        <in>directory_iterator_tar_file_header.h</in>
+        <in>directory_iterator_trec_recursive.c</in>
+        <in>directory_iterator_trec_recursive.h</in>
+        <in>directory_iterator_tsv.c</in>
+        <in>directory_iterator_tsv.h</in>
+        <in>directory_iterator_warc.c</in>
+        <in>directory_iterator_warc.h</in>
+        <in>directory_iterator_warc_gz_recursive.c</in>
+        <in>directory_iterator_warc_gz_recursive.h</in>
+        <in>disk.c</in>
+        <in>disk.h</in>
+        <in>disk_directory.h</in>
+        <in>encode_char.h</in>
+        <in>encode_char_8bit.h</in>
+        <in>encode_char_base32.h</in>
+        <in>encode_char_base32_edges.h</in>
+        <in>encode_char_base36.h</in>
+        <in>encode_char_base37.h</in>
+        <in>encode_char_base40.h</in>
+        <in>encode_char_printable_ascii.h</in>
+        <in>evaluation.c</in>
+        <in>evaluation.h</in>
+        <in>evaluation_binary_preference.c</in>
+        <in>evaluation_binary_preference.h</in>
+        <in>evaluation_discounted_cumulative_gain.c</in>
+        <in>evaluation_discounted_cumulative_gain.h</in>
+        <in>evaluation_expected_reciprocal_rank.c</in>
+        <in>evaluation_expected_reciprocal_rank.h</in>
+        <in>evaluation_intent_aware_expected_reciprocal_rank.c</in>
+        <in>evaluation_intent_aware_expected_reciprocal_rank.h</in>
+        <in>evaluation_intent_aware_mean_average_precision.c</in>
+        <in>evaluation_intent_aware_mean_average_precision.h</in>
+        <in>evaluation_intent_aware_normalised_discounted_cumulative_gain.c</in>
+        <in>evaluation_intent_aware_normalised_discounted_cumulative_gain.h</in>
+        <in>evaluation_intent_aware_precision_at_n.c</in>
+        <in>evaluation_intent_aware_precision_at_n.h</in>
+        <in>evaluation_mean_average_generalised_precision_document.c</in>
+        <in>evaluation_mean_average_generalised_precision_document.h</in>
+        <in>evaluation_mean_average_precision.c</in>
+        <in>evaluation_mean_average_precision.h</in>
+        <in>evaluation_normalised_discounted_cumulative_gain.c</in>
+        <in>evaluation_normalised_discounted_cumulative_gain.h</in>
+        <in>evaluation_precision_at_n.c</in>
+        <in>evaluation_precision_at_n.h</in>
+        <in>evaluation_rank_effectiveness.c</in>
+        <in>evaluation_rank_effectiveness.h</in>
+        <in>evaluation_success_at_n.c</in>
+        <in>evaluation_success_at_n.h</in>
+        <in>evaluator.c</in>
+        <in>evaluator.h</in>
+        <in>event.c</in>
+        <in>event.h</in>
+        <in>event_internals.h</in>
+        <in>fence.h</in>
+        <in>file.c</in>
+        <in>file.h</in>
+        <in>file_internals.c</in>
+        <in>file_internals.h</in>
+        <in>file_memory.c</in>
+        <in>file_memory.h</in>
+        <in>focus.c</in>
+        <in>focus.h</in>
+        <in>focus_article.c</in>
+        <in>focus_article.h</in>
+        <in>focus_hash_node.h</in>
+        <in>focus_lowest_tag.c</in>
+        <in>focus_lowest_tag.h</in>
+        <in>focus_result.h</in>
+        <in>focus_results_list.c</in>
+        <in>focus_results_list.h</in>
+        <in>fundamental_types.h</in>
+        <in>hash_header.c</in>
+        <in>hash_header.h</in>
+        <in>hash_header_collapse.c</in>
+        <in>hash_header_collapse.h</in>
+        <in>hash_header_experimental.c</in>
+        <in>hash_header_experimental.h</in>
+        <in>hash_lookup3.h</in>
+        <in>hash_matt.c</in>
+        <in>hash_matt.h</in>
+        <in>hash_random.c</in>
+        <in>hash_random.h</in>
+        <in>hash_superfast.h</in>
+        <in>hash_table.h</in>
+        <in>heap.h</in>
+        <in>impact_header.h</in>
+        <in>index_document.c</in>
+        <in>index_document.h</in>
+        <in>index_document_global_stats.h</in>
+        <in>index_document_topsig.c</in>
+        <in>index_document_topsig.h</in>
+        <in>index_document_topsig_signature.c</in>
+        <in>index_document_topsig_signature.h</in>
+        <in>instream.h</in>
+        <in>instream_buffer.c</in>
+        <in>instream_buffer.h</in>
+        <in>instream_bz2.c</in>
+        <in>instream_bz2.h</in>
+        <in>instream_bz2_internals.h</in>
+        <in>instream_deflate.c</in>
+        <in>instream_deflate.h</in>
+        <in>instream_deflate_internals.h</in>
+        <in>instream_file.c</in>
+        <in>instream_file.h</in>
+        <in>instream_file_star.c</in>
+        <in>instream_file_star.h</in>
+        <in>instream_lzo.c</in>
+        <in>instream_lzo.h</in>
+        <in>instream_memory.c</in>
+        <in>instream_memory.h</in>
+        <in>instream_pkzip.c</in>
+        <in>instream_pkzip.h</in>
+        <in>instream_scrub.c</in>
+        <in>instream_scrub.h</in>
+        <in>maths.c</in>
+        <in>maths.h</in>
+        <in>max_quantum.h</in>
+        <in>memory.c</in>
+        <in>memory.h</in>
+        <in>memory_index.c</in>
+        <in>memory_index.h</in>
+        <in>memory_index_filename_index.c</in>
+        <in>memory_index_filename_index.h</in>
+        <in>memory_index_hash_node.c</in>
+        <in>memory_index_hash_node.h</in>
+        <in>memory_index_one.c</in>
+        <in>memory_index_one.h</in>
+        <in>memory_index_one_node.h</in>
+        <in>memory_indexer.c</in>
+        <in>memory_indexer.h</in>
+        <in>memory_indexer_node.h</in>
+        <in>mersenne_twister.c</in>
+        <in>mersenne_twister.h</in>
+        <in>nexi.c</in>
+        <in>numbers.c</in>
+        <in>numbers.h</in>
+        <in>parser.c</in>
+        <in>parser.h</in>
+        <in>parser_readability.c</in>
+        <in>parser_readability.h</in>
+        <in>parser_token.h</in>
+        <in>pdebug.h</in>
+        <in>phonetic_double_metaphone.h</in>
+        <in>phonetic_double_metaphone_internals.h</in>
+        <in>phonetic_iterator_double_metaphone.h</in>
+        <in>phonetic_iterator_soundex.h</in>
+        <in>phonetic_soundex.h</in>
+        <in>plugin.h</in>
+        <in>plugin_manager.c</in>
+        <in>plugin_manager.h</in>
+        <in>postings_piece.c</in>
+        <in>postings_piece.h</in>
+        <in>pragma.h</in>
+        <in>precision_recall.h</in>
+        <in>pregen.c</in>
+        <in>pregen.h</in>
+        <in>pregen_field_type.h</in>
+        <in>pregen_kendall_tau.c</in>
+        <in>pregen_kendall_tau.h</in>
+        <in>pregen_t.h</in>
+        <in>pregen_writer.c</in>
+        <in>pregen_writer.h</in>
+        <in>pregen_writer_exact_integers.c</in>
+        <in>pregen_writer_exact_integers.h</in>
+        <in>pregen_writer_exact_strings.c</in>
+        <in>pregen_writer_exact_strings.h</in>
+        <in>pregen_writer_normal.c</in>
+        <in>pregen_writer_normal.h</in>
+        <in>pregens_writer.c</in>
+        <in>pregens_writer.h</in>
+        <in>primary_cmp.h</in>
+        <in>producer_consumer.h</in>
+        <in>quantum.h</in>
+        <in>query.c</in>
+        <in>query.h</in>
+        <in>query_boolean.c</in>
+        <in>query_boolean.h</in>
+        <in>query_parse_tree.c</in>
+        <in>query_parse_tree.h</in>
+        <in>ranking_function.c</in>
+        <in>ranking_function.h</in>
+        <in>ranking_function_bm25.c</in>
+        <in>ranking_function_bm25.h</in>
+        <in>ranking_function_bm25adpt.c</in>
+        <in>ranking_function_bm25adpt.h</in>
+        <in>ranking_function_bm25l.c</in>
+        <in>ranking_function_bm25l.h</in>
+        <in>ranking_function_bm25plus.c</in>
+        <in>ranking_function_bm25plus.h</in>
+        <in>ranking_function_bm25t.c</in>
+        <in>ranking_function_bm25t.h</in>
+        <in>ranking_function_bose_einstein.c</in>
+        <in>ranking_function_bose_einstein.h</in>
+        <in>ranking_function_dfi.c</in>
+        <in>ranking_function_dfi.h</in>
+        <in>ranking_function_dfi_idf.c</in>
+        <in>ranking_function_dfi_idf.h</in>
+        <in>ranking_function_dfiw.c</in>
+        <in>ranking_function_dfiw.h</in>
+        <in>ranking_function_dfiw_idf.c</in>
+        <in>ranking_function_dfiw_idf.h</in>
+        <in>ranking_function_dfree.c</in>
+        <in>ranking_function_dfree.h</in>
+        <in>ranking_function_divergence.c</in>
+        <in>ranking_function_divergence.h</in>
+        <in>ranking_function_dlh13.c</in>
+        <in>ranking_function_dlh13.h</in>
+        <in>ranking_function_docid.c</in>
+        <in>ranking_function_docid.h</in>
+        <in>ranking_function_dph.c</in>
+        <in>ranking_function_dph.h</in>
+        <in>ranking_function_factory.c</in>
+        <in>ranking_function_factory.h</in>
+        <in>ranking_function_factory_object.h</in>
+        <in>ranking_function_impact.c</in>
+        <in>ranking_function_impact.h</in>
+        <in>ranking_function_inner_product.c</in>
+        <in>ranking_function_inner_product.h</in>
+        <in>ranking_function_kbtfidf.c</in>
+        <in>ranking_function_kbtfidf.h</in>
+        <in>ranking_function_lmd.c</in>
+        <in>ranking_function_lmd.h</in>
+        <in>ranking_function_lmds.c</in>
+        <in>ranking_function_lmds.h</in>
+        <in>ranking_function_lmjm.c</in>
+        <in>ranking_function_lmjm.h</in>
+        <in>ranking_function_pregen.c</in>
+        <in>ranking_function_pregen.h</in>
+        <in>ranking_function_puurula.c</in>
+        <in>ranking_function_puurula.h</in>
+        <in>ranking_function_puurula_idf.c</in>
+        <in>ranking_function_puurula_idf.h</in>
+        <in>ranking_function_quantum_parameters.h</in>
+        <in>ranking_function_readability.c</in>
+        <in>ranking_function_readability.h</in>
+        <in>ranking_function_term_count.c</in>
+        <in>ranking_function_term_count.h</in>
+        <in>ranking_function_tflodop.c</in>
+        <in>ranking_function_tflodop.h</in>
+        <in>ranking_function_topsig.h</in>
+        <in>ranking_function_topsig_negative.c</in>
+        <in>ranking_function_topsig_negative.h</in>
+        <in>ranking_function_topsig_positive.c</in>
+        <in>ranking_function_topsig_positive.h</in>
+        <in>readability.h</in>
+        <in>readability_dale_chall.c</in>
+        <in>readability_dale_chall.h</in>
+        <in>readability_dale_chall_wordlist.h</in>
+        <in>readability_factory.c</in>
+        <in>readability_factory.h</in>
+        <in>readability_none.h</in>
+        <in>readability_tag_weighting.c</in>
+        <in>readability_tag_weighting.h</in>
+        <in>relevance_feedback.c</in>
+        <in>relevance_feedback.h</in>
+        <in>relevance_feedback_blind_kl.c</in>
+        <in>relevance_feedback_blind_kl.h</in>
+        <in>relevance_feedback_blind_kl_rm.c</in>
+        <in>relevance_feedback_blind_kl_rm.h</in>
+        <in>relevance_feedback_factory.c</in>
+        <in>relevance_feedback_factory.h</in>
+        <in>relevance_feedback_topsig.c</in>
+        <in>relevance_feedback_topsig.h</in>
+        <in>relevant_document.c</in>
+        <in>relevant_document.h</in>
+        <in>relevant_document_passage.h</in>
+        <in>relevant_subtopic.c</in>
+        <in>relevant_subtopic.h</in>
+        <in>relevant_topic.c</in>
+        <in>relevant_topic.h</in>
+        <in>search_engine.c</in>
+        <in>search_engine.h</in>
+        <in>search_engine_accumulator.c</in>
+        <in>search_engine_accumulator.h</in>
+        <in>search_engine_btree_leaf.h</in>
+        <in>search_engine_btree_node.h</in>
+        <in>search_engine_forum.c</in>
+        <in>search_engine_forum.h</in>
+        <in>search_engine_forum_INEX.c</in>
+        <in>search_engine_forum_INEX.h</in>
+        <in>search_engine_forum_INEX_bep.c</in>
+        <in>search_engine_forum_INEX_bep.h</in>
+        <in>search_engine_forum_INEX_efficiency.c</in>
+        <in>search_engine_forum_INEX_efficiency.h</in>
+        <in>search_engine_forum_INEX_focus.c</in>
+        <in>search_engine_forum_INEX_focus.h</in>
+        <in>search_engine_forum_TREC.c</in>
+        <in>search_engine_forum_TREC.h</in>
+        <in>search_engine_init_flags.h</in>
+        <in>search_engine_init_flags_boolean.h</in>
+        <in>search_engine_memory_index.c</in>
+        <in>search_engine_memory_index.h</in>
+        <in>search_engine_readability.c</in>
+        <in>search_engine_readability.h</in>
+        <in>search_engine_result.c</in>
+        <in>search_engine_result.h</in>
+        <in>search_engine_result_id_iterator.c</in>
+        <in>search_engine_result_id_iterator.h</in>
+        <in>search_engine_result_iterator.c</in>
+        <in>search_engine_result_iterator.h</in>
+        <in>semaphores.c</in>
+        <in>semaphores.h</in>
+        <in>semaphores_internals.h</in>
+        <in>snippet.c</in>
+        <in>snippet.h</in>
+        <in>snippet_beginning.c</in>
+        <in>snippet_beginning.h</in>
+        <in>snippet_best_tag.c</in>
+        <in>snippet_best_tag.h</in>
+        <in>snippet_best_tag_tf.h</in>
+        <in>snippet_factory.c</in>
+        <in>snippet_factory.h</in>
+        <in>snippet_keyword.h</in>
+        <in>snippet_tag.c</in>
+        <in>snippet_tag.h</in>
+        <in>snippet_tf.h</in>
+        <in>snippet_tficf.c</in>
+        <in>snippet_tficf.h</in>
+        <in>snippet_word_cloud.c</in>
+        <in>snippet_word_cloud.h</in>
+        <in>sockets.c</in>
+        <in>sockets.h</in>
+        <in>sockets_internals.h</in>
+        <in>stats.c</in>
+        <in>stats.h</in>
+        <in>stats_memory_index.c</in>
+        <in>stats_memory_index.h</in>
+        <in>stats_search_engine.c</in>
+        <in>stats_search_engine.h</in>
+        <in>stats_time.c</in>
+        <in>stats_time.h</in>
+        <in>stem.h</in>
+        <in>stem_krovetz.c</in>
+        <in>stem_krovetz.h</in>
+        <in>stem_none.h</in>
+        <in>stem_otago.c</in>
+        <in>stem_otago.h</in>
+        <in>stem_otago_v2.c</in>
+        <in>stem_otago_v2.h</in>
+        <in>stem_paice_husk.c</in>
+        <in>stem_paice_husk.h</in>
+        <in>stem_porter.c</in>
+        <in>stem_porter.h</in>
+        <in>stem_s.c</in>
+        <in>stem_s.h</in>
+        <in>stem_snowball.c</in>
+        <in>stem_snowball.h</in>
+        <in>stem_stemmer.h</in>
+        <in>stemmer.c</in>
+        <in>stemmer.h</in>
+        <in>stemmer_factory.c</in>
+        <in>stemmer_factory.h</in>
+        <in>stemmer_krovetz.h</in>
+        <in>stemmer_none.h</in>
+        <in>stemmer_otago.h</in>
+        <in>stemmer_otago_v2.h</in>
+        <in>stemmer_paice_husk.h</in>
+        <in>stemmer_porter.h</in>
+        <in>stemmer_snowball.h</in>
+        <in>stemmer_stem.h</in>
+        <in>stemmer_term_similarity.c</in>
+        <in>stemmer_term_similarity.h</in>
+        <in>stemmer_term_similarity_threshold.c</in>
+        <in>stemmer_term_similarity_threshold.h</in>
+        <in>stemmer_term_similarity_weighted.c</in>
+        <in>stemmer_term_similarity_weighted.h</in>
+        <in>stop_word.c</in>
+        <in>stop_word.h</in>
+        <in>str.c</in>
+        <in>str.h</in>
+        <in>string_pair.c</in>
+        <in>string_pair.h</in>
+        <in>string_pair_constant.h</in>
+        <in>term_divergence.h</in>
+        <in>term_divergence_kl.c</in>
+        <in>term_divergence_kl.h</in>
+        <in>thesaurus.c</in>
+        <in>thesaurus.h</in>
+        <in>thesaurus_relationship.c</in>
+        <in>thesaurus_relationship.h</in>
+        <in>thesaurus_rootnode.h</in>
+        <in>thesaurus_wordnet.c</in>
+        <in>thesaurus_wordnet.h</in>
+        <in>threads.c</in>
+        <in>threads.h</in>
+        <in>unicode.c</in>
+        <in>unicode.h</in>
+        <in>unicode_pair.h</in>
+        <in>unicode_tables.c</in>
+        <in>unicode_tables.h</in>
+        <in>version.c</in>
+        <in>version.h</in>
+      </df>
+      <df name="stemmer">
+        <df name="obj">
+        </df>
+        <in>ga.c</in>
+        <in>ga.h</in>
+        <in>ga_ant.c</in>
+        <in>ga_ant.h</in>
+        <in>ga_function.c</in>
+        <in>ga_function.h</in>
+        <in>ga_individual.c</in>
+        <in>ga_individual.h</in>
+        <in>ga_stemmer.c</in>
+        <in>ga_stemmer.h</in>
+        <in>qpp.c</in>
+        <in>strnlen.h</in>
+        <in>vocab.c</in>
+        <in>vocab.h</in>
+      </df>
+      <df name="tests">
+        <in>ant_plugins.c</in>
+        <in>ant_unzip.c</in>
+        <in>arithmetic_encoding_test.c</in>
+        <in>compiler_version.c</in>
+        <in>compiletime_math_test.c</in>
+        <in>filelist.c</in>
+        <in>phone.c</in>
+        <in>pregen_precision_measurement.c</in>
+        <in>producer_consumer.c</in>
+        <in>test_boolean_parser.c</in>
+        <in>test_compression.c</in>
+        <in>test_kendall_tau.c</in>
+        <in>test_pregen.c</in>
+        <in>test_stop.c</in>
+        <in>test_tar.c</in>
+        <in>test_unicode_case_convert.c</in>
+        <in>test_zlib.c</in>
+        <in>wordnet_test.c</in>
+      </df>
+      <df name="third_party">
+      </df>
+      <df name="tools">
+        <in>INEXqrels_to_run.c</in>
+        <in>arithmetic_encoding_model_gen.c</in>
+        <in>bindiff.c</in>
+        <in>factory_compression.c</in>
+        <in>generate_pregen.c</in>
+        <in>hash_evaluation.c</in>
+        <in>hash_time.c</in>
+        <in>link_analyse_inex_wikipedia.c</in>
+        <in>link_compute_inlink.c</in>
+        <in>link_extract_inex_wikipedia.c</in>
+        <in>make_unicode_tables.c</in>
+        <in>mysql_xml_dump.c</in>
+        <in>pregen_create.c</in>
+        <in>pregen_examine.c</in>
+        <in>textsplitter.c</in>
+        <in>topic_tree.c</in>
+        <in>topic_tree_cas.c</in>
+        <in>wordnet_to_ant_thesaurus.c</in>
+        <in>zipf_graph.c</in>
+      </df>
+      <df name="unicode">
+      </df>
+      <df name="uniseg">
+        <df name="test">
+          <in>stopword.c</in>
+          <in>uniseg.c</in>
+        </df>
+        <in>address.h</in>
+        <in>char.h</in>
+        <in>clist.c</in>
+        <in>clist.h</in>
+        <in>config.c</in>
+        <in>config.h</in>
+        <in>convert.h</in>
+        <in>cwords.c</in>
+        <in>cwords.h</in>
+        <in>dic.c</in>
+        <in>dic.h</in>
+        <in>dic2freq.c</in>
+        <in>dic2freq.h</in>
+        <in>encoding.h</in>
+        <in>encoding_ascii.h</in>
+        <in>encoding_factory.c</in>
+        <in>encoding_factory.h</in>
+        <in>encoding_utf8.c</in>
+        <in>encoding_utf8.h</in>
+        <in>file.c</in>
+        <in>file.h</in>
+        <in>freq.c</in>
+        <in>freq.h</in>
+        <in>freq_counter.c</in>
+        <in>freq_counter.h</in>
+        <in>freq_file.c</in>
+        <in>freq_file.h</in>
+        <in>freq_loader.c</in>
+        <in>freq_loader.h</in>
+        <in>icstring.hpp</in>
+        <in>index_file.c</in>
+        <in>index_file.h</in>
+        <in>qfreq.c</in>
+        <in>qfreq.h</in>
+        <in>range.h</in>
+        <in>seg.c</in>
+        <in>seg.h</in>
+        <in>seg2.c</in>
+        <in>seg2.h</in>
+        <in>stop_word.c</in>
+        <in>stop_word.h</in>
+        <in>string_utils.h</in>
+        <in>sys_file.c</in>
+        <in>sys_file.h</in>
+        <in>sys_files.c</in>
+        <in>sys_files.h</in>
+        <in>timings.h</in>
+        <in>uniseg.c</in>
+        <in>uniseg.h</in>
+        <in>uniseg_settings.c</in>
+        <in>uniseg_settings.h</in>
+        <in>uniseg_string.h</in>
+        <in>uniseg_types.h</in>
+        <in>utilities.h</in>
+        <in>word.c</in>
+        <in>word.h</in>
+      </df>
+      <df name="wordnet">
+        <df name="source">
+        </df>
+      </df>
+      <df name="xlink">
+        <df name="include">
+          <df name="stpl">
+            <df name="spec">
+              <in>default.h</in>
+              <in>property.h</in>
+              <in>text.h</in>
+            </df>
+            <df name="stpl">
+              <df name="characters">
+                <in>stpl_character.h</in>
+                <in>stpl_chinese.h</in>
+                <in>stpl_unicode.h</in>
+                <in>stpl_uscanner.h</in>
+              </df>
+              <df name="html">
+                <in>stpl_html.h</in>
+                <in>stpl_html_entity.h</in>
+              </df>
+              <df name="misc">
+                <in>stpl_trec.h</in>
+              </df>
+              <df name="xml">
+                <in>stpl_xml.h</in>
+                <in>stpl_xml_basic.h</in>
+                <in>stpl_xml_entity.h</in>
+              </df>
+              <in>stpl_doc.h</in>
+              <in>stpl_entity.h</in>
+              <in>stpl_entity.tcc</in>
+              <in>stpl_exception.h</in>
+              <in>stpl_grammar.h</in>
+              <in>stpl_keyword.h</in>
+              <in>stpl_log.h</in>
+              <in>stpl_othertraits.h</in>
+              <in>stpl_parser.h</in>
+              <in>stpl_property.h</in>
+              <in>stpl_rule.h</in>
+              <in>stpl_scanner.h</in>
+              <in>stpl_simple.h</in>
+              <in>stpl_stream.h</in>
+              <in>stpl_stream.tcc</in>
+              <in>stpl_typetraits.h</in>
+              <in>stpl_unichar.h</in>
+              <in>stpl_unigrammar.h</in>
+              <in>stpl_uniword.h</in>
+              <in>stpl_word.h</in>
+            </df>
+            <df name="utils">
+              <in>archive.h</in>
+              <in>charset_converter.h</in>
+              <in>fs.h</in>
+              <in>icstring.h</in>
+            </df>
+          </df>
+          <in>XML2TXT.h</in>
+          <in>pattern_singleton.h</in>
+        </df>
+        <df name="src">
+          <in>algorithm.cpp</in>
+          <in>algorithm.h</in>
+          <in>algorithm_ant_crosslink_this.cpp</in>
+          <in>algorithm_ant_crosslink_this.h</in>
+          <in>algorithm_ant_link_this.cpp</in>
+          <in>algorithm_ant_link_this.h</in>
+          <in>algorithm_ant_link_this_and_page_name.cpp</in>
+          <in>algorithm_ant_link_this_and_page_name.h</in>
+          <in>algorithm_bep.cpp</in>
+          <in>algorithm_bep.h</in>
+          <in>algorithm_config.cpp</in>
+          <in>algorithm_config.h</in>
+          <in>algorithm_ltara_base.cpp</in>
+          <in>algorithm_ltara_base.h</in>
+          <in>algorithm_ltw_incoming_a2b_search_tn.cpp</in>
+          <in>algorithm_ltw_incoming_a2b_search_tn.h</in>
+          <in>algorithm_ltw_incoming_search_tn.cpp</in>
+          <in>algorithm_ltw_incoming_search_tn.h</in>
+          <in>algorithm_ltw_tang.cpp</in>
+          <in>algorithm_ltw_tang.h</in>
+          <in>algorithm_out.cpp</in>
+          <in>algorithm_out.h</in>
+          <in>algorithm_page_name.cpp</in>
+          <in>algorithm_page_name.h</in>
+          <in>ant_link.cpp</in>
+          <in>ant_link.h</in>
+          <in>ant_link_parts.h</in>
+          <in>ant_link_posting.cpp</in>
+          <in>ant_link_posting.h</in>
+          <in>ant_link_term.cpp</in>
+          <in>ant_link_term.h</in>
+          <in>application_out.cpp</in>
+          <in>application_out.h</in>
+          <in>cmdline_options.cpp</in>
+          <in>cmdline_options.h</in>
+          <in>config.cpp</in>
+          <in>config.h</in>
+          <in>corpus.cpp</in>
+          <in>corpus.h</in>
+          <in>corpus_txt.cpp</in>
+          <in>corpus_txt.h</in>
+          <in>google_translator.cpp</in>
+          <in>google_translator.h</in>
+          <in>incoming_link.cpp</in>
+          <in>incoming_link.h</in>
+          <in>incoming_links.cpp</in>
+          <in>incoming_links.h</in>
+          <in>ir_task.h</in>
+          <in>language.cpp</in>
+          <in>language.h</in>
+          <in>link.cpp</in>
+          <in>link.h</in>
+          <in>link_print.cpp</in>
+          <in>link_print.h</in>
+          <in>links.cpp</in>
+          <in>links.h</in>
+          <in>ltw.cpp</in>
+          <in>ltw_run.cpp</in>
+          <in>ltw_run.h</in>
+          <in>ltw_task.cpp</in>
+          <in>ltw_task.h</in>
+          <in>ltw_topic.cpp</in>
+          <in>ltw_topic.h</in>
+          <in>name_container.cpp</in>
+          <in>name_container.h</in>
+          <in>outgoing_link.cpp</in>
+          <in>outgoing_link.h</in>
+          <in>outgoing_links.cpp</in>
+          <in>outgoing_links.h</in>
+          <in>pattern_singleton.h</in>
+          <in>porter.cpp</in>
+          <in>porter.h</in>
+          <in>proxy.cpp</in>
+          <in>run.cpp</in>
+          <in>run.h</in>
+          <in>run_config.cpp</in>
+          <in>run_config.h</in>
+          <in>search_engine.cpp</in>
+          <in>search_engine.h</in>
+          <in>search_engine_ant.cpp</in>
+          <in>search_engine_ant.h</in>
+          <in>singleton.h</in>
+          <in>str.h</in>
+          <in>string_utils.h</in>
+          <in>sys_file.cpp</in>
+          <in>sys_file.h</in>
+          <in>sys_files.cpp</in>
+          <in>sys_files.h</in>
+          <in>system_call.cpp</in>
+          <in>system_call.h</in>
+          <in>system_info.cpp</in>
+          <in>system_info.h</in>
+          <in>task_a2b.cpp</in>
+          <in>task_a2b.h</in>
+          <in>task_f2f.cpp</in>
+          <in>task_f2f.h</in>
+          <in>template_algo.h</in>
+          <in>template_comparor.h</in>
+          <in>topic.cpp</in>
+          <in>topic.h</in>
+          <in>translation.cpp</in>
+          <in>translation.h</in>
+          <in>webpage_retriever.cpp</in>
+          <in>webpage_retriever.h</in>
+          <in>wikipedia.cpp</in>
+          <in>wikipedia.h</in>
+          <in>wikipedia_page.cpp</in>
+          <in>wikipedia_page.h</in>
+          <in>xml2txt.cpp</in>
+          <in>xml2txt.h</in>
+          <in>xml2txt_client.cpp</in>
+          <in>xml2txt_client.h</in>
+        </df>
+        <df name="tools">
+          <in>collection_link_finder.cpp</in>
+        </df>
+      </df>
+      <df name="xpdf">
+        <in>at_pdftotext.c</in>
+        <in>pdf.c</in>
+      </df>
+    </df>
+  </logicalFolder>
+  <projectmakefile>GNUmakefile</projectmakefile>
+  <confs>
+    <conf name="Default" type="0">
+      <toolsSet>
+        <developmentServer>localhost</developmentServer>
+        <platform>4</platform>
+      </toolsSet>
+      <compile>
+        <compiledirpicklist>
+          <compiledirpicklistitem>.</compiledirpicklistitem>
+          <compiledirpicklistitem>${AUTO_FOLDER}</compiledirpicklistitem>
+        </compiledirpicklist>
+        <compiledir>${AUTO_FOLDER}</compiledir>
+        <compilecommandpicklist>
+          <compilecommandpicklistitem>${MAKE} ${ITEM_NAME}.o</compilecommandpicklistitem>
+          <compilecommandpicklistitem>${AUTO_COMPILE}</compilecommandpicklistitem>
+        </compilecommandpicklist>
+        <compilecommand>${AUTO_COMPILE}</compilecommand>
+      </compile>
+      <dbx_gdbdebugger version="1">
+        <gdb_pathmaps>
+        </gdb_pathmaps>
+        <gdb_interceptlist>
+          <gdbinterceptoptions gdb_all="false" gdb_unhandled="true" gdb_unexpected="true"/>
+        </gdb_interceptlist>
+        <gdb_options>
+          <DebugOptions>
+          </DebugOptions>
+        </gdb_options>
+        <gdb_buildfirst gdb_buildfirst_overriden="false" gdb_buildfirst_old="false"/>
+      </dbx_gdbdebugger>
+      <nativedebugger version="1">
+        <engine>gdb</engine>
+      </nativedebugger>
+      <runprofile version="9">
+        <runcommandpicklist>
+          <runcommandpicklistitem>"${OUTPUT_PATH}"</runcommandpicklistitem>
+        </runcommandpicklist>
+        <runcommand>"${OUTPUT_PATH}"</runcommand>
+        <rundir>.</rundir>
+        <buildfirst>false</buildfirst>
+        <terminal-type>0</terminal-type>
+        <remove-instrumentation>0</remove-instrumentation>
+        <environment>
+        </environment>
+      </runprofile>
+    </conf>
+  </confs>
+</configurationDescriptor>

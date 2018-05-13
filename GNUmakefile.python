@@ -1,0 +1,9 @@
+ANACONDA_ENV=~/anaconda3/envs/atire
+ANACONDA_ENV_LIBS=${ANACONDA_ENV}/lib
+ANACONDA_ENV_INCLUDES=${ANACONDA_ENV}/include
+BOOST_PYTHON_LIBS=/usr/local/lib/
+CFLAGS += -DBOOSTPY -Datire_EXPORTS -I ${ANACONDA_ENV_INCLUDES}/python3.6m -fPIC -DATIRE_LIBRARY
+
+#Glib stuff
+LDFLAGS += $(shell pkg-config --libs glib-2.0)
+CFLAGS += $(shell pkg-config --cflags glib-2.0)
