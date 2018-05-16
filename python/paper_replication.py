@@ -91,30 +91,17 @@ class GenerateNetwork:
         self.session = tf.Session()
         self.batch_size = tf.placeholder(tf.int32, [], name='batch_size')
 
-        self.query_input = tf.placeholder(tf.float32,[None,WORD_VECTOR_DIMENSIONS],name="query_input")
+        self.query_input = tf.placeholder(tf.float32,[None,number_of_terms,WORD_VECTOR_DIMENSIONS],name="query_input")
 
-
-
-
-
-        self.candidate_and_context_words = tf.placeholder(tf.float32,[None,WORD_VECTOR_DIMENSIONS]
+        self.candidate_and_context_input = tf.placeholder(tf.float32,[None,CANDIDATE_AND_CONTEXT_LENGTH,WORD_VECTOR_DIMENSIONS]
                                                           ,name="candidate_vectors")
 
 
-        self.action_taken = tf.placeholder(dtype=tf.int32,shape=[None,1],name='action')
-
-
-
-
-
-
-
-        #self.batch_size = tf.placeholder(dtype=tf.int32, shape=[],name='batch_size')
 
         # Reshaping the query so it becomes Rank 4, the order is [batch_size, width,height, channel]
         self.reshaped_query_input = tf.reshape(self.query_input,[self.batch_size,number_of_terms,WORD_VECTOR_DIMENSIONS,1])
 
-        self.reshaped_candidate_and_context = tf.reshape(self.candidate_and_context_words,
+        self.reshaped_candidate_and_context = tf.reshape(self.candidate_and_context_input,
                                                          [self.batch_size,CANDIDATE_AND_CONTEXT_LENGTH,WORD_VECTOR_DIMENSIONS,1])
 
         # Add 2 convolutional layers with ReLu activation
@@ -122,6 +109,7 @@ class GenerateNetwork:
             self.reshaped_query_input, num_outputs=256,
             kernel_size=[3,WORD_VECTOR_DIMENSIONS], stride=[1,1], padding='VALID'
         )
+
 
         # Second convolution layer
         self.query_conv2 = slim.conv2d(
@@ -161,21 +149,39 @@ class GenerateNetwork:
         self.pooled_vectors_concatenated = tf.concat((self.query_pooled, self.candidates_pooled), axis=3)
 
 
-        self.policy_fc1 = tf.contrib.layers.fully_connected(tf.reshape(self.pooled_vectors_concatenated,[1,512]),
+
+
+
+
+        self.policy_fc1 = tf.contrib.layers.fully_connected(tf.reshape(self.pooled_vectors_concatenated,[self.batch_size,512]),
                                                             num_outputs=256,activation_fn=tf.nn.tanh,
                                           weights_initializer=tf.contrib.layers.xavier_initializer(),
                                        biases_initializer=tf.constant_initializer(0.1))
 
-        # outputsthe probabilty of selecting term
-        self.action_probability = tf.squeeze(tf.contrib.layers.fully_connected(self.policy_fc1,num_outputs=1,activation_fn=tf.nn.sigmoid,
-                                                                    weights_initializer=tf.contrib.layers.xavier_initializer(),
-                                                                    biases_initializer=None))
+
+
+        self.aprob = slim.fully_connected(self.policy_fc1,2,biases_initializer=None,activation_fn=tf.nn.sigmoid)
+
+
+        # reshape, -1 means let TF infer the output shape
+        self.output = tf.reshape(self.aprob,[-1,self.batch_size])
+        self.chosen_action = tf.argmax(self.output, 0)
 
 
 
-        self.mean_context_vector = tf.placeholder(shape=[256],dtype=tf.float32)
+        # # outputsthe probabilty of selecting term
+        # self.action_probability = tf.contrib.layers.fully_connected(self.policy_fc1,num_outputs=1,activation_fn=tf.nn.sigmoid,
+        #                                                             weights_initializer=tf.contrib.layers.xavier_initializer(),
+        #                                                             biases_initializer=None)
 
-        self.mean_context_and_query_concatenated = tf.concat((tf.squeeze(self.query_pooled),self.mean_context_vector),axis=0)
+
+
+
+
+
+
+        self.mean_context_vector = tf.reduce_mean(self.candidates_pooled,axis=0)
+        self.mean_context_and_query_concatenated = tf.concat((tf.reduce_mean(self.query_pooled,axis=0),self.mean_context_vector),axis=2)
 
 
         self.value_fc1 = tf.contrib.layers.fully_connected(tf.reshape(self.mean_context_and_query_concatenated,[1,512]),
@@ -190,88 +196,70 @@ class GenerateNetwork:
 
 
 
-    # Using the same training parameters from the paper
+        # Using the same training parameters from the paper
         self.optimizer = tf.train.AdamOptimizer(learning_rate=10e-4,beta1=0.9,beta2=0.999,epsilon=10e-8)
-    # Update the parameters according to the computed gradient.
-    # train_step = optimizer.minimize(loss)
+        # Update the parameters according to the computed gradient.
+        # train_step = optimizer.minimize(loss)
+
+
+        self.action_holder = tf.placeholder(shape=None,dtype=tf.int32)
 
 
 
-        self.target = tf.placeholder(shape=[1],dtype=tf.float32,name="target")
+        self.reward = tf.placeholder(shape=[1],dtype=tf.float32,name="target")
+
+
 
         #
-        # self.magnitude = tf.placeholder(shape=[],dtype=tf.float32)
-        # self.picked_action_prob = tf.gather(self.action_probability, self.action_taken)
+        # #TODO: ask about this line
+        # Nicked this line, unsure why it's there
+        # self.responsible_weight = tf.slice(self.output,self.action_holder,[0])
+        # self.policy_loss = (self.reward - self.value_prediction) * tf.reduce_sum(-tf.log(self.responsible_weight),axis=0)
+        # self.policy_loss = tf.nn.l2_loss(self.reward - tf.reduce_sum(-tf.log(self.responsible_weight), axis=0))
 
-        self.policy_loss = (self.target - self.value_prediction ) * tf.reduce_sum(-tf.log(self.action_probability))
-
-        self.value_loss = 0.1 * tf.nn.l2_loss(self.target - self.value_prediction)
-
-
+        self.value_loss = 0.1 * tf.nn.l2_loss(self.reward - self.value_prediction)
         # self.policy_loss = -tf.log(self.picked_action_prob) * self.target
         # self.value_loss = tf.squared_difference(self.target,self.value_prediction)
 
-
         self.train_value_network = self.optimizer.minimize(self.value_loss)
-
-        self.train_policy_network = self.optimizer.minimize(self.policy_loss)
+        # self.train_policy_network = self.optimizer.minimize(self.policy_loss)
 
 
         init = tf.global_variables_initializer()
         self.session.run(init)
 
-
-
-    def get_pooled_query_vector(self,input_terms):
-        feed_dict = {self.query_input:input_terms}
+    def get_query_pooled(self,query,batchsize):
+        feed_dict = {self.query_input:query,self.batch_size:batchsize}
         return self.session.run(self.query_pooled,feed_dict=feed_dict)
-
-
-
-
-    def get_input_vector(self,input_terms):
-        feed_dict = {self.query_input: input_terms}
-        return self.session.run(self.reshaped_query_input, feed_dict=feed_dict)
-
-    def get_first_conv(self,input_terms):
-        feed_dict = {self.query_input: input_terms}
-        return self.session.run(self.query_conv1,feed_dict=feed_dict)
-
-
-    def get_first_candidate_conv(self,input_terms):
-        feed_dict = {self.candidate_and_context_words: input_terms}
-        return self.session.run(self.candidates_conv1,feed_dict=feed_dict)
-
-
-
-    def get_pooled_candidate_vector(self, input_terms,batch_size=1):
-        feed_dict = {self.candidate_and_context_words: input_terms, self.batch_size:batch_size}
-        return self.session.run(self.candidates_pooled, feed_dict=feed_dict)
-
-
+    def candidate_pooled(self,candidate,batch_size):
+        feed_dict = {self.candidate_and_context_input:candidate, self.batch_size:batch_size}
+        return self.session.run(self.candidates_pooled,feed_dict=feed_dict)
 
 
 
     def get_action_prob(self, query, candidates,batch_size=1):
-        feed_dict = {self.query_input: query, self.candidate_and_context_words: candidates,self.batch_size:batch_size}
-        return self.session.run(self.action_probability, feed_dict=feed_dict)
+        feed_dict = {self.query_input: query, self.candidate_and_context_input: candidates,self.batch_size:batch_size}
+        return self.session.run([self.output,self.chosen_action], feed_dict=feed_dict)
 
-    def get_value_prediction(self,vectorized_query,mean_state_vector,batch_size=1):
-        feed_dict = {self.query_input:vectorized_query, self.mean_context_vector:mean_state_vector,self.batch_size:batch_size}
+    def get_value_prediction(self,query_input,candidate_input,batch_size=1):
+        feed_dict = {self.query_input:query_input, self.candidate_and_context_input:candidate_input,self.batch_size:batch_size}
         return self.session.run(self.value_prediction,feed_dict=feed_dict)
 
 
 
-    def policy_update(self,state,vectorized_query,advantage,mean_state_vector,mean_vector,batch_size=1):
-        feed_dict = {self.candidate_and_context_words:state,self.query_input:vectorized_query,self.target:advantage,
-                     self.mean_context_vector:mean_state_vector,self.batch_size:batch_size,self.mean_context_vector:mean_vector}
+    def policy_update(self,state,query_feed_in,reward,batch_size):
+        feed_dict = {self.candidate_and_context_input:state,
+                     self.query_input:query_feed_in,
+                     self.reward:reward
+                    ,self.batch_size:batch_size}
         loss, _ = self.session.run([self.policy_loss, self.train_policy_network], feed_dict=feed_dict)
         return loss
 
-    def value_update(self,actual_reward,vectorized_query,mean_state_vector,batch_size=1):
-        feed_dict = {self.target: actual_reward,
-                     self.query_input: vectorized_query,
-                     self.mean_context_vector: mean_state_vector,self.batch_size:batch_size}
+    def value_update(self,state,query_feed_in,reward,batch_size):
+        feed_dict = {self.reward: reward,
+                     self.query_input: query_feed_in,
+                     self.candidate_and_context_input:state,
+                     self.batch_size:batch_size}
         loss,_ = self.session.run([self.value_loss,self.train_value_network],feed_dict=feed_dict)
         return loss
 
@@ -353,9 +341,11 @@ if __name__ == "__main__":
 
                 query_feed = []
                 states = []
-
+                candidate_terms = []
 
                 aprob_record = []
+
+                actions_taken = []
 
 
                 # This is the input to the left half of the neural network
@@ -375,7 +365,7 @@ if __name__ == "__main__":
                     # For each term in one of the documents
                     for i in range(0,len(doc)):
                         candidate_and_context = []
-                        candidate_term = doc[i]
+                        candidate_terms.append(doc[i])
 
                         # This represents the state
                         candidate_and_context_vectors = []
@@ -412,30 +402,41 @@ if __name__ == "__main__":
 
                         # Per-step action begins here
 
+
+                        # Here we prepare the inputs to the neural network
                         states.append(candidate_and_context_vectors)
                         query_feed.append(query_vectors)
 
-                        max_pooled_candidate_vector = np.squeeze(network.get_pooled_candidate_vector(candidate_and_context_vectors))
-                        candidate_pooled_vector_accumulated.append(max_pooled_candidate_vector)
-
-                        aprob = network.get_action_prob(query_vectors, candidate_and_context_vectors)
-                        aprob_record.append(aprob)
-
-                        if aprob > 0.5:
-                            reformulated_query.append(candidate_term)
 
 
 
 
+
+                query_feed = np.array(query_feed)
+                states = np.array(states)
+                batch_size = len(states)
+
+
+                a_prob = network.get_action_prob(query_feed,states, batch_size)
+                predicted_reward = network.get_value_prediction(query_feed, states, batch_size)
+
+
+                for i in range(0, batch_size):
+                    if a_prob[i] > 0.5:
+                        reformulated_query.append(candidate_terms[i])
+                        actions_taken.append(1)
+                    else:
+                        actions_taken.append(0)
+
+
+                reward = atire.lookup(int(topicID), " ".join(reformulated_query))
 
                 # Feed the mean context vector in to the network to predict value
-                candidate_pooled_vector_accumulated = np.array(candidate_pooled_vector_accumulated)
-                mean_pooled_vector = np.mean(candidate_pooled_vector_accumulated, axis=0)
 
 
-                predicted_reward = network.get_value_prediction(query_vectors,mean_pooled_vector)
 
 
+                reward = [50]
 
 
                 """
@@ -450,24 +451,17 @@ if __name__ == "__main__":
                 
                 """
 
-                reward = atire.lookup(int(topicID)," ".join(reformulated_query))
-
-                advantage = reward - predicted_reward
 
 
-                update_magnitude = np.sum(-np.log(np.array(aprob_record)))
-
-                value_loss = network.value_update(reward,query_vectors,mean_pooled_vector)
-                mean_policy_loss = 0
+                policy_loss = network.policy_update(states,query_feed,reward,batch_size)
+                value_loss = network.value_update(states,query_feed,reward,batch_size)
 
 
 
-                mean_policy_loss = network.policy_update(np.vstack(states),np.vstack(query_feed),advantage[0],mean_pooled_vector
-                                                         ,mean_pooled_vector,batch_size=len(states))
 
                 # mean_policy_loss/=len(states)
 
-                print("policy loss: ", mean_policy_loss)
+                print("policy loss: ", policy_loss)
                 print("value loss: ", value_loss)
 
 
@@ -485,80 +479,80 @@ if __name__ == "__main__":
 
 
 
-
-    # dummy inputs to the network
-    else:
-
-        dummy_query = "hello world"
-        dummy_candidate_terms = "hello world this is a dummy result something something"
-        dummy_query_input_vectors = []
-        dummy_candidate_terms_vector= []
-
-
-        candidate_pooled_vector_accumulated = []
-
-
-
-
-        for word in dummy_query.split(" "):
-            dummy_query_input_vectors.append(word_embedding.wv[word])
-
-        for word in dummy_candidate_terms.split(" "):
-            dummy_candidate_terms_vector.append(word_embedding.wv[word])
-
-
-
-        dummy_query_input_vectors = np.array(dummy_query_input_vectors)
-        dummy_candidate_terms_vector = np.array(dummy_candidate_terms_vector)
-
-        # padding
-        if len(dummy_query_input_vectors) < MAX_SEQUENCE_LENGTH:
-            diff = MAX_SEQUENCE_LENGTH - len(dummy_query_input_vectors)
-            dummy_query_input_vectors = np.pad(dummy_query_input_vectors,[(0,diff),(0,0)],mode='constant',constant_values=0)
-
-
-
-
-
-
-        network = GenerateNetwork(number_of_terms=MAX_SEQUENCE_LENGTH)
-
-        max_pooled_candidate_vector = network.get_pooled_candidate_vector(dummy_candidate_terms_vector)
-
-        candidate_pooled_vector_accumulated.append(np.squeeze(max_pooled_candidate_vector))
-
-
-
-
-
-
-        # dummy_input_vectors = np.array(
-        #     [
-        #         [1,0,0,0,1,1],
-        #         [2,0,0,0,1,1],
-        #         [3,0,0,0,1,1],
-        #         [1, 0, 0, 0, 1,1],
-        #         [2, 0, 0, 0, 1,1],
-        #         [3, 0, 0, 0, 1,1]
-        #
-        #     ]
-        # )
-
-
-
-        pooled_vector = network.get_pooled_query_vector(dummy_query_input_vectors)
-        #
-
-        print (pooled_vector)
-
-
-
-
-
-
-
-
-
+    #
+    # # dummy inputs to the network
+    # else:
+    #
+    #     dummy_query = "hello world"
+    #     dummy_candidate_terms = "hello world this is a dummy result something something"
+    #     dummy_query_input_vectors = []
+    #     dummy_candidate_terms_vector= []
+    #
+    #
+    #     candidate_pooled_vector_accumulated = []
+    #
+    #
+    #
+    #
+    #     for word in dummy_query.split(" "):
+    #         dummy_query_input_vectors.append(word_embedding.wv[word])
+    #
+    #     for word in dummy_candidate_terms.split(" "):
+    #         dummy_candidate_terms_vector.append(word_embedding.wv[word])
+    #
+    #
+    #
+    #     dummy_query_input_vectors = np.array(dummy_query_input_vectors)
+    #     dummy_candidate_terms_vector = np.array(dummy_candidate_terms_vector)
+    #
+    #     # padding
+    #     if len(dummy_query_input_vectors) < MAX_SEQUENCE_LENGTH:
+    #         diff = MAX_SEQUENCE_LENGTH - len(dummy_query_input_vectors)
+    #         dummy_query_input_vectors = np.pad(dummy_query_input_vectors,[(0,diff),(0,0)],mode='constant',constant_values=0)
+    #
+    #
+    #
+    #
+    #
+    #
+    #     network = GenerateNetwork(number_of_terms=MAX_SEQUENCE_LENGTH)
+    #
+    #     max_pooled_candidate_vector = network.get_pooled_candidate_vector(dummy_candidate_terms_vector)
+    #
+    #     candidate_pooled_vector_accumulated.append(np.squeeze(max_pooled_candidate_vector))
+    #
+    #
+    #
+    #
+    #
+    #
+    #     # dummy_input_vectors = np.array(
+    #     #     [
+    #     #         [1,0,0,0,1,1],
+    #     #         [2,0,0,0,1,1],
+    #     #         [3,0,0,0,1,1],
+    #     #         [1, 0, 0, 0, 1,1],
+    #     #         [2, 0, 0, 0, 1,1],
+    #     #         [3, 0, 0, 0, 1,1]
+    #     #
+    #     #     ]
+    #     # )
+    #
+    #
+    #
+    #     pooled_vector = network.get_pooled_query_vector(dummy_query_input_vectors)
+    #     #
+    #
+    #     print (pooled_vector)
+    #
+    #
+    #
+    #
+    #
+    #
+    #
+    #
+    #
 
 
 
