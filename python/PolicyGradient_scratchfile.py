@@ -33,7 +33,7 @@ class agent():
         self.state_in = tf.placeholder(shape=[None, s_size], dtype=tf.float32)
         hidden = slim.fully_connected(self.state_in, h_size, biases_initializer=None, activation_fn=tf.nn.relu)
         self.output = slim.fully_connected(hidden, a_size, activation_fn=tf.nn.softmax, biases_initializer=None)
-        self.chosen_action = tf.argmax(self.output, 1)
+
 
         # The next six lines establish the training proceedure. We feed the reward and chosen action into the network
         # to compute the loss, and use it to update the network.
@@ -100,7 +100,8 @@ with tf.Session() as sess:
                 ep_history = np.array(ep_history)
                 ep_history[:, 2] = discount_rewards(ep_history[:, 2])
                 feed_dict = {myAgent.reward_holder: ep_history[:, 2],
-                             myAgent.action_holder: ep_history[:, 1], myAgent.state_in: np.vstack(ep_history[:, 0])}
+                             myAgent.action_holder: ep_history[:, 1],
+                             myAgent.state_in: np.vstack(ep_history[:, 0])}
                 grads = sess.run(myAgent.gradients, feed_dict=feed_dict)
                 for idx, grad in enumerate(grads):
                     gradBuffer[idx] += grad
