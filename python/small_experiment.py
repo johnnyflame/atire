@@ -57,7 +57,7 @@ start_eps = 1.0
 end_eps = 0.1
 eps = start_eps
 stepDrop = (start_eps - end_eps) / annealing_steps
-EPSILON = start_eps
+
 
 
 
@@ -309,7 +309,6 @@ if __name__ == "__main__":
 
     tf.reset_default_graph()  # Clear the Tensorflow graph.
 
-
     word_embedding = gensim.models.Word2Vec.load(WORD_EMBEDDING_PATH)
 
 
@@ -336,12 +335,8 @@ if __name__ == "__main__":
                 ep_history = []
                 candidate_terms = []
                 policy_training_history = []
-
-
                 aprob_list = []
                 actions = []
-
-
 
                 # This is the input to the left half of the neural network
                 current_query, query_vectors = lookup_term_vectors(current_query)
@@ -417,19 +412,18 @@ if __name__ == "__main__":
 
                         # TODO: might need to add randomness here, or weights may not get updated at all.
 
+                        if eps > end_eps:
+                            eps -= stepDrop
 
-                        # r = random()
-                        # a_prob = None
-                        #
-                        #
-                        # if r < EPSILON:
-                        #     a_prob = randint(0,1)
-                        # else:
+                        r = random.random()
+                        a_prob = None
 
 
-                        a_prob = sess.run(network.aprob, feed_dict={network.query_input: query_vectors,
-                                                                        network.candidate_and_context_input: candidate_and_context_vectors})
-
+                        if r < eps:
+                            a_prob = randint(0,1)
+                        else:
+                            a_prob = sess.run(network.aprob, feed_dict={network.query_input: query_vectors,
+                                                                            network.candidate_and_context_input: candidate_and_context_vectors})
                         aprob_list.append(a_prob)
 
                         a = 0
@@ -449,10 +443,6 @@ if __name__ == "__main__":
 
                 ep_history = np.array(ep_history)
                 # policy_training_history = np.array(policy_training_history)
-
-
-
-
 
 
 
