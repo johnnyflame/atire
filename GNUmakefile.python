@@ -1,7 +1,7 @@
-ANACONDA_ENV=~/anaconda3/envs/atire
+ANACONDA_ENV=/data2/johnny-lee/anaconda3/envs/atire
 ANACONDA_ENV_LIBS=${ANACONDA_ENV}/lib
 ANACONDA_ENV_INCLUDES=${ANACONDA_ENV}/include
-BOOST_PYTHON_LIBS=/usr/local/lib/
+BOOST_PYTHON_LIBS=${ANACONDA_ENV}/lib
 CFLAGS += -DBOOSTPY -Datire_EXPORTS -I ${ANACONDA_ENV_INCLUDES}/python3.6m -fPIC -DATIRE_LIBRARY
 
 #Glib stuff

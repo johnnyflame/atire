@@ -34,7 +34,7 @@ $(ZLIB): $(ALL_OBJECTS)
 
 $(SOURCE_DIR)/%.o: $(SOURCE_DIR)/%.c
 	$(PUT_FILENAME)
-	$(CC) $(CFLAGS) -c $< -o $@
+	$(CC) $(CFLAGS) -fPIC -c $< -o $@
 
 clean:
 	rm -f $(ZLIB) $(ALL_OBJECTS)

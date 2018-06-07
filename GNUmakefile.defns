@@ -87,7 +87,7 @@ USE_MYSQL := 0
 USE_STEM_PAICE_HUSK := 1
 
 # use snowball stemmers
-USE_SNOWBALL := 1
+USE_SNOWBALL := 0
 
 
 # what type to use for the accumulators

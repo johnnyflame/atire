@@ -23,7 +23,10 @@ include GNUmakefile.defns
 
 all: $(EXTRA_OBJS) GNUmakefile index atire atire_client atire_broker atire_dictionary atire_merge atire_reorder atire_doclist
 
-python: $(EXTRA_OBJS) GNUMakefile atire.so
+python: $(EXTRA_OBJS) GNUmakefile atire.so
+
+print_target:
+	echo $(TARGET)
 
 # faster compilation without considering extra objects, useful for repeated make for testing
 internal: index atire atire_client atire_broker atire_dictionary atire_merge atire_reorder atire_doclist
@@ -96,7 +99,7 @@ $(BIN_DIR)/atire : $(ATIRE_OBJECTS)
 	$(CC) -o $@  $^ $(EXTRA_OBJS) $(LDFLAGS)
 
 $(PYTHON_DIR)/atire.so: $(ATIRE_OBJECTS)
-	$(CC) -shared -o $@ $^ $(EXTRA_OBJS) $(LDFLAGS) -Wl,-rpath,${ANACONDA_ENV_LIBS} ${BOOST_PYTHON_LIBS}/libboost_python3-mt.a ${ANACONDA_ENV_LIBS}/libpython3.6m.dylib
+	$(CC) -shared -fPIC -o $@ $^ $(EXTRA_OBJS) $(LDFLAGS) -Wl,-rpath,${ANACONDA_ENV_LIBS} ${BOOST_PYTHON_LIBS}/libboost_python36.so ${ANACONDA_ENV_LIBS}/libpython3.6m.so 
 
 $(BIN_DIR)/atire_broker : $(ATIRE_BROKER_OBJECTS)
 	$(CC) -o $@  $^ $(EXTRA_OBJS) $(LDFLAGS)

@@ -91,7 +91,7 @@ $(LZO): $(ALL_OBJECTS)
 
 $(SOURCE_DIR)/%.o: $(SOURCE_DIR)/%.c
 	$(PUT_FILENAME)
-	$(CC) $(CFLAGS) -c $< -o $@ -I $(SOURCE_DIR)/../include
+	$(CC) $(CFLAGS) -fPIC -c $< -o $@ -I $(SOURCE_DIR)/../include
 
 clean:
 	rm -f $(LZO) $(ALL_OBJECTS)

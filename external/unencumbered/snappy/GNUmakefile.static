@@ -29,7 +29,7 @@ $(SNAPPY_LIB): $(ALL_OBJECTS)
 
 $(SNAPPY_DIR)/%.o: $(SNAPPY_DIR)/%.cc
 	$(PUT_FILENAME)
-	$(CC) $(CFLAGS) -c $< -o $@
+	$(CC) $(CFLAGS) -fPIC -c $< -o $@
 
 clean:
 	rm -f $(SNAPPY_LIB) $(ALL_OBJECTS)
