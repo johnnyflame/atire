@@ -125,7 +125,7 @@ ANT_relevant_document *ANT_assessment_TREC::read(char *filename, long long *judg
 	char ***found, *pointer_to_document, **pointer_to_pointer_to_document;
 	long missing_warned = FALSE;
 #endif
-char document[128];		// Assume document IDs are going to be less than 128 characters
+char document[1024];		// Assume document IDs are going to be less than 128 characters
 char *file, **lines, **current;
 long topic, subtopic, relevance, relevance_judgements;
 long long lines_in_file;
@@ -146,8 +146,8 @@ lines = ANT_disk::buffer_to_list(file, &lines_in_file);
 relevance_judgements = 0;
 for (current = lines; *current != 0; current++)
 	{
-	params = sscanf(*current, "%ld %ld %127s %ld", &topic, &subtopic, document, &relevance);
-	document[127] = '\0';
+	params = sscanf(*current, "%ld %ld %1023s %ld", &topic, &subtopic, document, &relevance);
+	document[1023] = '\0';
 	if (params == 4)
 		relevance_judgements++;
 	else
@@ -164,8 +164,8 @@ current_assessment = all_assessments = (ANT_relevant_document *)memory->malloc(s
 */
 for (current = lines; *current != 0; current++)
 	{
-	params = sscanf(*current, "%ld %ld %127s %ld", &topic, &subtopic, document, &relevance);
-	document[127] = '\0';
+	params = sscanf(*current, "%ld %ld %1023s %ld", &topic, &subtopic, document, &relevance);
+	document[1023] = '\0';
 	if (params >= 4)
 		{
 		#ifdef FILENAME_INDEX

@@ -51,4 +51,8 @@ Thumbs.db
 /build/*
 /downloads/*
 /bin/*
+/atire/python/weights/*
+/atire/python/record/*
+/atire_dataset/*
+*.p
 >>>>>>> df6726e1628117190fc4d202a7496e5e89c17a93

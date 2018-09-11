@@ -1,0 +1,4 @@
+*.aspt
+*.npy
+weights/*
+record/*

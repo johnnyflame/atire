@@ -2,29 +2,41 @@ import gensim
 import atire
 
 
-
-atire.init("atire")
-
-
-input = []
-COLLECTION_SIZE = 173251
+datasets = {"MSA":480721, "WSJ":173251}
 
 
+INDEX_FLAG = ""
 
-for i in range(0, COLLECTION_SIZE):
-    input.append(atire.get_ordered_tokens(i))
+for name in datasets:
 
-model = gensim.models.Word2Vec(sentences=input, size=300,window=5,workers=4,min_count=1,iter=30)
-model.save('wsj-collection-vectors')
+    if name == "MSA":
+        params = "atire " + INDEX_FLAG
 
-# TODO: Re-train Word2Vec model, it's not getting numbers in at the moment.Do it Friday night. Train for 30 iterations
-print(atire.get_ordered_tokens(63615))
+    elif name == "WSJ":
+        INDEX_FLAG = "-findex ./index_WSJ.aspt"
+        params = "atire " + INDEX_FLAG
+
+    input = []
+    COLLECTION_SIZE = datasets[name]
+
+    atire.init(params)
 
 
-print ("done")
+    for i in range(0, COLLECTION_SIZE):
+        input.append(atire.get_ordered_tokens(i))
 
+        model = gensim.models.Word2Vec(sentences=input, size=300,window=5,workers=64,min_count=1,iter=30)
+        model.save(name + '-collection-vectors')
 
-loaded_models = gensim.models.Word2Vec.load("wsj-collection-vectors")
-#
-#
-print (loaded_models.most_similar('money'))
+    atire.cleanup()
+    # # TODO: Re-train Word2Vec model, it's not getting numbers in at the moment.Do it Friday night. Train for 30 iterations
+    # print(atire.get_ordered_tokens(63615))
+    #
+    #
+    # print ("done")
+    #
+    #
+    # loaded_models = gensim.models.Word2Vec.load("wsj-collection-vectors")
+    # #
+    # #
+    # print (loaded_models.most_similar('money'))

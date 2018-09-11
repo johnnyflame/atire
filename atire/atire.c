@@ -1478,6 +1478,7 @@ boost::python::list std_vector_to_py_list(std::vector<T> vector) {
 }
 
 
+
 void python_atire_init(const std::string &args){
   gint argc;
   gchar **argv;
@@ -1503,7 +1504,7 @@ boost::python::list python_atire_loop(long topic_id, const std::string input){
 
 	std::vector<long long> docIDs = ar->ant_loop_python(topic_id, input, &evaluations);
 
-	if (topic_id > 0){
+	if (topic_id >= 0){
 		return std_vector_to_py_list(evaluations);
 	}else{
 		return std_vector_to_py_list(docIDs);
